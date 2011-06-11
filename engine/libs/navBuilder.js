@@ -2,6 +2,12 @@ function NavBuilder() {
 
 	var appletPath = "engine/jpath/jpath.jar";
 	var appletClass = "path.PathApplet";
+
+    this.metadata = {
+        domain: "javascript.info",
+        idMap: {}
+    };
+
 	/**
 	 * Returns callback which triggers when applet is ready
 	 */
@@ -37,7 +43,7 @@ function NavBuilder() {
 		}
 
 		// ensure we have javascript array, not java Array
-		// turn it into objects
+		// turn it into objects with data
 		for (var i = 0; i < filesFromApplet.length; i++) {
 			var file = filesFromApplet[i]+'';
 			if (file.charAt(0) == '*') {
@@ -49,13 +55,33 @@ function NavBuilder() {
 			} else {
 				file = { path: file };
 				if (!isNavPath(file.path)) continue;
+                file.data = this._loadFile(file.path);
 			}
 			file.toString = function() { return this.path };
+
 			files.push(file)
 		}
 
+        // extract titles for all titles
 		for(var i = 0; i<files.length; i++) {
-			this._setFileTitle(files[i]);
+			var file = files[i];
+
+            if (file.children) {
+                /* move folder index data into folder */
+                for(var i=0; i<file.children.length; i++) {
+                    var c = file.children[i];
+
+                    if (this._isFolderIndex(c.path)) {
+                        file.data = c.data;
+                        file.children.splice(i, 1);
+                        break;
+                    }
+                }
+            }
+
+			this._setFileTitle(file);
+			this._extractReferences(file);
+//			delete file.data;
 		}
 
 		files.sort(function(a,b) {
@@ -83,27 +109,27 @@ function NavBuilder() {
 		return loadFile(src);
 	};
 
+    this._extractReferences = function(file) {
+        var self = this;
+        console.log(file.path);
+	    if (!file.data) return;
+        console.log('has data')
+        file.data.replace(/\[#([\w]+?)(\|(?:[^"]|"(?:\\.|[^"\\])*")+?)?]/im, function(m, id, title) {
+
+            if (title) title = title.slice(1);
+            self.metadata.idMap[id] = {
+                href: '/'+self._pathToRelative(file.path, self.currentDir) + (file.children ? '/':''),
+                title: title
+            };
+            return m;
+        });
+    };
+
 	this._setFileTitle = function(file) {
 		var titleExtrator = new TitleExtractor();
 
-		if (!file.children) {
-
-			var data = this._loadFile(file.path);
-			file.title = titleExtrator.extract(data).title;
-
-		} else {
-
-			// find a file starting with 00-index
-			for(var i=0; i<file.children.length; i++) {
-				var c = file.children[i];
-
-				if (this._getNameFromPath(c.path).match(/^00\-index/i)) {
-					var data = this._loadFile(c.path);
-					file.title = titleExtrator.extract(data).title;
-					break;
-				}
-			}
-
+		if (file.data) {
+			file.title = titleExtrator.extract(file.data).title;
 		}
 
 		if (!file.title) {
@@ -111,10 +137,13 @@ function NavBuilder() {
 		}
 	};
 
+
+	this._isFolderIndex = function(path) {
+		return this._getNameFromPath(path).match(/^00\-index/i);
+	};
+
 	this._getNameFromPath = function(path) {
-
-		return path.match(/[^\\\/]+$/)[0]
-
+		return path.match(/[^\\\/]+$/)[0];
 	};
 
 	this._convertToRelativePaths = function(files, dir) {
@@ -133,19 +162,19 @@ function NavBuilder() {
 	// TODO: extract ids
 	this._doBuild = function() {
 
-		var metadata = {};
 		this.currentDir = location.pathname.replace(/\/[^\\\/]*$/, '');
 
-		var bookDir = this.currentDir+'/book/en';
-		files = this._getFiles(bookDir);
+        // used in map for navigation in the book
+		this.bookDir = this.currentDir+'/book/en';
+		files = this._getFiles(this.bookDir);
 
 		// full path is not needed any more
-		this._convertToRelativePaths(files, bookDir);
+		this._convertToRelativePaths(files, this.currentDir);
 
-		metadata.files = files;
+		this.metadata.files = files;
 
-		metadata = JSON.stringify(metadata)
-		this.applet.saveJsonFile(bookDir, "metadata", metadata);
+		this.metadata = JSON.stringify(this.metadata);
+		this.applet.saveJsonFile(bookDir, "metadata", this.metadata);
 	};
 
 	this.build = function() {

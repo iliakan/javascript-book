@@ -7,7 +7,7 @@ if (typeof module != 'undefined') {
 function TagExpander(srcLoader) {
 
 	// these keywords can be used as [ref ], without closing [/ref]
-	var keywordsSelfClose = '# img todo try play iframe task see'.split(' ');
+	var keywordsSelfClose = 'img todo try play iframe task see'.split(' ');
 
 	var langs = 'css java ruby js php txt py xml xslt html erl as';
 
@@ -78,22 +78,25 @@ function TagExpander(srcLoader) {
 		// we need to extract tags, convert them and then insert back
 		// that's because each tag handles markdown by itself and doesn't need to be remarkdowned
 
-		text = text.replace(regNeedCloseTags, function(match, tag, attrs, body) {
+        function process(match, tag, attrs, body, offset, s) {
 			attrs = attrs || '';
+
+            if (arguments.length < 6) { // match, tag, attrs, offset, s, no body
+                body = '';
+            }
 
 			var label = '@@'+Math.random();
 			labels[label] = tagProcessor.processSquareTag({match:match, tag: tag, attrsMatch:attrs, attrs: parseAttrs(attrs), body: body });
 			return label;
-		});
+		}
 
-		text = text.replace(regSelfCloseTags, function(match, tag, attrs) {
-			attrs = attrs || '';
+		text = text.replace(regNeedCloseTags, process);
 
-			var label = '@@'+Math.random();
-			labels[label] = tagProcessor.processSquareTag({match: match, tag: tag, attrsMatch: attrs, attrs: parseAttrs(attrs)});
-			return label;
-		});
+		text = text.replace(regSelfCloseTags, process);
 
+
+        // references do not have space after #, remove them
+        text = text.replace(/\[#([\w]+?)(\|(?:[^"]|"(?:\\.|[^"\\])*")+?)?]/gim, '');
 
 //		console.dir(labels)
 
