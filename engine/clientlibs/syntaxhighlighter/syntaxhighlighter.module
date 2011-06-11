@@ -1,0 +1,286 @@
+<?php
+
+// TODO: hide all code before other filters (prepare), then reveal and highlight after other filters are done 
+
+define("LT_PLACEHOLDER", uniqid("lt_"));
+define("GT_PLACEHOLDER", uniqid("gt_"));
+
+
+/**
+ * @file
+ * Syntax highlight code using the Syntaxhighlighter javascript library.
+ * See http://alexgorbatchev.com/wiki/SyntaxHighlighter
+ *
+ * @author: Matthew Young <www.hddigitalworks.com/contact>
+ */
+
+
+function syntaxhighlighter_init() {
+  //
+  // Fix a javascript compability issue with imce reported by gmark
+  // Don't inject syntax highlighter javascript on "off pages"
+  $off_pages = variable_get('syntaxhighlighter_off_pages', "admin\nadmin/*\nuser\nuser/*\nimce\nimce/*\n");
+  $path = drupal_get_path_alias($_GET['q']);
+  // Compare with the internal and path alias (if any).
+  $page_match = drupal_match_path($path, $off_pages);
+  if ($path != $_GET['q']) {
+    $page_match = $page_match || drupal_match_path($_GET['q'], $off_pages);
+  }
+  if ($page_match) {
+    return;
+  }
+
+  $lib_location = 'modules/syntaxhighlighter/sh';
+
+  $styles_path = $lib_location .'/styles/';
+  $scripts_path = $lib_location .'/scripts/';
+
+  drupal_add_css($styles_path .'shCore.css', 'module');
+  $theme = variable_get('syntaxhighlighter_theme', 'shThemeDefault.css');
+  drupal_add_css($styles_path . $theme, 'module');
+
+  if (@$_GET['ilia']) {
+	drupal_add_js($scripts_path.'/shCore.js', 'module', 'header');
+	drupal_add_js($scripts_path.'/shBrushCss.js', 'module', 'header');
+	drupal_add_js($scripts_path.'/shBrushJScript.js', 'module', 'header');
+	drupal_add_js($scripts_path.'/shBrushXml.js', 'module', 'header');
+
+  } else {
+	drupal_add_js($scripts_path.'/syntaxhighlighter.min.js', 'module', 'header');
+  }
+
+  drupal_add_js("
+  SyntaxHighlighter.config.clipboardSwf = '/modules/syntaxhighlighter/sh/scripts/clipboard.swf'
+  $(function() { SyntaxHighlighter.highlight() })
+  ", 'inline');
+}
+
+
+/**
+ * Implements hook_filter()
+ */
+function syntaxhighlighter_filter($op, $delta = 0, $format = -1, $text = '') {
+ // echo '!!!'.$op.'>>>'.$text.'<<<!!!';
+  
+  switch ($op) {
+    case 'list':
+      return array(0 => t('Syntax Highlighter'));
+
+    case 'description':
+      return t('Formats code pieces.');
+
+    case 'no cache':
+      return FALSE;
+
+    case 'prepare':
+      return $text;
+      
+
+    case 'process':
+      return codeviewer_code_embedded($text, $j);
+      
+    // do nothing
+    default:
+      return $text;
+  }
+}
+
+
+
+function syntaxhighlighter_closetag($text) {
+	$langs = implode('|', syntaxhighlighter_get_langs());
+
+
+  $split = preg_split('%(\[('.$langs.').*?\].*?\[/\\2\])%ims', $text);
+
+  $last = end($split);
+
+  if (preg_match('%\[('.$langs.').*?\]%ims', $last, $matches)) {
+	$text = rtrim($text)."\n...[/".$matches[1]."]";
+  }
+
+  return $text;
+}
+
+function syntaxhighlighter_get_langs() {
+	return array('css','java','ruby', 'js','php', 'txt', 'text', 'py', 'xml', 'xslt', 'html', 'erl', 'as');
+}
+
+
+// Used outside of the module to split pieces of code
+// e.g TOc ignores H1 from  [html] <h1> [/html]
+function syntaxhighlighter_split($text) {
+	$langs = implode('|', syntaxhighlighter_get_langs());
+
+	$split = preg_split('%\[('.$langs.')(.*?)\](.*?)\[/\\1\]%ims', $text, -1, PREG_SPLIT_DELIM_CAPTURE);
+	
+	return $split;
+}
+
+
+// Used outside of the module to split pieces of code
+// e.g TOc ignores H1 from  [html] <h1> [/html]
+// does not capture
+function syntaxhighlighter_split_nocapture($text, $capture = true) {
+	$langs = implode('|', syntaxhighlighter_get_langs());
+
+	$split = preg_split('%(\[('.$langs.').*?\].*?\[/\\2\])%ims', $text, -1, PREG_SPLIT_DELIM_CAPTURE);
+	foreach($split as $k => $v) {
+		if ( ($k+1) % 3 == 0 ) unset($split[$k]);
+	}
+	$split = array_values($split);
+
+	return $split;
+}
+
+
+function codeviewer_code_embedded($text, &$codeStorage) {
+
+  $split = syntaxhighlighter_split($text);
+
+  $output = '';
+  for($i=0; $i<count($split); $i+=4) {
+    $output .= $split[$i];
+    if ($i == count($split)-1) break;
+
+    //echo ($split[$i+2]);
+    $params = parse_attrs($split[$i+2]);
+
+    //	print_r($params);
+    $lang = strtolower($split[$i+1]);
+
+    // normalize lang
+    if ($lang == 'text') $lang = 'txt';
+
+    $code = $split[$i+3];
+
+    if ($file = $params['file']) {
+      if (preg_match('~\.(js|css|html)$~', $file)) {
+        $prefix = realpath($_SERVER['DOCUMENT_ROOT'].'/../files');
+        $filepath = realpath($prefix.'/'.$file);
+        
+        if (!$filepath || substr($filepath,0,strlen($prefix)+1) != $prefix.'/') {
+          $code = "Not found $file";
+        } else {
+          $code = file_get_contents($filepath);
+        }
+      } else {
+        $code = "Not supported $file";
+      }
+    }
+
+    $params['lang'] = $lang;
+    $codeHolder = codeviewer_highlight($code, $params);
+    if (is_array($codeStorage)) {
+      $id = uniqid('code_');
+      $codeStorage[$id] = $codeHolder;
+      $output .= $id; 
+    } else {
+      $output .= $codeHolder;
+    }
+      
+  }
+
+  return $output;
+}
+
+
+function codeviewer_highlight($code, $params, $lt_gt = true) {
+	$sourceId = @$params['id'];
+	if (!$sourceId) $sourceId = uniqid();
+
+	$code = strtr(trim($code), array('<' => '&lt;', '>' => '&gt;', '&' => '&amp;'));
+
+	$sourceLang = $params['lang'];
+	
+  
+	if ($sourceLang == 'html') {
+		$class = array("source brush:js; html-script:true");
+	} else {
+		$class = array("source brush:".$sourceLang);	
+	}
+	
+	$light = substr_count($code,"\n") <= 2 && !$params['run'];
+	if ($light) {
+		$class[] = 'light:true';
+	}
+
+	if ($params['autorun']) {
+		$class[] = 'autorun:true';
+	}
+	
+	if ($params['untrusted']) {
+		$class[] = 'untrusted:true';
+	}
+
+	if ($params['run'] || $params['autorun']) {
+		if ($sourceLang == 'html') {
+		
+			if (isset($params['height'])) {
+				if ($params['height']=='auto') $class[] = 'height:auto';
+				else $class[] = 'height:'.intval($params['height']);
+			}
+			if (isset($params['width'])) {
+				$class[] = 'width:'.intval($params['height']);
+			}
+		}
+	}
+	
+	
+	if ($params['run']) {
+		$class[] = 'run:true';
+	}
+		
+	if ($params['nouserhighlight']) {
+		$class[] = 'noUserHighlight:true';
+	}
+
+	if ($params['nolines']) {
+		$class[] = 'gutter:false';
+	}
+
+	if ($params['firstline']) {
+		$class[] = 'first-line:'.intval($params['firstline']);
+	}
+
+	if ($params['nolinks']) {
+		$class[] = 'auto-links:false';
+	}
+
+    if ($params['hide']) {
+		if ($params['hide'] === true) {
+			$class[] = 'collapse:true';
+		} else {
+			$class[] = 'collapse:\''.$params['hide'].'\'';
+		}
+    }
+
+	$class = implode(';', $class);
+
+	$style = array();
+  if ($params['code-height'] && intval($params['code-height'])<600) {
+    $style[] = 'height:'.intval($params['code-height']).'px';
+  }
+  $style = implode(';', $style);
+    
+
+	$result = "<pre class=\"$class\" style=\"$style\">\n".$code."\n</pre>";
+
+  
+  if ($params['link'] && $params['file']) {
+    $result .= '<a href="/files/'.$params['file'].'" target="_blank">Open the code in new window</a>';
+  }
+
+	if ($params['example.title']) {
+		$result = '<div class="example-title">'.t('Example').': '.$params['example.title'].'</div>'."\n".$result;
+	}
+  
+	if ($lt_gt) {
+		$result = lt_gt_placeholderize($result);
+	}
+
+	return $result;
+
+}
+
+

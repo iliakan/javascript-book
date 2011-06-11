@@ -1,0 +1,1 @@
+ java -jar compiler.jar --js shCore.js --js shBrushCss.js --js shBrushJava.js --js shBrushJScript.js --js shBrushPhp.js --js shBrushPlain.js --js shBrushPython.js --js shBrushXml.js --js shBrushRuby.js --js shBrushErlang.js --js shBrushAS3.js --charset utf8 --js_output_file syntaxhighlighter.min.js

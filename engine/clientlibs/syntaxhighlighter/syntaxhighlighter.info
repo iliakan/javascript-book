@@ -1,0 +1,12 @@
+; $Id: syntaxhighlighter.info,v 1.5 2009/02/11 18:20:30 mattyoung Exp $
+name = "Syntax highlighter"
+description = "Integrates the Syntax Highlighter Javascript Library to your site."
+core = "6.x"
+
+
+; Information added by drupal.org packaging script on 2009-12-31
+version = "6.x-1.22"
+core = "6.x"
+project = "syntaxhighlighter"
+datestamp = "1262288765"
+

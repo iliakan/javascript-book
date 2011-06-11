@@ -1,0 +1,225 @@
+# $Id: syntaxhighlighter-module.de.po,v 1.12 2009/08/24 17:53:42 mattyoung Exp $
+#
+# LANGUAGE translation of Drupal (general)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from files:
+#  syntaxhighlighter.admin.inc,v 1.2 2009/02/11 22:52:25 mattyoung
+#  syntaxhighlighter.module,v 1.4 2009/02/12 18:20:49 mattyoung
+#  syntaxhighlighter.info,v 1.5 2009/02/11 18:20:30 mattyoung
+#  syntaxhighlighter.install,v 1.2 2009/02/11 22:52:25 mattyoung
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 1\n"
+"POT-Creation-Date: 2009-08-24 10:51-0700\n"
+"PO-Revision-Date: 2009-08-24 10:53-0800\n"
+"Last-Translator: Matthew Young <matthew@hddigitalworks.com>\n"
+"Language-Team: HD Digitalworks <info@hddigitalworks.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: GERMANY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: syntaxhighlighter.admin.inc:24
+#, fuzzy
+msgid "Enabled languages"
+msgstr "Aktivierte Sprachen des Syntax Highlighter"
+
+#: syntaxhighlighter.admin.inc:27
+msgid "Only the selected languages will be enabled and its corresponding required Javascript files loaded.  You may only want to choose the languages you actual display on your site to lower the amount of Javascript files loaded. For details please see <a href=\"http://alexgorbatchev.com/wiki/SyntaxHighlighter:Brushes\">the Syntax Highlighter Javascript Library Page</a>."
+msgstr "Es werden nur die ausgewählten Sprachen aktiviert und entsprechende Javascript Dateien geladen. Sie sollten nur die Sprachen auswählen, die Sie aktuell auf Ihrer Seite darstellen um die Anzahl der zu ladenden Javascript Dateien zu verringern. Details entnehmen Sie bitte <a href=\"http://alexgorbatchev.com/wiki/SyntaxHighlighter:Brushes\">der Syntax Highlighter Javascript Bibliothek Seite</a>."
+
+#: syntaxhighlighter.admin.inc:39
+msgid "Theme"
+msgstr "Theme"
+
+#: syntaxhighlighter.admin.inc:40
+msgid "Choose a syntax highlight theme."
+msgstr "Ein Syntax Highlighter Theme auswählen."
+
+#: syntaxhighlighter.admin.inc:48
+msgid "Tag name"
+msgstr "Tag Name"
+
+#: syntaxhighlighter.admin.inc:49
+msgid "Use different tag to markup code."
+msgstr "Den Code markierender Tag."
+
+#: syntaxhighlighter.admin.inc:55
+msgid "Legacy mode"
+msgstr "Kompatibilitätsmodus"
+
+#: syntaxhighlighter.admin.inc:56
+msgid "Enable pre-2.0 style markup support."
+msgstr "Aktiviere Unterstützung für Markierung der pre-2.0 Version."
+
+#: syntaxhighlighter.admin.inc:57
+msgid "Disabled"
+msgstr "Deaktiviert"
+
+#: syntaxhighlighter.admin.inc:57
+msgid "Enabled"
+msgstr "Aktiviert"
+
+#: syntaxhighlighter.admin.inc:65
+#, fuzzy
+msgid "Turn off Syntax Highlighter on these pages"
+msgstr "Aktivierte Sprachen des Syntax Highlighter"
+
+#: syntaxhighlighter.admin.inc:67
+msgid "Enter one page per line as Drupal paths. The '*' character is a wildcard. Example paths are %blog for the blog page and %blog-wildcard for every personal blog. %front is the front page."
+msgstr ""
+
+#: syntaxhighlighter.admin.inc:72
+msgid "Default expressions"
+msgstr ""
+
+#: syntaxhighlighter.admin.inc:74
+msgid "Enter syntaxhihglighter default settings javascript expressions, e.g. !example"
+msgstr ""
+
+#: syntaxhighlighter.module:76
+msgid "+ expand source"
+msgstr "+ Quelltext ausklappen"
+
+#: syntaxhighlighter.module:77
+msgid "view source"
+msgstr "Quelltext anzeigen"
+
+#: syntaxhighlighter.module:78
+msgid "copy to clipboard"
+msgstr "in die Zwischenablage kopieren"
+
+#: syntaxhighlighter.module:79
+msgid "The code is in your clipboard now"
+msgstr "Der Code ist jetzt in Ihrer Zwischenablage"
+
+#: syntaxhighlighter.module:80
+msgid "print"
+msgstr "drucken"
+
+#: syntaxhighlighter.module:81
+msgid "?"
+msgstr "? Über"
+
+#: syntaxhighlighter.module:83
+msgid ""
+"SyntaxHighlighter\\n"
+"\\n"
+msgstr ""
+"SyntaxHighlighter\\n"
+"\\n"
+
+#: syntaxhighlighter.module:84
+msgid "Can't find brush for: "
+msgstr "Kann keinen Brush finden für:"
+
+#: syntaxhighlighter.module:85
+msgid "Brush wasn't made for html-script option: "
+msgstr "Brush wurde nicht gemacht für die HTML-Skript Option:"
+
+#: syntaxhighlighter.module:105
+msgid "Syntax highlight code surrounded by the <code>!ex0</code> tags, where OPTIONS is a Syntaxhighlighter options string."
+msgstr ""
+
+#: syntaxhighlighter.module:107
+msgid "Example: <code>!ex1</code>"
+msgstr ""
+
+#: syntaxhighlighter.module:109
+msgid "This will syntax highlight PHP code, initially collapsed, start line number at 50, highlight lines 57, 81 and 101 and tag highlighted code with class names some_class and some_other_class."
+msgstr ""
+
+#: syntaxhighlighter.module:110
+msgid "See <a href=\"!url0\">usage</a>, <a href=\"!url1\">language aliases</a> and <a href=\"!url2\">options</a> for additional helps."
+msgstr ""
+
+#: syntaxhighlighter.module:114
+msgid "Note: instead of using the raw HTML <code>&lt;pre&gt;</code> tag markup from the original Syntaxhighlighter Javascript Library, you <a href=\"!filter_admin\">enable the Syntaxhighlighter filter</a> in an input format, and then use the <code>{syntaxhighlighter OPTIONS}...{/syntaxhighlighter}</code> markup using that input format. The <code>OPTIONS</code> string is whatever you would put inside the class string as in <code>&lt;pre class=\"OPTIONS\"&gt;...&lt;/pre&gt;</code> according to the original Javascript Library format. Secondly, you do not need to escape the \"<code>&lt;</code>\" and \"<code>&gt;</code>\" characters in your program code as required by the original Syntaxhighlighter Javascript Library. This is automatically taken care of so you can leave your program code completely unchanged. Thirdly, if you use the HTML filter, you must allow the <code>&lt;pre&gt;</code> tag."
+msgstr ""
+
+#: syntaxhighlighter.module:120
+msgid "Syntax highlight code surrounded by the <code>!ex0</code> tags."
+msgstr ""
+
+#: syntaxhighlighter.module:133
+#, fuzzy
+msgid "Syntax Highlighter"
+msgstr "Syntax highlighter"
+
+#: syntaxhighlighter.module:212
+msgid "{syntaxhighlighter} tags are not balanced: open and close tags must match."
+msgstr ""
+
+#: syntaxhighlighter.module:218
+msgid "{syntaxhighlighter} tags cannot be nested. If you need to show the {syntaxhighlighter}/{/syntaxhighlighter} strings in syntax highlighted code, show them in escape form as <code>&amp;#123;syntaxhighlighter OPTIONS&amp;#125;</code> and <code>&amp;#123;/syntaxhighlighter&amp;#125;</code>"
+msgstr ""
+
+#: syntaxhighlighter.module:17
+#: syntaxhighlighter.info:0
+msgid "Syntax highlighter"
+msgstr "Syntax highlighter"
+
+#: syntaxhighlighter.module:18
+msgid "Configure syntax highlighter"
+msgstr "Konfiguriere syntax highlighter"
+
+#: syntaxhighlighter.module:0
+msgid "syntaxhighlighter"
+msgstr "syntaxhighlighter"
+
+#: (duplicate) syntaxhighlighter.install:27
+#, fuzzy
+msgid "Syntax highlighter js library"
+msgstr "Syntax highlighter"
+
+#: (duplicate) syntaxhighlighter.install:28
+#, fuzzy
+msgid "Installed"
+msgstr "Aktiviert"
+
+#: (duplicate) syntaxhighlighter.install:28
+msgid "Not installed"
+msgstr ""
+
+#: (duplicate) syntaxhighlighter.install:33
+#, fuzzy
+msgid "The required Syntax highlighter javascript library is not installed. See <a href=\"!link\">the Syntaxhighlighter module README.txt file</a> for instructions."
+msgstr "Die benötigte Syntax Hightlighter Javascript Bibliothek wurde nicht installiert. Siehe README.txt."
+
+#: (duplicate) syntaxhighlighter.install:43
+msgid "You must <a href=\"!link\">turn on the Syntaxhighlighter filter</a> in an input format for syntax highlight code using that format."
+msgstr ""
+
+#: (duplicate) syntaxhighlighter.install:45
+msgid "Then <a href=\"!link\">configure the Syntax Highlighter module</a>."
+msgstr ""
+
+#: (duplicate) syntaxhighlighter.install:47
+msgid "See <a href=\"!link\">the Syntaxhighlighter module README.txt file</a> for instructions."
+msgstr ""
+
+#: (duplicate) syntaxhighlighter.install:65
+msgid "Go to <a href=\"!link\">filters settings</a> to enable the Syntaxhighlighter filter in the appropriate input format. It's not necessary to use Full HTML format anymore."
+msgstr ""
+
+#: syntaxhighlighter.info:0
+msgid "Integrates the Syntax Highlighter Javascript Library to your site."
+msgstr "Integriert die Syntax Highlighter Javascript-Bibliothek auf Ihrer Website."
+
+#~ msgid "Syntax highlighter module"
+#~ msgstr "Syntax highligther Modul"
+
+#, fuzzy
+#~ msgid "The required SyntaxHighlighter Javascript library is not installed."
+#~ msgstr ""
+#~ "Die benötigte Syntax Hightlighter Javascript Bibliothek wurde nicht "
+#~ "installiert. Siehe README.txt."
+#~ msgid "Required SyntaxHighlighter JS lib not installed"
+#~ msgstr ""
+#~ "Die benötigte Syntax Hightlighter Javascript Bibliothek wurde nicht "
+#~ "installiert."
+

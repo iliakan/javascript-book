@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+<head>
+<script>
+
+function insertApplet(){
+  var a = document.createElement('applet');
+  a.setAttribute('code',"path.PathApplet");
+  a.setAttribute('archive',"jpath.jar");
+  a.setAttribute('width','1');
+  a.setAttribute('height','1');
+  document.body.appendChild(a);
+  return a;
+}
+</script>
+</head>
+
+<script>
+var applet = insertApplet();
+</script>
+<script>
+
+var currentDir = location.pathname.replace(/\/[^\/]*$/, '');
+var files = applet.getDirectoryPaths(currentDir);
+
+for(var i=0; i<files.length; i++) {
+  document.writeln(files[i]+'<br>')
+}
+
+//applet.saveJsonFile(currentDir, "1", "lalala"+Math.random());
+
+</script>
+
+</body>
+</html>

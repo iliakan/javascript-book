@@ -1,0 +1,48 @@
+
+a[href^='http://'], a[href^='https://'] {
+	padding-right: 13px;
+	background: url(images/link-icon_external.png) no-repeat right;
+}
+
+a[href^='http://msdn.microsoft.com'], a[href^='https://msdn.microsoft.com'] {
+	padding-right: 24px;
+	background: url(images/msdn.jpg) no-repeat right;
+}
+
+a[href^='http://developer.mozilla.org'], a[href^='https://developer.mozilla.org'] {
+	padding-right: 18px; background: url(images/mdn.png) no-repeat right;
+}
+
+a[href^='http://w3.org'], a[href^='https://w3.org'] {
+	padding-right: 18px;
+	background: url(images/link-icon_w3.png) no-repeat right;
+}
+
+a[href^='http://wikipedia.org'], a[href*='wikipedia.org'] {
+	padding-right: 14px; background: url(images/link-icon_wikipedia.gif) no-repeat right;
+}
+
+a[href^='mailto:'] {
+	padding-right: 14px; background: url(images/link-icon_mail.gif) no-repeat right;
+}
+
+
+
+a[href$='.pdf'] { background: url(images/link-icon_pdf.png) no-repeat right; padding-right: 16px; }
+a[href$='.xls'] { background: url(images/link-icon_excel.png) no-repeat right; padding-right: 16px; }
+a[href$='.doc'] { background: url(images/link-icon_word.png) no-repeat right; padding-right: 16px; }
+a[href$='.zip'] { background: url(images/link-icon_zip.png) no-repeat right; padding-right: 13px; }
+
+/*
+.lisee {  background: url(images/link-icon_newwin.gif) no-repeat right; padding-right: 16px; }
+
+.liplay {  background: url(images/note.gif) no-repeat right top; padding-right: 12px; }
+
+
+.liinternal { padding-left: 13px; background: url(images/link-icon_internal.gif) no-repeat left; }
+
+.w3c {  background: url(images/w3c.png) no-repeat right; padding-right: 20px; }
+.ie { background: url(images/ie.gif) no-repeat right; padding-right: 18px; }
+.firefox { background: url(images/firefox.png) no-repeat right; padding-right: 18px; }
+.opera { background: url(images/opera.gif) no-repeat right; padding-right: 18px; }
+*/

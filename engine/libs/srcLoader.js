@@ -1,0 +1,60 @@
+if (typeof module != 'undefined') {
+	console.log("NOT READY");
+}
+
+/**
+ * Uses loadFile to actually get the file
+ * @param url
+ */
+function SrcLoader(url) {
+
+	function getBaseDir(url) {
+		if (url.lastIndexOf('/')) {
+			return url.substr(0, url.lastIndexOf('/'));
+		} else {
+			return '.';
+		}
+	}
+
+	var baseDir = getBaseDir(url);
+
+	/**
+	 * Returns full URL to src, from current dir
+	 * Uses this.baseDir for relative urls
+	 * @param src
+	 */
+	this.getFullUrl = function(src) {
+
+		if (src.charAt(0) == '/') {
+			src = src.substr(0); // /tutorial/bla -> tutorial/bla (relative)
+		} else {
+			src = baseDir + '/' + src;
+		}
+
+		return src;
+	};
+
+	/**
+	 * Creates srcLoader for another base url
+	 * It can be used to load srcs, given in that file
+	 * @param src new baseDir
+	 */
+	this.createRelativeLoader = function(src) {
+		return new SrcLoader(this.getFullUrl(src));
+	};
+
+
+	this.load = function(src) {
+
+		src = this.getFullUrl(src);
+
+		try {
+			return loadFile(src)
+		} catch(e) {
+			alert('Access to '+src+' is denied or not found');
+			throw e;
+		}
+
+	}
+
+}
