@@ -5,6 +5,14 @@ var Metadata = new function() {
 		metadata = obj;
 	};
 
+	this.getDomain = function() {
+		if (!metadata.domain) {
+			throw new Error("No domain in metadata")
+		}
+
+		return metadata.domain;
+	};
+
 	this.idToHref = function(id) {
 		var href = metadata && metadata.idMap && metadata.idMap[id].href;
 		return href || "javascript:alert('ID: " + id + "');return false";
@@ -34,4 +42,4 @@ var Metadata = new function() {
 		return id
 	}
 
-}
+};

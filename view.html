@@ -27,17 +27,21 @@
     //file:///C:/tmp/xhrtest/showdown/src/1.html?document/events/01-introduction-browser-events.md
     var bookifier = new Bookifier();
 
-    if (!location.search) {
-        alert('No document')
-    } else {
-        var path = location.search.substr(1)
-        sections = bookifier.convert(path)
-        sections.head && document.write(sections.head)
+    Metadata.setup({
+        domain: 'http://javascript.info'
+    });
 
+    if (!location.search) {
+        alert('No document');
+    } else {
+        var path = location.search.substr(1);
+        sections = bookifier.convert(path);
+        sections.head && document.write(sections.head);
 
         $(function() {
 
             document.getElementById('result').innerHTML = sections.teaser + '<div class="cut"></div>' + sections.body;
+
             SyntaxHighlighter.highlight()
         })
 

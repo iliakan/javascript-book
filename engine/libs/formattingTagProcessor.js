@@ -34,7 +34,7 @@ function FormattingTagProcessor(srcLoader) {
 	 */
 	this.processSquareTag = function(data) {
 		data.tag = data.tag.toLowerCase();
-		
+
 		for (var i = 0; i < langs.length; i++) {
 			if (langs[i] == data.tag) {
 				return this.lang(data);
@@ -76,8 +76,27 @@ function FormattingTagProcessor(srcLoader) {
 	this.play = function(data) {
 		var attrs = data.attrs;
 
-		var text = srcLoader.load(data.attrs.src);
-		debugger
+		// try to load play from the given url
+		try {
+			var text = srcLoader.load(attrs.src);
+		} catch(e) {
+		}
+
+		if (!text) {
+			// now check if src is a directory enabled for .play
+			try {
+				text = srcLoader.load(attrs.src + '/.play')
+			} catch(e) {
+			}
+		}
+
+		if (!text) {
+			return '<div class="format-error">ERROR: no such play: '+attrs.src+'</div>';
+		}
+		var url = srcLoader.getFullUrl(attrs.src);
+
+		return '<a href="'+Metadata.getDomain()+'/play/'+url+'" class="liplay" target="_blank">'+attrs.vertical+'</a>';
+		//debugger
 	};
 
 	// [task src="..."]
@@ -93,35 +112,40 @@ function FormattingTagProcessor(srcLoader) {
 	};
 
 	this.img = function(data) {
-		return '<img '+data.attrsMatch+'>';
+		return '<img ' + data.attrsMatch + '>';
+	};
+
+	// [verbatim] ... [/verbatim] leaves contents as is
+	this.verbatim = function(data) {
+		return data.match;
 	};
 
 	this.iframe = function(data) {
 
-        var attrs = data.attrs;
+		var attrs = data.attrs;
 		var height = attrs.height;
 
-		if (height && +height+'' == height) height += 'px';
+		if (height && +height + '' == height) height += 'px';
 
 		var border = attrs.border ? '1px solid black' : 'none';
 		var src = srcLoader.getFullUrl(attrs.src);
 
 		if (height) {
-			var result = '<iframe frameborder="0" style="width:100%;height:'+height+';border:'+border+'" src="'+src+'"></iframe>';
+			var result = '<iframe frameborder="0" style="width:100%;height:' + height + ';border:' + border + '" src="' + src + '"></iframe>';
 		} else {
-            result = '<iframe onload="iframeResize(this)" frameborder="0" style="display:none;border:'+border+'" src="'+src+'"></iframe>';
-        }
+			result = '<iframe onload="iframeResize(this)" frameborder="0" style="display:none;border:' + border + '" src="' + src + '"></iframe>';
+		}
 
 		if (attrs.hide) {
 			var hideText = attrs.hide !== true ? attrs.hide : 'Click to open';
-			result = result.replace(/'/g, "\\'").replace(/"/g,'&quot;');
+			result = result.replace(/'/g, "\\'").replace(/"/g, '&quot;');
 
-            // TODO: replace div by iframe, not innerhtml it
+			// TODO: replace div by iframe, not innerhtml it
 			// TODO: untested
-            result = '<div style="cursor: pointer;text-decoration: underline; color: #39c" onclick="this.innerHTML=\''+result+'\';this.parentNode.replaceChild(this.firstChild, this)">'+hideText+'</div>';
-        }
+			result = '<div style="cursor: pointer;text-decoration: underline; color: #39c" onclick="this.innerHTML=\'' + result + '\';this.parentNode.replaceChild(this.firstChild, this)">' + hideText + '</div>';
+		}
 
-        return result;
+		return result;
 
 	};
 
@@ -146,7 +170,7 @@ function FormattingTagProcessor(srcLoader) {
 			className.push('brush:js');
 			className.push('html-script:true');
 		} else {
-			className.push('brush:'+data.tag);
+			className.push('brush:' + data.tag);
 		}
 		var code = data.body, attrs = data.attrs;
 
@@ -208,7 +232,7 @@ function FormattingTagProcessor(srcLoader) {
 			}
 		}
 
-		className = 'source '+className.join(';');
+		className = 'source ' + className.join(';');
 
 		var style = [];
 		if (attrs['code-height'] && parseInt(attrs['code-height']) < 600) {
@@ -223,14 +247,14 @@ function FormattingTagProcessor(srcLoader) {
 
 		var result = "<pre class=\"" + className + "\" style=\"" + style + "\">\n" + code + "\n</pre>";
 
-/* TODO
-		if ($params['example.title']) {
-			$result = '<div class="example-title">'.t('Example').
-			': '.$params['example.title'].
-			'</div>'.
-			"\n".$result;
-		}
-*/
+		/* TODO
+		 if ($params['example.title']) {
+		 $result = '<div class="example-title">'.t('Example').
+		 ': '.$params['example.title'].
+		 '</div>'.
+		 "\n".$result;
+		 }
+		 */
 
 		return result;
 	}

@@ -189,6 +189,8 @@ function SimpleDown() {
 				}
 			}
 
+			if (!text) text = '&raquo;&raquo;';
+
 			return '<a href="' + url + '">' + text + '</a>';
 		}
 
@@ -222,7 +224,7 @@ function SimpleDown() {
 
 		text = text.replace(/^(#{1,6})[ \t]*(.+?)[ \t]*(\[[\w-]+?])?\#*(?:$|\n+)/gm,
 			function(wholeMatch, m1, m2, m3) {
-				var h_level = m1.length + 1; // h1 is only title
+				var h_level = m1.length; // h1 should be only in title
 				var id = (m3 && m3.slice(1, -1) || Metadata.makeHeaderId(m2));
 				return "<h" + h_level + ' id="' + id + '">' + m2 + "</h" + h_level + ">";
 			}

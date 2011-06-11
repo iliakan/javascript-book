@@ -25,7 +25,6 @@ function TaskParser(srcLoader) {
 	}
 
 	this.parse = function(text) {
-		var regHeader = /^#[ \t]*(.+?)[ \t]*(\[[\w-]+?])?\#*(?:$|\n+)/gm
 
 		text = trim(text);
 
@@ -39,7 +38,7 @@ function TaskParser(srcLoader) {
 
 		var splitLabel = Math.random();
 
-		text = text.replace(regHeader, splitLabel+'$1'+ splitLabel);
+		text = text.replace(/^=(.*?)$/gim, splitLabel+'$1'+ splitLabel);
 
 		var split = text.split(splitLabel);
 
@@ -58,32 +57,19 @@ function TaskParser(srcLoader) {
 
 		delete parsed.title;
 
-		var text = parsed.body;
+		var text = '<div class="learning-task"> ';
+		text += '<div class="task-formulation">'+ parsed.body + '</div>';
+
+		delete parsed.body;
+
 		for(var key in parsed) {
-			if (key.match(/^hint/i)) {
-				text += '<h2>'+key+'</h2>'
-				text +=
-			}
+			text += '<div class="task-section-open" data-title="'+key+'">Open '+key+'</div>'
+			text += '<div class="task-section">'+parsed[key]+'</div>';
 		}
-// TODO: finish task
-		return '<div class="learning-task"> \
-			<div class="task-formulation">'+ parsed.body + '</div>';
 
-<div id="learning-task-nid-118" class="learning-task learning-task-nid-118">
-<div class="task-formulation">There is a message list. Add a delete button to each message to remove it.
-<p>The result:<br />
-<iframe onload="iframeResize(this)" frameborder="0" style="display:none;border:none" src="/files/tutorial/browser/events/messages/"></iframe>
-</p>
-<p>The source is <a href="/play/tutorial/browser/events/messages-src" class="liplay" target="_blank">here</a>.
-</p></div>
-<p><span class="task-solution-open">Open solution</span></p>
-<div class="task-solution">
-<div class="learning-task-solution-header">Solution</div>
+		text += '</div>';
 
-<p>The solution is shown <a href="/play/tutorial/browser/events/messages" class="liplay" target="_blank">here</a>.
-</p>
-</div>
-</div>
+		return text
 				
 	};
 

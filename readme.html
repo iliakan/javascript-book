@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+
+
+<h2>Book structure</h2>
+
+At the top level, books are listed by language.
+
+Then the navigation is formed from files/folders named like 01-..., 02-... etc.
+That is, a number, followed by a hyphen.
+
+Everything which ends with <code>.bak</code> is ignored. All other files are ignored in the navigation.
+
+For a file, the first header becomes the title.
+For a folder, the first header in file "00-index..." becomes the title.
+
+<h2>Layout</h2>
+
+<h3>Page layout</h3>
+<pre>
+    # Title
+
+    This is a short intro to the page.
+    The cut below is optional, but recommended.
+    If there is no cut, then several first lines are used.
+
+    =Cut
+
+    The body.
+
+    =Head
+
+    Scripts, styles, other unformatted stuff that goes to HEAD.
+</pre>
+
+All sections are optional.
+
+<h3>Task layout</h3>
+
+<pre>
+    # Title
+
+    The body, task formulation.
+
+    =Hint 1
+    ...
+    =Hint n
+    ...
+    =Solution
+    ...
+
+</pre>
+
+All sections are optional, the sulution should exist.
+
+<h2>Formatting</h2>
+
+<h3>Headers</h3>
+
+Headers starts from <code>#</code>:
+<pre>
+# Title
+## SubTitle
+</pre>
+
+There should be only one 1st-level header in the document: the title.
+
+A header may have id:
+<pre>
+## Header with id [id]
+</pre>
+
+<h3>External Links</h3>
+Links can be written as <code>[title](url)</code>, for example:
+<pre>
+    [Google](http://google.com)
+    ["Title with backslashed quote: \", [ and ] "](http://somewhere.com)
+</pre>
+
+To put a link which name is same as URL, use empty <code>()</code>:
+<pre>
+    [http://google.com]()
+</pre>
+
+<h3>Internal links and references</h3>
+All internal links must be made through references, not URLs.
+The purpose of such structure is to ensure consistency across the book. All references are global and unique.
+
+A <i>reference</i> is created with <code>[#id]</code> anywhere in the text. A reference must be latin alphanumeric with hyphens.
+
+<pre>
+    [#events-this]
+</pre>
+
+It may have a title after <code>|</code>:
+
+<pre>
+    [#closure-peculiarity|Closure Peculiarity]
+</pre>
+Headers with <code>[id]</code> can be used as titled references.
+
+To make an internal link link, use <code>[title](#id)</code>, for example:
+<pre>
+    Somewhere: [#good-info]
+
+    Now the link: [Good reading](#good-info)
+</pre>
+
+A link can also use the reference title:
+<pre>
+    This will show up as "Good reading" link: [](#good-info)
+</pre>
+
+
+<h2>Inline code</h2>
+
+The inline code in backtricks <code>`code`</code> is wrapped into CODE tag. All special chars inside code are replaced inside <code>`...`</code>.
+For example:
+<pre>
+    `<i>code</i>` -> `&lt;i&gt;code&lt;/i&gt;`
+</pre>
+
+To use tags inside the inline code code, use the CODE tag.
+
+<h2>Verbatim pieces</h2>
+
+No format happens inside <code>[verbatim]</code> bb-tag:
+<pre>
+    [verbatim]
+    `no format [#here]`
+    [/verbatim]
+</pre>
+
+<h2>Code blocks</h2>
+
+.. TODO HELP
+
+<h2>Rebuilding navigation</h2>
+
+If you change the structure or references, then the navigation needs to be rebuild to pickup the changes.
+
+JavaScript is unable to traverse the directory tree, that's why a signed Java Applet is used. You should run it only when rebuilding navigation.
+
+Actually, the applet is small and simplified to maximum.
+All it can do is to read directory structure and write to files which end with '.applet.json'.
+The sources are in the <code>engine/jpath</code> folder. If you feel really paranoid, recompile it and sign by your certificate.
+
+Please never click "Trust always" on it.
+
+
+</body>
+</html>

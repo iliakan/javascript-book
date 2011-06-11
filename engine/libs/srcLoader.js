@@ -48,12 +48,7 @@ function SrcLoader(url) {
 
 		src = this.getFullUrl(src);
 
-		try {
-			return loadFile(src)
-		} catch(e) {
-			alert('Access to '+src+' is denied or not found');
-			throw e;
-		}
+		return loadFile(src);
 
 	}
 

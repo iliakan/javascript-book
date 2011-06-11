@@ -11,7 +11,7 @@ function TagExpander(srcLoader) {
 
 	var langs = 'css java ruby js php txt py xml xslt html erl as';
 
-	var keywordsNeedClose = ('link smart warn ponder'+' '+langs).split(' ');
+	var keywordsNeedClose = ('verbatim link smart warn ponder'+' '+langs).split(' ');
 
 	var tagProcessor = new FormattingTagProcessor(srcLoader);
 
