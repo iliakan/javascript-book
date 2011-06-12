@@ -3,6 +3,10 @@
  * */
 function loadFile(src) {
 
+	if (src.match('://')) {
+		throw new Error('External src is not allowed: '+src);
+	}
+	
 	// for Windows, use ActiveX, because native XHR doesn't support files
 	var xhr = window.ActiveXObject ? new window.ActiveXObject("Microsoft.XMLHTTP") : new XMLHttpRequest();
 
@@ -10,7 +14,7 @@ function loadFile(src) {
 		xhr.open('GET', src, false);
 		xhr.send(null);
 	} catch(e) {
-		debugger; // for easier debugging
+		//debugger; // for easier debugging
 		throw e;
 	}
 	return xhr.responseText.replace(/\r/g, '');

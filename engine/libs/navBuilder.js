@@ -1,6 +1,6 @@
 function NavBuilder() {
 
-	var appletPath = "engine/jpath/jpath.jar";
+	var appletPath = "../engine/jpath/jpath.jar";
 	var appletClass = "path.PathApplet";
 
 	this.metadata = {
