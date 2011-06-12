@@ -1,8 +1,20 @@
 
 var Metadata = new function() {
 
+	var metadata;
+
 	this.setup = function(obj) {
 		metadata = obj;
+	};
+
+	this.read = function(dir) {
+		var m = JSON.parse(loadFile(dir+'/metadata.applet.json'));
+
+		this.setup(m);
+	};
+
+	this.getNavigaton = function() {
+		return metadata.navigation;
 	};
 
 	this.getDomain = function() {

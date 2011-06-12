@@ -1,19 +1,22 @@
 <!DOCTYPE HTML>
 <html>
-<body>
+<body style="width:700px;margin:auto;font-family: Georgia">
 
 
 <h2>Book structure</h2>
 
-At the top level, books are listed by language.
+<p>At the top level, books are listed by language: en, ru ...
+Each language is a separate book.</p>
 
-Then the navigation is formed from files/folders named like 01-..., 02-... etc.
-That is, a number, followed by a hyphen.
+<p>The book content resides in files with <code>.md</code> extension.
+There may be asset files like scripts, styles etc.
+A book content may use them, but no parsing and formatting is applied to non-<code>.md</code> files.</p>
 
-Everything which ends with <code>.bak</code> is ignored. All other files are ignored in the navigation.
+<p>Book pages and chapters must start with a digital number followed by a hyphen: 01-..., 02-... etc.
+It is used for sorting.</p>
 
-For a file, the first header becomes the title.
-For a folder, the first header in file "00-index..." becomes the title.
+<p>The title is inferred from the first header of the page.
+For a folder (chapter), the file <code>00-index.md</code> is used for this purpose.</p>
 
 <h2>Layout</h2>
 
@@ -34,7 +37,7 @@ For a folder, the first header in file "00-index..." becomes the title.
     Scripts, styles, other unformatted stuff that goes to HEAD.
 </pre>
 
-All sections are optional.
+<p>All sections are optional.</p>
 
 <h3>Task layout</h3>
 
@@ -52,62 +55,62 @@ All sections are optional.
 
 </pre>
 
-All sections are optional, the sulution should exist.
+<p>All sections are optional, the sulution should exist.</p>
 
 <h2>Formatting</h2>
 
 <h3>Headers</h3>
 
-Headers starts from <code>#</code>:
+<p>Headers starts from <code>#</code>:</p>
 <pre>
 # Title
 ## SubTitle
 </pre>
 
-There should be only one 1st-level header in the document: the title.
+<p>There should be only one 1st-level header in the document: the title.</p>
 
-A header may have id:
+<p>A header may have id:</p>
 <pre>
 ## Header with id [id]
 </pre>
 
 <h3>External Links</h3>
-Links can be written as <code>[title](url)</code>, for example:
+<p>Links can be written as <code>[title](url)</code>, for example:</p>
 <pre>
     [Google](http://google.com)
     ["Title with backslashed quote: \", [ and ] "](http://somewhere.com)
 </pre>
 
-To put a link which name is same as URL, use empty <code>()</code>:
+<p>To put a link which name is same as URL, use empty <code>()</code>:</p>
 <pre>
     [http://google.com]()
 </pre>
 
 <h3>Internal links and references</h3>
-All internal links must be made through references, not URLs.
-The purpose of such structure is to ensure consistency across the book. All references are global and unique.
+<p>All internal links must be made through references, not URLs.
+The purpose of such structure is to ensure consistency across the book. All references are global and unique.</p>
 
-A <i>reference</i> is created with <code>[#id]</code> anywhere in the text. A reference must be latin alphanumeric with hyphens.
+<p>A <i>reference</i> is created with <code>[#id]</code> anywhere in the text. A reference must be latin alphanumeric with hyphens.</p>
 
 <pre>
     [#events-this]
 </pre>
 
-It may have a title after <code>|</code>:
+<p>It may have a title after <code>|</code>:</p>
 
 <pre>
     [#closure-peculiarity|Closure Peculiarity]
 </pre>
-Headers with <code>[id]</code> can be used as titled references.
+<p>Headers with <code>[id]</code> can be used as titled references.</p>
 
-To make an internal link link, use <code>[title](#id)</code>, for example:
+<p>To make an internal link link, use <code>[title](#id)</code>, for example:</p>
 <pre>
     Somewhere: [#good-info]
 
     Now the link: [Good reading](#good-info)
 </pre>
 
-A link can also use the reference title:
+<p>A link can also use the reference title:</p>
 <pre>
     This will show up as "Good reading" link: [](#good-info)
 </pre>
@@ -115,13 +118,50 @@ A link can also use the reference title:
 
 <h2>Inline code</h2>
 
-The inline code in backtricks <code>`code`</code> is wrapped into CODE tag. All special chars inside code are replaced inside <code>`...`</code>.
-For example:
+<p>The inline code in backtricks <code>`code`</code> is wrapped into <code>CODE</code> tag.</p>
+
+<p>To use backtricks inside the code, put double backtricks around it:</p>
 <pre>
-    `<i>code</i>` -> `&lt;i&gt;code&lt;/i&gt;`
+    `` `which` `` -> &lt;code&gt;`which`&lt;/code&gt;
 </pre>
 
-To use tags inside the inline code code, use the CODE tag.
+<p>All special chars inside code are replaced inside <code>`...`</code>. You can write <code>`&lt;body&gt;`</code>.
+But even if you want to use tags, they won't work. For example:</p>
+<pre>
+    `&lt;body&gt;` -> &lt;code&gt;&amp;lt;body&amp;gt;&lt;/code&gt;
+</pre>
+
+<p>To use tags inside the inline code code, use the <code>CODE</code> tag:</p>
+<pre>
+    &lt;code&gt;on&lt;i&gt;event&lt;/i&gt;&lt;/code&gt;
+</pre>
+
+
+<h2>Code blocks</h2>
+
+<p>A code block is wrapped in bb-tags: </p>
+
+<pre>
+    [html]
+    &lt;!DOCTYPE HTML&gt;
+    &lt;html&gt;
+    ...
+    &lt;/html&gt;
+    [/html]
+</pre>
+
+<p>Other languages are supported: <code>js, css, java ruby, php txt py xml xslt html erl as</code>.</p>
+
+The code block can be made runnable by adding a <code>run</code> attribute:
+<pre>
+    [html run]
+    &lt;p&gt; A "run" button will appear above the code block &lt;/p&gt;
+    [/html]
+</pre>
+
+The attribute <code>autorun</code> makes html/js code run automatically.
+For book pages, the execution happens on the same domain, in iframe for HTML or eval for JS.
+
 
 <h2>Verbatim pieces</h2>
 
@@ -131,10 +171,6 @@ No format happens inside <code>[verbatim]</code> bb-tag:
     `no format [#here]`
     [/verbatim]
 </pre>
-
-<h2>Code blocks</h2>
-
-.. TODO HELP
 
 <h2>Rebuilding navigation</h2>
 

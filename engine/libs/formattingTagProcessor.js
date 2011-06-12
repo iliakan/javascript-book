@@ -85,7 +85,8 @@ function FormattingTagProcessor(srcLoader) {
 		if (!text) {
 			// now check if src is a directory enabled for .play
 			try {
-				text = srcLoader.load(attrs.src + '/.play')
+				text = srcLoader.load(attrs.src + '/index.html');
+				attrs.src += '/index.html'
 			} catch(e) {
 			}
 		}
@@ -95,12 +96,13 @@ function FormattingTagProcessor(srcLoader) {
 		}
 		var url = srcLoader.getFullUrl(attrs.src);
 
-		return '<a href="'+Metadata.getDomain()+'/play/'+url+'" class="liplay" target="_blank">'+attrs.vertical+'</a>';
+		// TODO: add online mode
+		// Metadata.getDomain()+'/play/
+		return '<a href="'+url+'" class="liplay" target="_blank">'+attrs.vertical+'</a>';
 		//debugger
 	};
 
 	// [task src="..."]
-	// TODO!
 	this.task = function(data) {
 		var text = srcLoader.load(data.attrs.src);
 

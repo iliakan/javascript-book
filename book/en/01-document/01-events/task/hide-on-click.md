@@ -1,4 +1,6 @@
-# Hide on Click
+# Hide on Click [hide-on-click]
+
+[#task-ref|Reference]
 
 Use JavaScript to make a clickable button, which hides the element with `id="hide"`. 
 Demo:

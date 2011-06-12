@@ -96,7 +96,7 @@ function TagExpander(srcLoader) {
 
 
         // references do not have space after #, remove them
-        text = text.replace(/\[#([\w]+?)(\|(?:[^"]|"(?:\\.|[^"\\])*")+?)?]/gim, '');
+        text = text.replace(/\[#([\w-]+?)(\|(?:[^"]|"(?:\\.|[^"\\])*")+?)?]/gim, '');
 
 //		console.dir(labels)
 

@@ -7,10 +7,15 @@
 <script src="engine/libs/navBuilder.js"></script>
 </head>
 <body>
-Build Nav
+Rebuilding navigation. Allow the applet, but don't trust it.
+
+<div id="done" style="display: none">Complete.</div>
+
 <script>
 var nav = new NavBuilder();
-nav.build();
+nav.build(function() {
+  document.getElementById('done').style.display='block';
+});
 </script>
 </body>
 </html>
