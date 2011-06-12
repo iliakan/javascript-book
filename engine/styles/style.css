@@ -1111,12 +1111,11 @@ ul.secondary {
 
 .toc {
     border: 1px solid #CCCCCC;
-    
-    position: fixed;
+    position: absolute;
     font-size: 80%;
     left: 0;
     top:  0;
-    max-width: 300px;
+    max-width: 270px;
     margin:  1px;
     padding-left: 20px;
 }
