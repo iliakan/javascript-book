@@ -32,5 +32,8 @@ See the `en/readme.html` for formatting and other details.
 
 -----------
 
+The framework and the book content are licensed under the terms of [CC BY-NC-SA](http://creativecommons.org/licenses/by-nc-sa/3.0/deed). The code is also under MIT license.
+
+Ilya Kantor, 2011.
 
 
