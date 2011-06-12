@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.lang.reflect.Array;
+import java.net.URL;
 import java.security.AccessController;
 import java.security.PrivilegedAction;
 import java.security.PrivilegedActionException;
@@ -96,11 +97,16 @@ public class PathApplet extends Applet {
         }
     }
 
+    protected void ensureRunLocally() {
+        if (getCodeBase().getProtocol().equals("file")) return;
+        throw new RuntimeException("The applet must be run locally (security measure)");
+    }
     /**
      * Saves JSON file in given folder
      * ENSURES: file has .applet.json extension
      */
     public void saveJsonFile(String filePath, String filename, String data) throws PrivilegedActionException {
+        ensureRunLocally();
 
         filename += ".applet.json";
 
@@ -114,14 +120,20 @@ public class PathApplet extends Applet {
      * Folders have '*' at start.
      */
     public String[] getDirectoryPaths(String folder) throws PrivilegedActionException {
+        ensureRunLocally();
+
         return AccessController.doPrivileged(new DirectoryLister(folder));
     }
 
-    /*
+
  @Override
  public void init() {
      super.init();
 
-     System.err.println(Arrays.asList(AccessController.doPrivileged(new DirectoryLister("/C:/jsbook/engine/jpath"))));
- }   */
+     try {
+         System.err.println(Arrays.asList(getDirectoryPaths("/jsbook")));
+     } catch (PrivilegedActionException e) {
+         e.printStackTrace();
+     }
+ }
 }
