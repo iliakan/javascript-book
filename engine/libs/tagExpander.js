@@ -13,9 +13,6 @@ function TagExpander(srcLoader) {
 
 	var keywordsNeedClose = ('verbatim link smart warn ponder'+' '+langs).split(' ');
 
-	var tagProcessor = new FormattingTagProcessor(srcLoader);
-
-	var simpleDown = new SimpleDown();
 
 	// str = 'str="lala\\" ]" test=5 blabla "test\\"]" | help me'
 	// console.dir(parseAttrs(str)) -> {str: lala\", test: 5, "test\"\": true, vertical: help me}
@@ -51,10 +48,10 @@ function TagExpander(srcLoader) {
 	}
 
 	/**
-	 * Extract all [tags.. ] from the text and pass them to tagProcessor.processSquareTag
-	 * @param text with square tags
+	 * extracts tags, leaving bare labelled text + labels, ready for processing
+	 * @param text
 	 */
-	this.expandSquareTags = function(text, tocArr) {
+	this.extractTags = function(text) {
 
 		// '[ref str="lala ]" test=5 blabla "test\"]"]' -> $0, ref, all the rest
 		// the regexp allows backslashed quotes inside quotes " \" "
@@ -86,7 +83,10 @@ function TagExpander(srcLoader) {
             }
 
 			var label = '@@'+Math.random();
-			labels[label] = tagProcessor.processSquareTag({match:match, tag: tag, attrsMatch:attrs, attrs: parseAttrs(attrs), body: body });
+			labels[label] = function() { // postpone procession (maybe we just extracting tags, not want to process them
+				var tagProcessor = new FormattingTagProcessor(srcLoader);
+				return tagProcessor.processSquareTag({match:match, tag: tag, attrsMatch:attrs, attrs: parseAttrs(attrs), body: body });
+			};
 			return label;
 		}
 
@@ -94,6 +94,23 @@ function TagExpander(srcLoader) {
 
 		text = text.replace(regSelfCloseTags, process);
 
+		return {
+			text: text,
+			labels: labels
+		};
+
+	};
+
+	/**
+	 * Extract all [tags.. ] from the text and pass them to tagProcessor.processSquareTag
+	 * @param text with square tags
+	 */
+	this.expandSquareTags = function(text, tocArr) {
+
+		var extracted = this.extractTags(text);
+
+		text = extracted.text;
+		var labels = extracted.labels;
 
         // references do not have space after #, remove them
         text = text.replace(/\[#([\w-]+?)(\|(?:[^"]|"(?:\\.|[^"\\])*")+?)?]/gim, '');
@@ -102,13 +119,17 @@ function TagExpander(srcLoader) {
 
 //		console.log('out 1: '+text)
 
+
+		var simpleDown = new SimpleDown();
+
 		text = simpleDown.makeHtml(text, tocArr);
 
 //		console.log('out 2: '+text)
 
 		for(var label in labels) {
-			text = text.replace('<p>'+label + '</p>', labels[label]);
-			text = text.replace(label, labels[label]);
+			var res = labels[label]();
+			text = text.replace('<p>'+label + '</p>', res);
+			text = text.replace(label, res);
 		}
 
 //		console.log('out 3: '+text)

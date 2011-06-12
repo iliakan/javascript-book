@@ -154,8 +154,12 @@ function NavBuilder() {
 
 		var idMap = this.metadata.idMap;
 
+		var tagExpander = new TagExpander(new SrcLoader(file.path));
+		var res = tagExpander.extractTags(file.data);
+		var text = res.text; // text without tags
+
 		// [#id] references
-		file.data.replace(/\[#([\w-]+?)(\|(?:[^"]|"(?:\\.|[^"\\])*")+?)?]/gim, function(m, id, title) {
+		text.replace(/\[#([\w-]+?)(\|(?:[^"]|"(?:\\.|[^"\\])*")+?)?]/gim, function(m, id, title) {
 			if (title) title = title.slice(1);
 			if (idMap[id]) {
 				alert("Duplicate id:"+id+", clash at href:"+idMap[id].href+" title:"+idMap[id].title);
@@ -168,7 +172,7 @@ function NavBuilder() {
 		});
 
 		// ## Header  [id] 
-		file.data.replace(/^(#{1,6})[ \t]*(.+?)[ \t]*(\[[\w-]+?])?\#*(?:$|\n+)/gm,
+		text.replace(/^(#{1,6})[ \t]*(.+?)[ \t]*(\[[\w-]+?])?\#*(?:$|\n+)/gm,
 			function(m, m1, m2, m3) {
 				var id = m3 && m3.slice(1, -1);
 				if (!id) return m; // header without id => no reference
