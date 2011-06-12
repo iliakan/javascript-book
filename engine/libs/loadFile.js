@@ -14,6 +14,7 @@ function loadFile(src) {
 		xhr.open('GET', src, false);
 		xhr.send(null);
 	} catch(e) {
+		console && console.log("xhr error for "+src);
 		//debugger; // for easier debugging
 		throw e;
 	}
