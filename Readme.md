@@ -1,4 +1,6 @@
 
+!in progress, not yet released
+
 # Welcome!
 
 Our aim to create the modern, correct, easy to understand and interactive JavaScript tutorial.
