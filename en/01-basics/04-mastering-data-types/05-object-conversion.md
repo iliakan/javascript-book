@@ -173,7 +173,7 @@ var b  = {
 alert( a > b )  // 1 > 0, true
 [/js]
 
-[task src="tasks/x-x.md"]
+[task src="task/x-x.md"]
 
 
 ## Boolean context   
@@ -240,8 +240,8 @@ But `if` converts it to boolean primitive, and here any object is true... Wops!
 Java programmers' eyes usually pop out when they see that. 
 </div>
 
-[task src="tasks/why.md"]
-[task src="tasks/conversion-quiz.md"]
+[task src="task/why.md"]
+[task src="task/conversion-quiz.md"]
 
 
 ## Summary   

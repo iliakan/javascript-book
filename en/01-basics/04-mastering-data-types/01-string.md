@@ -146,7 +146,7 @@ alert( "Hey-ho!".charAt(0).toLowerCase() )
 
 
 
-[task src="tasks/uppercase-char.md"]
+[task src="task/uppercase-char.md"]
 
 
 
@@ -200,7 +200,7 @@ But here, everything's all right. Just remember: `'~` reads as "not minus one", 
 
 [/smart]
 
-[task src="tasks/checkspam.md"]
+[task src="task/checkspam.md"]
 
 
 
@@ -286,7 +286,7 @@ Or, alternatively, `substr(start, length)` with non-negative `start` (negative d
 
 
 
-[task src="tasks/truncate.md"]
+[task src="task/truncate.md"]
 
 
 ## Comparison   

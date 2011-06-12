@@ -163,7 +163,7 @@ function isNumeric(n) {
 </blockquote>
 
 
-[task src="tasks/sum.md"]
+[task src="task/sum.md"]
 
 
 
@@ -268,7 +268,7 @@ alert(9999999999999999)
 The reason is, of course, precision loss. The number format cannot store that many digits exactly.
 [/smart]
 
-[task src="tasks/endless-chance.md"]
+[task src="task/endless-chance.md"]
 
 
 
@@ -358,11 +358,11 @@ alert( Math.random() )
 
 Most often recipes regarding random numbers are represented as a set of tasks. Check them out below.
 
-[task src="tasks/random0b.md"]
+[task src="task/random0b.md"]
 
-[task src="tasks/randomab.md"]
+[task src="task/randomab.md"]
 
-[task src="tasks/intrandomminmax.md"]
+[task src="task/intrandomminmax.md"]
 
 
 

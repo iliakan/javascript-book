@@ -128,7 +128,7 @@ In the tutorial, you find lots of code without semicolons. That just my bad habi
 Because I'm in JavaScript for a very long time, I stepped into pitfalls so many times that I know how to get the way out very quickly. Guess, you don't want to repeat my path here, but rather walk around the pits. Put simicolons between statements.
 [/ponder]
 
-[task src="tasks/whats-wrong.md"]
+[task src="task/whats-wrong.md"]
 
 
 ## Variables   

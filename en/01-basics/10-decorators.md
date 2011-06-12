@@ -60,6 +60,6 @@ Multiple decorators can be combined for greater flexibility.
 
 See the tasks below for more examples.
 
-[task src="tasks/make-logging-decorator.md"]
-[task src="tasks/make-caching-decorator.md"]
+[task src="task/make-logging-decorator.md"]
+[task src="task/make-caching-decorator.md"]
 

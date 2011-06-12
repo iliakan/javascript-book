@@ -101,9 +101,9 @@ function f() {
 [/js] 
 So, function `g` has access to `g, a` and `f`.
 
-[task src="tasks/sumclosure.md"]
+[task src="task/sumclosure.md"]
 
-[task src="tasks/sum-with-arbitrary-number-brackets.md"]
+[task src="task/sum-with-arbitrary-number-brackets.md"]
 
 
 ## Closures   
@@ -191,7 +191,7 @@ Inner functions always see the <i>last</i> value.
 
 The task below contains interesting tricks, best demonstrated by an example. <b>Please, glance at the solution, or, much better, try to solve it.</b>
 
-[task src="tasks/shooters-loop.md"]
+[task src="task/shooters-loop.md"]
 
 
 

@@ -213,7 +213,7 @@ This way works great for parameters which are either not given or true. It happe
 </ol>
 
 
-[task src="tasks/mathmax-array.md"]
+[task src="task/mathmax-array.md"]
 
 
 

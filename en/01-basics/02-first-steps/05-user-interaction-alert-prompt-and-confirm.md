@@ -84,7 +84,7 @@ Note that you can't style, decorate or change screen position of basic modal win
 
 But all these functions are simple and require no additional code. That's why people still use them.
 
-[task src="tasks/simple-page-task.md"]
+[task src="task/simple-page-task.md"]
 
 
 ## Summary   

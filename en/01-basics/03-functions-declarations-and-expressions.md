@@ -83,8 +83,8 @@ function sum(a, b) {
 [/js]
 
 
-[task src="tasks/function-simple.md"]
-[task src="tasks/funciton-powxn.md"]
+[task src="task/function-simple.md"]
+[task src="task/funciton-powxn.md"]
 
 
 ## Function Declaration   
@@ -311,7 +311,7 @@ In the code above, the function is created and called instantly.
 That's just like `var result = sum(2,2)`, where `sum` is replaced by a function expression.
 
 
-[task src="tasks/closure-syntax-test.md"]
+[task src="task/closure-syntax-test.md"]
 
 [smart]
 There is one more way which uses a direct call to `Function` constructor. It takes arguments list and body as strings and creates a function from them:
@@ -369,7 +369,7 @@ setTimeout(function factorial(n) {
 }, 100)
 [/js]
 
-[task src="tasks/nfe-test.md"]
+[task src="task/nfe-test.md"]
 
 
 ## Function naming   

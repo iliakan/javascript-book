@@ -136,8 +136,8 @@ alert("b" in window) // true, there is window.b = 5
 
 
 
-[task src="tasks/window-and-variable.md"]
-[task src="tasks/window-and-variable-2.md"]
+[task src="task/window-and-variable.md"]
+[task src="task/window-and-variable-2.md"]
 
 
 ## Function variables   
@@ -238,7 +238,7 @@ alert(i) // 5, variable survives and keeps value
 
 Declaring a variable in the loop is convenient, but doesn't make the loop it's scope.
 
-[task src="tasks/varwindow.md"]
+[task src="task/varwindow.md"]
 
-[task src="tasks/scope-type.md"]
+[task src="task/scope-type.md"]
 

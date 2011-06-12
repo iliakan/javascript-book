@@ -85,8 +85,8 @@ for(;;) {
 }
 [/js]
 
-[task src="tasks/rewrite-while.md"]
-[task src="tasks/loop-until-input-right.md"]
+[task src="task/rewrite-while.md"]
+[task src="task/loop-until-input-right.md"]
 
 
 ## Jumping out with `break`   
@@ -196,7 +196,7 @@ That looks like `goto`, but it is not, because you can't break outside loops, an
 
 Javascript has no goto. Even in latest editions of the standard.
 
-[task src="tasks/output-prime-numbers.md"]
+[task src="task/output-prime-numbers.md"]
 
 
 ## The `switch` construct   

@@ -60,7 +60,7 @@ fruits.push("Peach");
 alert("Last element is:"+fruits[fruits.length-1])
 [/js]
 
-[task src="tasks/create-array.md"]
+[task src="task/create-array.md"]
 
 ## Methods `shift/unshift`   
 
@@ -87,7 +87,7 @@ fruits.unshift("Pineapple","Lemon")
 // now: ["Pineapple", "Lemon", "Apple", "Orange", "Peach"]
 [/js]
 
-[task src="tasks/get-random-value-array.md"]
+[task src="task/get-random-value-array.md"]
 
 
 
@@ -105,9 +105,9 @@ for(var i=0; i<fruits.length; i++) {
 }
 [/js]
 
-[task src="tasks/array-find.md"]
+[task src="task/array-find.md"]
 
-[task src="tasks/filternumeric.md"]
+[task src="task/filternumeric.md"]
 
 
 
@@ -137,8 +137,8 @@ var arr = fruits.split(',');
 alert(arr[0]);
 [/js]
 
-[task src="tasks/addclass.md"]
-[task src="tasks/camelize.md"]
+[task src="task/addclass.md"]
+[task src="task/camelize.md"]
 
 ## Using `length` to trim an array   
 
@@ -192,7 +192,7 @@ alert(arr[1]) // string "array"
 
 So, using `shift/unshift` is generally slower than `push/pop`. The larger array - the more work to renumber it.
 
-[task src="tasks/array-element-call-this.md"]
+[task src="task/array-element-call-this.md"]
 
 
 
@@ -342,9 +342,9 @@ arr.splice(-1, 0, 3, 4)
 alert(arr)  // 1,2,3,4,5
 [/js]
 
-[task src="tasks/removeclass.md"]
+[task src="task/removeclass.md"]
 
-[task src="tasks/filternumericinplace.md"]
+[task src="task/filternumericinplace.md"]
 
 
 ### Method `slice`   
@@ -424,7 +424,7 @@ alert( arr )   // 1, 2, 15
 
 Now it works right. 
 
-[task src="tasks/compare-people.md"]
+[task src="task/compare-people.md"]
 
 
 
@@ -482,9 +482,9 @@ alert(matrix[1][1]) // central element
 [/js]
 
 
-[task src="tasks/filter.md"]
+[task src="task/filter.md"]
 
-[task src="tasks/sieve-eratosthenes.md"]
+[task src="task/sieve-eratosthenes.md"]
 
 
 ## Summary   

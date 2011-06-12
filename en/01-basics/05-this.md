@@ -96,7 +96,7 @@ That's because of so called <i>Reference Type</i>, described in the language spe
 
 Any other expression, like `(a = obj.method)()` or `(a.method || b.method)()` does not pass proper `this`.
 
-[task src="tasks/object-syntax-check.md"]
+[task src="task/object-syntax-check.md"]
 
 [/ponder]
 

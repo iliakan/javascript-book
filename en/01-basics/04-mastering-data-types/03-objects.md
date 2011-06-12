@@ -94,7 +94,7 @@ menuSetup.height = 200
 menuSetup.title = 'Menu'
 [/js]
 
-[task src="tasks/fist-object.md"]
+[task src="task/fist-object.md"]
 
 It is also possible to create nested objects:
 [js]
@@ -319,7 +319,7 @@ alert(obj.val) // obj.val is now 6
 
 The difference is because in first example variable `val` is changed, while in second example `obj` is not changed, but data which it references is modified instead.
 
-[task src="tasks/multiplynumeric.md"]
+[task src="task/multiplynumeric.md"]
 
 
 ## Properties and methods   
@@ -371,9 +371,9 @@ user.sayHi()
 
 Note the `this` keyword inside `askName` and `sayHi`. When a function is called from the object, `this` becomes a reference to this object.
 
-[task src="tasks/create-summator.md"]
+[task src="task/create-summator.md"]
 
-[task src="tasks/create-chainable-object.md"]
+[task src="task/create-chainable-object.md"]
 
 
 [#new]
@@ -470,7 +470,7 @@ peter.sayHi()
 [/js]
 
 
-[task src="tasks/create-summator-with-new.md"]
+[task src="task/create-summator-with-new.md"]
 
 
 

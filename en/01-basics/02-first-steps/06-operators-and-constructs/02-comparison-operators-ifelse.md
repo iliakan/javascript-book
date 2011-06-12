@@ -42,7 +42,7 @@ if (userId > 1) {
 } 
 [/js]
 
-[task src="tasks/if-sign-check.md"]
+[task src="task/if-sign-check.md"]
 
 
 ## Logical conditions   
@@ -76,8 +76,8 @@ if ( !(x<10 || x>20) ) {
 }
 [/js]
 
-[task src="tasks/if-login-simple.md"]
-[task src="tasks/if-login-advanced.md"]
+[task src="task/if-login-simple.md"]
+[task src="task/if-login-advanced.md"]
 
 
 ## Boolean conversions   

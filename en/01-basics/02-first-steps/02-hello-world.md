@@ -49,7 +49,7 @@ Not only reading, but actually testing and doing something on your own is very i
 
 Fulfil the task to ensure you got eveything right. 
 
-[task src="tasks/alert.md"]
+[task src="task/alert.md"]
 
 On next pages we'll go deeper into the examples and basic script building blocks.
 
