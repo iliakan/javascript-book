@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+<script>
+
+// ----- helper functions to add/remove a class to element
+
+function addClass(el, cls) {
+	for(var c = el.className.split(' '),i=c.length-1; i>=0; i--) {
+		if (c[i] == cls) return
+	}
+	
+	el.className += ' '+cls
+}
+
+function removeClass(el, cls) {
+  for(var c = el.className.split(' '),i=c.length-1; i>=0; i--) {
+		if (c[i] == cls) c.splice(i,1)
+	}
+	
+	el.className = c.join(' ')
+}
+
+</script>
+
+<img src="button_static.png">
+<img src="button_hover.png">
+<img src="button_click.png">
+
+</body>
+</html>

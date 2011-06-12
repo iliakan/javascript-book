@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+<script src="getOffset.js"></script>
+
+Click on the mouse and press arrow keys to move it:
+
+<div style="width:41px;height:48px">
+<div style="width:41px; height:48px;background:url(mousie.gif)" id="mousie" tabindex="0"></div>
+</div>
+
+<script>
+
+
+document.getElementById('mousie').onfocus = function() {
+  this.style.position = 'absolute'
+  var offset = getOffset(this)
+  this.style.left = offset.left + 'px'
+  this.style.top = offset.top + 'px'
+}
+
+document.getElementById('mousie').onkeydown = function(e) {
+  e = e || event
+
+  switch(e.keyCode) {
+  case 37: // left
+    this.style.left = parseInt(this.style.left)-this.offsetWidth+'px'
+    return false
+  case 38: // up
+    this.style.top = parseInt(this.style.top)-this.offsetHeight+'px'
+    return false
+  case 39: // right
+    this.style.left = parseInt(this.style.left)+this.offsetWidth+'px'
+    return false
+  case 40: // down
+    this.style.top = parseInt(this.style.top)+this.offsetHeight+'px'
+    return false  
+  }
+}
+</script>
+
+</body>
+</html>

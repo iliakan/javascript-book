@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Eyes</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+    <style type="text/css">
+        body {
+            padding: 50px;
+        }
+
+        .eye {
+            width: 41px;
+            height: 41px;
+            background: url(circle.gif) no-repeat;
+            float: left;
+            margin: 4px;
+        }
+
+    </style>
+</head>
+<body>
+
+
+<div class="eye">
+    <img src="dot.gif" width="12" height="12"/>
+</div>
+<div class="eye">
+    <img src="dot.gif" width="12" height="12"/>
+</div>
+
+<script type="text/javascript">
+
+    var dotRadius = 12 // eye circle radius
+    var dotOrbitRadius = 8  // inner eye walk radius
+
+
+    $('div.eye').each(function() {
+        var offset = $(this).offset()
+
+        // получить и сохранить центр каждого глаза
+        this.centerX = Math.round(offset.left + $(this).width() / 2)
+        this.centerY = Math.round(offset.top + $(this).height() / 2)
+
+        // поставить зрачки в центр. для этого надо их отпозиционировать в центр + сдвинуть на пол-радиуса самого зрачка
+        $(this).find('img').offset({left: this.centerX - dotRadius / 2, top: this.centerY - dotRadius / 2})
+
+    })
+
+    $(document).mousemove(function(event) {
+
+        $('div.eye').each(function() {
+
+            var offsetNew = calculateEyeOffset(event, this)
+
+            $(this).find('img').offset(offsetNew)
+
+        })
+    })
+
+
+
+    function calculateEyeOffset(event, div) {
+
+        // the eye will be on the cross of the inner circle and the line passing through (clientX,clientY) и (centerX,centerY)
+        // the equations are:
+        // (x - centerX)^2 + (y-centerY)^2 = dotOrbitRadius^2
+        // (x-centerX) / (clientX-centerX ) = (y-centerY) / (clientY-centerY)
+
+        // substitute variables
+        var m = event.clientX - div.centerX,
+                n = event.clientY - div.centerY,
+                a, b
+
+        if (n != 0) {
+            // calculate  solution of the square equation
+            b = Math.sqrt(Math.pow(dotOrbitRadius, 2) / ( Math.pow(m / n, 2) + 1 ))
+
+            // the square equation has 2 roots (the line crosses the circle 2 times)
+            // we need the nearest cross
+            if (event.clientY < div.centerY) b = -b
+
+            a = b * m / n
+        } else {
+            // special case
+            a = b = 0
+        }
+
+        return {
+            left: a + div.centerX - dotRadius / 2,
+            top: b + div.centerY - dotRadius / 2
+        }
+    }
+
+
+</script>
+
+
+</body>
+</html>

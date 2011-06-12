@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+<link type="text/css" rel="stylesheet" href="example.css">
+
+<div class="d1">1  
+    <div class="d2">2
+        <div class="d3">3 
+        </div> 
+    </div>
+</div>
+
+<script>
+var divs = document.getElementsByTagName('div')
+
+for(var i=0; i<divs.length; i++) {
+  divs[i].onclick = function(e) {
+    e = e || event
+    var target = e.target || e.srcElement
+
+    this.style.backgroundColor='yellow'
+    
+    alert("target = "+target.className+", this="+this.className)
+
+    this.style.backgroundColor = ''
+  }
+}
+</script>
+
+</body>
+</html>

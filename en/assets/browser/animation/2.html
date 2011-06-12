@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style> @import url(animate.css) </style>
+<script src="animate.js"></script>
+<script src="delta.js"></script>
+</head>
+<body>
+<script>
+	function animateText() {
+		var element = document.getElementById('textExample')
+    var text = element.value
+		var to = text.length, from = 0
+    
+    animate({
+      delay: 20,
+      duration: 5000,
+      delta: bounce,
+      step: function(delta) {
+        var result = (to-from) * delta + from
+        element.value = text.substr(0, Math.ceil(result))
+      }
+    })
+	}
+</script>
+<textarea id="textExample" rows="4" cols="60">
+(Stan)There's the girl that I like...
+Now more than ever, she gives me butterflies,
+she makes my stomach quizie every thime she walks bye....
+I know i kan be cool if I try!
+</textarea>
+
+
+<div onclick="animateText()">Type!</div>
+
+</body>
+</html>

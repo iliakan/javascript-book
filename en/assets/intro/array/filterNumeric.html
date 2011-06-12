@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+
+function isNumeric(val) {
+    var numVal = +val;
+
+    return val + '' === numVal + '';
+}
+
+function filterNumeric(arr) {
+    var result = [];
+
+	for(var i=0; i<arr.length; i++) {
+		var val  = arr[i];
+        if (isNumeric(val)) {
+            result.push(val);
+        }
+	}
+
+	return result;
+}
+
+
+// now let's see if it works
+var arr = ["a",1, 2, "b"];
+
+arr = filterNumeric(arr);
+alert(arr);
+
+
+</script>
+
+</body>
+</html>

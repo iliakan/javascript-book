@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Image gallery</title>
+  <link rel="stylesheet" type="text/css" href="gallery.css">
+</head>
+
+<body>
+
+<p><img id="largeImg" src="img1-lg.jpg" alt="Large image"></p>
+
+<div id="thumbs">
+  <!-- title activates embedded browser tooltip -->
+  <a href="img2-lg.jpg" title="Image 2"><img src="img2-thumb.jpg"></a>
+  <a href="img3-lg.jpg" title="Image 3"><img src="img3-thumb.jpg"></a>
+  <a href="img4-lg.jpg" title="Image 4"><img src="img4-thumb.jpg"></a>
+  <a href="img5-lg.jpg" title="Image 5"><img src="img5-thumb.jpg"></a>
+  <a href="img6-lg.jpg" title="Image 6"><img src="img6-thumb.jpg"></a>
+</div>
+
+<script>
+var largeImg = document.getElementById('largeImg')
+		
+document.getElementById('thumbs').onclick = function(e) {
+  e = e || window.event
+  var target = e.target || e.srcElement
+
+  if (target.nodeName != 'IMG') return
+
+  var anchor = target.parentNode
+	
+  largeImg.src = anchor.href
+  largeImg.alt = anchor.title
+			
+  return false
+}
+</script>
+
+</body>
+</html>

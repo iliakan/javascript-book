@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+  <body>
+    <div>Allowed readers:</div>
+    <ul>
+      <li>Bob</li>
+      <li>Alice</li>
+    </ul>
+
+    <!-- a comment node -->
+
+    <script>   
+      function go() {
+        var ie_less_9 /*@cc_on @if (@_jscript_version <= 5.8) =1 @end @*/
+        
+        if (ie_less_9) {
+          alert( document.body.childNodes[0].nodeName )
+          alert( document.body.childNodes[1].nodeName )        
+        } else {
+          alert( document.body.childNodes[1].nodeName )
+          alert( document.body.childNodes[3].nodeName )        
+        }
+        
+      }
+    </script>
+
+    <button onclick="go()" style="width:100px">Go!</button>
+
+  </body>
+</html>

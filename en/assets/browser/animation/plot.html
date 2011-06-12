@@ -1,0 +1,126 @@
+<html>
+<head>
+  <script src="delta.js"></script>
+  <script>
+  
+function prepare(canvas) {
+  var ctx = canvas.getContext("2d");
+    
+  ctx.clearRect(0, 0, canvas.offsetWidth, canvas.offsetHeight) // clear canvas
+  ctx.beginPath()
+  
+  // zero point is 20px from left, middle vertically
+  // max is distance to 1 from zero.
+  var zeroX = 20, zeroY = canvas.offsetHeight/2
+  var max = canvas.offsetWidth-zeroX-7
+ 
+  ctx.lineWidth   = 1
+  
+  ctx.font  = 'normal 14px sans-serif'
+  ctx.strokeStyle = '#000' 
+  
+  ctx.strokeText('0', zeroX-15, zeroY+5)
+  ctx.strokeText('1', zeroX+max, zeroY+5)
+  ctx.strokeText('-1', zeroX-17, zeroY+max-8)
+  ctx.strokeText('1', zeroX-15, zeroY-max+15)
+  
+  ctx.strokeStyle = '#808080' 
+    
+  // arrow right
+  ctx.moveTo(zeroX, zeroY)
+  ctx.lineTo(zeroX+max, zeroY)
+  ctx.lineTo(zeroX+max-5, zeroY-5)
+  ctx.moveTo(zeroX+max, zeroY)
+  ctx.lineTo(zeroX+max-5, zeroY+5)
+  
+  // arrow up
+  ctx.moveTo(zeroX, zeroY)  
+  ctx.lineTo(zeroX, zeroY-max)
+  ctx.lineTo(zeroX+5, zeroY-max+5)
+  ctx.moveTo(zeroX, zeroY-max)
+  ctx.lineTo(zeroX-5, zeroY-max+5)
+  
+  // arrow down
+  ctx.moveTo(zeroX, zeroY)  
+  ctx.lineTo(zeroX, zeroY+max)
+  ctx.lineTo(zeroX+5, zeroY+max-5)
+  ctx.moveTo(zeroX, zeroY+max)
+  ctx.lineTo(zeroX-5, zeroY+max-5)
+  ctx.closePath()
+  ctx.stroke()
+}
+
+function draw(canvas, f, color) {
+  var ctx = canvas.getContext("2d");
+ 
+  var zeroX = 20, zeroY = canvas.offsetHeight/2
+  var max = canvas.offsetWidth-zeroX-7
+ 
+  
+  ctx.lineWidth   = 3
+  ctx.strokeStyle = color // red
+  
+  ctx.beginPath()
+  //console.log("height=%d, width=%d", height, width)
+  for(var x=0; x<=max; x++) {
+    var y = f(x/max)*max
+    //console.log("x=%d, f(%d)=%d", x, x/width, f(x/width))
+    ctx[x ? 'lineTo' : 'moveTo'](x+zeroX, canvas.offsetHeight-y-zeroY)  
+  }
+  ctx.stroke()
+
+}
+
+function plot(form) {
+  var canvas = document.getElementById('canvas')
+  if (!canvas.getContext) return
+  
+  prepare(canvas)
+  
+  var delta = window[form.delta.options[form.delta.selectedIndex].value]
+  
+  
+  if (form.easeIn.checked) {
+    draw(canvas, delta, '#f00')  
+  }
+  
+  if (form.easeOut.checked) {
+    draw(canvas, makeEaseOut(delta), '#080')  
+  }
+  
+  if (form.easeInOut.checked) {
+    draw(canvas, makeEaseInOut(delta), '#00f')  
+  }
+  
+}
+</script>
+</head>
+<body onload="plot(document.forms[0])">
+  
+<script>
+if (!document.createElement('canvas').getContext) {
+  document.write('<span style="color:red;font-size:120%">The graph-plotter below uses <code>CANVAS</code>. Sorry, but your browser doesn\'t support it. Switch the browser to try it.</span>')
+}
+</script>  
+  <canvas id="canvas" width="200" height="400"></canvas>
+  
+  <form>
+    <select name="delta">
+    <option value="circ">Circ</option>
+    <option value="elastic">Elastic (x=1.5)</option>
+    <option value="linear">Linear</option>
+    <option value="quad">x^2</option>
+    <option value="quint">x^5</option>
+    <option value="bounce">Bounce</option>
+    <option value="back">Back (x=1.5)</option>
+    </select>
+    <label style="color:#f00"><input type="checkbox" name="easeIn" checked> easeIn</label>
+    <label style="color:#080"><input type="checkbox" name="easeOut"> easeOut</label>
+    <label style="color:#00f"><input type="checkbox" name="easeInOut"> easeInOut</label>
+
+    <input type="button" onclick="plot(this.form)" value="Draw!">
+
+  </form>
+   
+</body>
+</html>

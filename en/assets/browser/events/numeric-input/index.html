@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+
+Enter your age please: <input type="text">
+
+
+<script>    
+
+document.getElementsByTagName('input')[0].onkeypress = function(e) {
+  e = e || event
+  var chr = getChar(e)
+  
+  if (!isNumeric(chr) && chr !== null) {
+    return false
+  }
+}
+
+
+// helper functions
+function isNumeric(val) {
+  return val !== "NaN" && (+val)+'' === val + ''
+}
+
+function getChar(event) {
+  if (event.which == null) {
+    return String.fromCharCode(event.keyCode) // IE
+  } else if (event.which!=0 && event.charCode!=0) {
+    return String.fromCharCode(event.which)   // the rest
+  } else {
+    return null // special key
+  }
+}
+
+</script>
+</body>
+</html>
+

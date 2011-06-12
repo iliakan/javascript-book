@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+<link type="text/css" rel="stylesheet" href="example.css">
+
+<div class="d1" onclick="highlight(this)">1  
+    <div class="d2" onclick="highlight(this)">2
+        <div class="d3" onclick="highlight(this)">3 
+        </div> 
+    </div>
+</div>
+
+<script>
+function highlight(elem) {
+    elem.style.backgroundColor='yellow'
+    alert(elem.className)
+    elem.style.backgroundColor = ''
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+<head>
+<script src="event.js"></script>
+</head>
+<body>
+
+<div id='test'>Test div</div>
+
+<script>
+var elem = document.getElementById('test')
+Event.add(elem, "click", function(e) { alert("Hi") })
+Event.add(elem, "click", function(e) { alert("I am clicked") })
+var f = function(e) { alert("Mouse over!") }
+Event.add(elem, "mouseover", f)
+Event.remove(elem, 'mouseover', f)
+
+</script>
+
+
+</body>
+</html>

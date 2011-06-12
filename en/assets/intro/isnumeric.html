@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+
+Enter strings to check for a number. 
+
+Click cancel or press escape to stop.
+
+<script>
+
+
+    function isNumeric(val) {
+        return val !== "NaN" && (+val)+'' === val + ''
+    }
+
+    while (true) {
+
+        var val = prompt("A number to call isNumeric for?", 123)
+        
+        if (!val) break
+        
+        alert(isNumeric(val))
+    
+    }
+
+</script>
+
+</body>
+</html>

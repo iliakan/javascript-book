@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>        
+  <body>
+NOT WORKING, because mouse doesn't bubble up from iframe
+
+    <div>Click on the link to get rich now:</div>
+    
+    <iframe src="clicktarget.html" style="width:300px;height:80px;position:absolute;top:0px;left:0px;filter:alpha(opacity=50);opacity:0.5;z-index:-1"></iframe>
+    <a href="http://www.google.com" target="_blank" style="position:relative;left:20px;font-size:15px;z-index:-2">CLICK ME!</a>
+
+    <div>You'll be rich for the whole life!</div>
+    
+    <script>
+    
+    var iframe = document.getElementsByTagName('iframe')[0]
+    document.onmousemove = function(e) {
+      e = e || event
+      iframe.style.left = e.clientX - 100 + 'px'
+      iframe.style.top = e.clientY - 50 + 'px' // should be pageX/pageY
+    }
+    </script>
+  </body>
+</html>

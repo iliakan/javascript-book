@@ -1,0 +1,31 @@
+<!DOCTYLE HTML>
+<html>
+<body>
+
+<script>
+function bind(func, fixThis) { // using custom bind for simplicity
+  return function() {
+    return func.apply(fixThis, arguments)
+  }
+}
+
+function Menu(elem) {
+
+  this.sayHi = function() { alert('Menu') }
+
+  elem.onclick = bind(this.sayHi, this)
+}
+
+function SuperMenu(elem) { 
+  Menu.apply(this, arguments)
+  
+  this.sayHi = function() { alert('SuperMenu') }
+}
+
+new SuperMenu(document.body)
+</script>
+
+Click me. I'm a SuperMenu!
+
+</body>
+</html>

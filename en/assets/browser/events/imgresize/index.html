@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <style type="text/css">
+        .resizable {
+            border-right: 5px solid teal;
+            border-bottom: 5px solid teal;
+        }
+        .resizable img {
+            display:block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="resizable" id="resizable"><img src="heroes.jpg" width="500" height="282"/></div>
+
+<script>
+
+    var resizingElement
+
+    var resizable = document.getElementById('resizable')
+    
+    resizable.style.width = resizable.firstChild.width+'px'
+    
+    resizable.firstChild.ondragstart = function() { return false }
+    
+    resizable.onmousedown = function(e) {
+        e = e || event
+        fixEvent(e)
+        var offset = getOffset(this)
+        
+        offset.right = offset.left + this.offsetWidth
+        offset.bottom = offset.top + this.offsetHeight
+        
+        if (Math.abs(e.pageX-offset.right) + Math.abs(e.pageY-offset.bottom) > 25) return
+
+        startResize(this)
+        
+    }
+    
+
+    
+    function startResize(resizingElement) {
+  
+        resizingElement.style.borderColor = 'red'
+
+        document.onmousemove = function(e) {
+            e = e || event
+            fixEvent(e)
+            var offset = getOffset(resizingElement),
+              newWidth = Math.max(e.pageX - offset.left, 1),
+              newHeight = Math.max(e.pageY - offset.top, 1)
+
+            resizingElement.firstChild.style.width = resizingElement.style.width = newWidth + 'px'
+            resizingElement.firstChild.style.height = resizingElement.style.height = newHeight + 'px'
+        }
+        
+        document.onmouseup = function() {
+            resizingElement.style.borderColor = ''
+            document.onmousemove = document.onmouseup = null
+        }        
+        
+    }
+    
+    // helper functions
+    
+  
+    function fixEvent(event) {
+        if ( event.pageX == null && event.clientX != null ) {
+            var html = document.documentElement, body = document.body;
+            event.pageX = event.clientX + (html && html.scrollLeft || body && body.scrollLeft || 0) - (html.clientLeft || 0);
+            event.pageY = event.clientY + (html && html.scrollTop || body && body.scrollTop || 0) - (html.clientTop || 0);
+        }
+    }
+
+
+    function getOffset(elem) {
+        var box = elem.getBoundingClientRect()
+        
+        var body = document.body
+        var docElem = document.documentElement
+        
+        var scrollTop = window.pageYOffset || docElem.scrollTop || body.scrollTop
+        var scrollLeft = window.pageXOffset || docElem.scrollLeft || body.scrollLeft
+        
+        var clientTop = docElem.clientTop || body.clientTop || 0
+        var clientLeft = docElem.clientLeft || body.clientLeft || 0
+        
+        var top  = box.top +  scrollTop - clientTop
+        var left = box.left + scrollLeft - clientLeft
+        
+        return { top: Math.round(top), left: Math.round(left) }
+    }
+    
+
+    
+</script>
+
+</body>
+</html>

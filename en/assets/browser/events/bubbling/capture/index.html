@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+<link type="text/css" rel="stylesheet" href="example.css">
+
+<div class="d1">1  
+    <div class="d2">2
+        <div class="d3">3 
+        </div> 
+    </div>
+</div>
+
+<script>
+var divs = document.getElementsByTagName('div')
+
+for(var i=0; i<divs.length; i++) {
+  divs[i].addEventListener("click", highlightThis, true)
+}
+
+function highlightThis() {
+  this.style.backgroundColor='yellow'
+  alert(this.className)
+  this.style.backgroundColor = ''
+}
+</script>
+
+</body>
+</html>

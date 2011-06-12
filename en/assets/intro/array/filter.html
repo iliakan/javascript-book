@@ -1,0 +1,37 @@
+<html>
+<body>
+<script>
+
+function isNumeric(val) {
+    var numVal = +val;
+
+    return val + '' === numVal + '';
+}
+
+function filter(arr, filterFunc) {
+    var result = [];
+
+	for(var i=0; i<arr.length; i++) {
+		var val  = arr[i];
+        if (filterFunc(val)) {
+            result.push(val);
+        }
+	}
+
+	return result;
+}
+
+arr = ["a", -1, 2, "b"];
+
+
+arr = filter(arr, isNumeric);
+// res = [-1, 2]
+
+arr = filter(arr, function(val) { return val > 0; })
+// res = [2]
+
+
+</script>
+
+</body>
+</html>

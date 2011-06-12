@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="messages.css"/>
+</head>
+
+<body>
+
+<div id="messages-container">
+	<div class="pane">
+		<h3>Horse</h3>
+		<p>A fast-running animal. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi malesuada, ante at feugiat tincidunt, enim massa gravida metus, commodo lacinia massa diam vel eros. Proin eget urna. Nunc fringilla neque vitae odio. Vivamus vitae ligula.</p>
+		<img src="delete.gif" alt="delete" class="delete" />
+	</div>
+	<div class="pane">
+		<h3>Donkey</h3>
+		<p>A stubborn animal. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi malesuada, ante at feugiat tincidunt, enim massa gravida metus, commodo lacinia massa diam vel eros. Proin eget urna. Nunc fringilla neque vitae odio. Vivamus vitae ligula.</p>
+
+		<img src="delete.gif" alt="delete" class="delete" />
+	</div>
+	<div class="pane">
+		<h3>Cow</h3>
+		<p>A milky animal. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi malesuada, ante at feugiat tincidunt, enim massa gravida metus, commodo lacinia massa diam vel eros. Proin eget urna. Nunc fringilla neque vitae odio. Vivamus vitae ligula.</p>
+		<img src="delete.gif" alt="delete" class="delete" />
+	</div>
+	<div class="pane">
+		<h3>Kenny</h3>
+
+		<p>I good person. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi malesuada, ante at feugiat tincidunt, enim massa gravida metus, commodo lacinia massa diam vel eros. Proin eget urna. Nunc fringilla neque vitae odio. Vivamus vitae ligula.</p>
+		<img src="delete.gif" alt="delete" class="delete" />
+	</div>
+	<div class="pane">
+		<h3>Remove me</h3>
+		<p>Just a message. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi malesuada, ante at feugiat tincidunt, enim massa gravida metus, commodo lacinia massa diam vel eros. Proin eget urna. Nunc fringilla neque vitae odio. Vivamus vitae ligula.</p>
+		<img src="delete.gif" alt="delete" class="delete" />
+	</div>
+</div>
+
+
+
+<script type="text/javascript">
+
+  document.getElementById('messages-container').onclick = function(e) {
+
+    e = e || window.event
+
+    var target = e.target || e.srcElement
+
+    if (target.className != 'delete') return
+		
+    target.parentNode.style.display = 'none'
+  }
+
+
+</script>
+</body>
+</html>

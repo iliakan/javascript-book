@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+<h2 id="top">The table</h2>
+
+<form name="age-form">
+
+  <table id="age-table">
+    <tr>
+      <td id="age-header">Your age:</td>
+      <td>
+        <label>
+          <input type="radio" name="age" value="young"/> under 18
+        </label>
+        <label>
+          <input type="radio" name="age" value="mature"/> 18 to 50
+        </label>
+        <label>
+          <input type="radio" name="age" value="senior"/> after 60
+        </label>
+      </td>
+    </tr>
+  </table>
+
+
+</form>
+
+<script>
+var labels = document.getElementsByTagName('label')
+for(var i=0; i<labels.length; i++) {
+  var label = labels[i]
+
+  label.style.display = 'block'
+  label.style.border = '1px dashed gray'    
+  label.style.padding = '5px'
+}
+
+</script>
+</body>

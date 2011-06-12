@@ -1,0 +1,15 @@
+* html body { 
+  /* IE6 behavior must be in HEAD */
+  /* http://www.xs4all.nl/~peterned/csshover.html */
+  behavior:url("csshover.htc");
+}
+
+ul { 
+  list-style: none; 
+  margin: 0;
+}
+
+li { 
+  display: inline; 
+}
+

@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<h2>Choose the picture</h2>
+
+<ul onclick="onSelect(event); return false">
+<li><a href="monkey1.jpg">One</a></li>
+<li><a href="monkey2.jpg">Two</a></li>
+</ul>
+
+<a href="http://google.com">External link</a>
+
+<div id="pic" style="background: center no-repeat;width:400px;height:300px"></div>
+
+
+<script>
+
+document.write(history.state) 
+
+function onSelect(event) {
+  var target = event.target || event.srcElement
+  if (target.tagName != 'A') return
+    
+  var picUrl = target.getAttribute('href')
+  
+  if (history.state && history.state.url == picUrl) {
+    return
+  }
+  
+  showPicture(picUrl)
+  
+  history.pushState( { url: picUrl}, null, '?'+picUrl)  // use '?...' to make /index.html work
+
+}
+
+function showPicture(url) {
+  document.getElementById('pic').style.backgroundImage = 'url('+url+')'
+}
+
+
+function onPopState(event) {
+// Firefox is buggy: won't do onpopstate when coming back from external link
+// => so, the state must be in URL to work
+// alert(event.state)
+
+  if (event.state) {
+    var picUrl = event.state.url
+    showPicture(picUrl) 
+  } else {
+    // no event state, we are at index, before any pushState 
+    showPicture('')
+  }
+   
+}
+window.addEventListener('popstate', onPopState, false)
+
+// Firefox 4 onpopstate emulation
+window.addEventListener('pageshow', function() {
+  if (history.state) {
+    onPopState({state: history.state})
+  }
+})
+
+</script>
+</body>
+</html>

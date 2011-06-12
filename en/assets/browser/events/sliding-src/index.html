@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+
+
+<img src="arrow-down.png">
+<img src="arrow-right.png">
+
+Sweeties (click me)!
+  <ul>
+    <li>Cake</li>
+    <li>Donut</li>
+    <li>Honey</li>
+  </ul>
+
+
+<script>
+
+// ... your code
+
+// ---------- Helper functions to add/remove/check class ------------
+
+function addClass(el, cls) {
+	for(var c = el.className.split(' '),i=c.length-1; i>=0; i--) {
+		if (c[i] == cls) return
+	}
+	
+	el.className += ' '+cls
+}
+
+function hasClass(el, cls) {
+	for(var c = el.className.split(' '),i=c.length-1; i>=0; i--) {
+		if (c[i] == cls) return true
+	}
+}
+
+function removeClass(el, cls) {
+  for(var c = el.className.split(' '),i=c.length-1; i>=0; i--) {
+		if (c[i] == cls) c.splice(i,1)
+	}
+	
+	el.className = c.join(' ')
+}
+</script>
+
+</body>
+</html>

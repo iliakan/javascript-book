@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<div id="contents">
+  <p>
+  Would you like to read <a href="http://wikipedia.org">Wikipedia</a>, or maybe visit <a href="http://w3.org"><i>W3.org</i></a> to read about standards?
+  </p>
+</div>
+
+<script>
+  document.getElementById('contents').onclick = function(evt) {
+    var evt = evt || event
+    var target = evt.target || evt.srcElement
+
+    function handleLink(href) {    
+      var isLeaving = confirm('Leave to '+href+'?')      
+      if (!isLeaving) return false
+    }
+    
+    while(target != this) {
+      if (target.nodeName == 'A') {
+        return handleLink(target.href)
+      }
+      target = target.parentNode
+    }
+  }  
+</script>
+</body>
+</html>

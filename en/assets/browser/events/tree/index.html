@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+* html body { 
+  /* IE6 behavior to support :hover, must be in HEAD */
+  /* http://www.xs4all.nl/~peterned/csshover.html */
+  behavior:url("csshover.htc");
+}
+
+span:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+
+<ul class="tree">
+    <li>About Animals
+        <ul>
+            <li>Mammals
+                <ul>
+                    <li>Cows</li>
+                    <li>Donkeys</li>
+                    <li>Dogs</li>
+                    <li>Tigers</li>
+                </ul>
+            </li>
+            <li>Others
+                <ul>
+                    <li>Snakes</li>
+                    <li>Birds</li>
+                    <li>Lizards</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>About Fish
+        <ul>
+            <li>About aquarium fishes
+                <ul>
+                    <li>Guppy</li>
+                    <li>Scalare</li>
+                </ul>
+
+            </li>
+            <li>Sea fish
+                <ul>
+                    <li>Sea trout</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<script>
+var treeUl = document.getElementsByTagName('ul')[0]
+
+var treeLis = treeUl.getElementsByTagName('li')
+
+/* wrap all textNodes into spans */
+for(var i=0; i<treeLis.length; i++) {
+  var li = treeLis[i]
+  
+  var span = document.createElement('span')
+  li.insertBefore(span, li.firstChild)
+  span.appendChild(span.nextSibling)
+}
+
+/* catch clicks on whole tree */
+treeUl.onclick = function() {
+  var evt = arguments[0] || event
+  var target = evt.target || evt.srcElement
+
+  if (target.nodeName != 'SPAN') {
+    return
+  }
+  
+  /* now we know SPAN is clicked */
+  var node = target.parentNode.getElementsByTagName('ul')[0]
+  if (!node) return // no children
+
+  node.style.display = node.style.display ? '' : 'none'
+}
+
+/* disable selection on whole tree (can filter if needed) */
+treeUl.onselectstart = treeUl.onmousedown = function() {
+  return false
+}
+
+</script>
+
+</body>
+</html>

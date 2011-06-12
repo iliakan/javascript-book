@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<div id="log"></div>
+
+
+<h2>Choose the picture</h2>
+
+<ul>
+<li><a href="monkey1.jpg">One</a></li>
+<li><a href="monkey2.jpg">Two</a></li>
+</ul>
+
+<a href="http://google.com">External link</a>
+
+<div id="pic" style="background: center no-repeat;width:400px;height:300px"></div>
+
+
+
+<script>
+
+var log = document.getElementById('log')
+
+alert('history.state = '+history.state)
+
+document.addEventListener && document.addEventListener('DOMContentLoaded', function() {
+  alert('DOMContentLoaded')
+}, false)
+
+
+onload = function() {
+  alert('load')
+}
+
+onpopstate = function(evt) {
+  alert('popstate '+evt.state)
+}
+
+// Firefox doesn't work 
+onpageshow = onpagehide = function(evt) {
+  alert('history.state = '+history.state)
+  alert(evt.type + ' '+evt.persisted)
+}
+
+setInterval(function() {
+  log.innerHTML += '.'
+}, 100)
+
+
+</script>
+
+</body>
+</html>

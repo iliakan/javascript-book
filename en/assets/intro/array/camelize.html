@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+
+function camelize(str) {
+	var arr = str.split('-');
+	var result = [ arr[0] ];
+	for(var i=1; i<arr.length; i++) {
+		var piece = arr[i];
+		piece = piece.charAt(0).toUpperCase() + piece.substr(1);
+		result.push(piece);
+	}
+
+	result = result.join('');
+	return result;
+
+}
+
+alert(camelize("background-color"));
+alert(camelize("list-style-image"));
+
+
+</script>
+
+</body>
+</html>

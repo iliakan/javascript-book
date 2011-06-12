@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+.button {
+  border: 1px solid green;
+  height: 30px;
+  line-height: 30px;
+  width: 80px;
+  text-align: center;
+  color: red;
+  font-weight: bold;
+
+  background-color: white;  /* added */
+}
+
+.question {
+  background-color: yellow;
+  width:200px;
+  margin-left:20px;
+
+  position: relative;       /* added */
+}
+</style>
+</head>
+<body>
+
+<div class="button">Yes!</div>
+
+<div class="question">Do you really want it?</div>
+
+Text Text Text Text Text Text<br>
+Text Text Text Text Text Text<br>
+
+<script>
+ var buttonElem = document.body.children[0]
+ var questionElem = document.body.children[1]
+
+ buttonElem.style.position = 'absolute'
+ buttonElem.style.right = 0
+ questionElem.appendChild(buttonElem)
+
+
+</script>
+
+</body>
+</html>

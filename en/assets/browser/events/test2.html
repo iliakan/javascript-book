@@ -1,0 +1,22 @@
+<html>
+<body>
+
+<div id='test'>Test div</div>
+
+
+
+<script>
+var elem = document.getElementById('test')
+type = 'click'
+elem.addEventListener(type, function(e) {
+e.preventDefault()
+e.stopPropagation();
+
+ return false }, false);
+elem.addEventListener(type, function() { alert('Hi') }, false);
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="buttons.css" />
+  <link rel="stylesheet" type="text/css" href="menu.css" />
+</head>
+<body>
+
+<ul id="menu">
+  <li><a class="button" href="/php">PHP</a></li>
+  <li><a class="button" href="/html">HTML</a></li>
+  <li><a class="button" href="/javascript">JavaScript</a></li>
+  <li><a class="button" href="/flash">Flash</a></li>
+</ul>
+
+<script>
+  document.getElementById('menu').onclick = function(e) {
+    e = e || event   
+    var target = e.target || e.srcElement 
+
+    if (target.nodeName != 'A') return
+    
+    var href = target.href
+    // extract URL part from http://site.com/url
+    alert( href.substr(href.indexOf('/', href.indexOf('//')+2)+1) )
+
+    return false // prevent url change
+  }
+</script>
+
+</body>
+</html>

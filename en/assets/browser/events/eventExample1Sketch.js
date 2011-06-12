@@ -1,0 +1,1 @@
+function handler(event) {	this.innerHTML = "event.pageX="+event.pageX}Event.add(elem, 'click', handler)// и никакого дополнительного кросс-браузерного кода

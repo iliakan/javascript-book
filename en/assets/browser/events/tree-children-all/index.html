@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <style>
+    #tree span {
+        cursor: pointer;        
+    }
+    #tree span:hover {
+        font-weight: bold;
+    }
+    
+    #tree ul {
+        display: none;
+    }
+  </style>
+</head>
+<body>
+
+<input type="button" value="Open all" id="open-all">
+<input type="button" value="Close all" id="close-all">
+
+<ul id="tree">
+    <li><span>About Animals</span>
+        <ul>
+            <li><span>Mammals</span>
+                <ul>
+                    <li><span>Cows</span></li>
+                    <li><span>Donkeys</span></li>
+                    <li><span>Dogs</span></li>
+                    <li><span>Tigers</span></li>
+                </ul>
+            </li>
+            <li><span>Others</span>
+                <ul>
+                    <li><span>Snakes</span></li>
+                    <li><span>Birds</span></li>
+                    <li><span>Lizards</span></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li><span>About Fish</span>
+        <ul>
+            <li><span>About aquarium fishes</span>
+                <ul>
+                    <li><span>Guppy</span></li>
+                    <li><span>Scalare</span></li>
+                </ul>
+
+            </li>
+            <li><span>Sea fish</span>
+                <ul>
+                    <li><span>Sea trout</span></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+
+<script>
+var tree = document.getElementById('tree')
+
+document.getElementById('open-all').onclick = function() {
+    var nodes = tree.getElementsByTagName('UL')
+    for(var i=0; i<nodes.length; i++) {
+        nodes[i].style.display = 'block'
+    }
+}
+
+document.getElementById('close-all').onclick = function() {
+    var nodes = tree.getElementsByTagName('UL')
+    for(var i=0; i<nodes.length; i++) {
+        nodes[i].style.display = 'none'
+    }
+}
+
+tree.onclick = function(e) {
+    e = e || event
+    var target = e.target || e.srcElement
+    
+    if (target.nodeName != 'SPAN') {
+        // click on somewhere away from the header
+        return;
+    }
+    
+    var nextSibling = target.parentNode.children[1]
+    if (!nextSibling) return // no children
+
+    nextSibling.style.display = (nextSibling.style.display == 'block') ? 'none' : 'block'
+}
+
+tree.onselectionstart = tree.onmousedown = function(e) {
+    e = e || event
+    var target = e.target || e.srcElement
+    
+    // disable selection by clicks on spans only
+    if (target.nodeName == 'SPAN') {
+        return false
+    }
+}
+
+</script>
+
+
+</body>
+</html>

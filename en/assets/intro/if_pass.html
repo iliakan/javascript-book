@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+
+  var value = prompt('Login?', '')
+    
+  if ( value == 'Monty' ) {
+
+    var pass = prompt('Password?', '')
+
+    if ( pass == 'Cheese' ) {
+      alert('Access granted')
+    } else {
+      alert('Wrong password')
+    }
+
+  } else if ( value !== null ) {   // null means that Cancel is pressed
+
+    alert('Wrong login')
+
+  }
+
+</script>
+
+
+</body>
+</html>

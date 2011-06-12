@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+
+Makes XHR request every 50ms. Watch the memory. Leaks in IE less than 9.
+
+<script>
+onload = function() {
+  setInterval(function(){
+     var xhr = new XDomainRequest()
+     
+     xhr.open('GET', 'jquery.js?'+Math.random(), true)
+     
+     xhr.onreadystatechange = function() {
+        if(xhr.readyState == 4 && xhr.status == 200) {            
+           document.getElementById('test').innerHTML++
+        }
+     }
+     document.getElementById('test').innerHTML++
+     
+     xhr.send(null)
+  }, 50);
+}
+</script>
+<div id="test">0</div>
+
+</body>
+</html>

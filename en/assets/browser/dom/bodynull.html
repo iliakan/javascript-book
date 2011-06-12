@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <script>
+            alert("Body from HEAD: "+document.body) // null
+        </script>
+    </head>
+    <body>
+        <div>The document</div>
+
+        <script>
+            // different browsers output different text here, 
+            // because of different implementations of toString 
+
+            alert("Body from inside body: " + document.body) 
+        </script>
+    </body>
+</html>

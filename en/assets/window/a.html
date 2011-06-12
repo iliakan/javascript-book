@@ -1,0 +1,11 @@
+a
+<script>
+  function work() {
+    alert('work at '+location.host)
+  }
+  document.domain = 'javascript.info'
+</script>
+
+<input type="button" value="parent.work()" onclick="parent.work()">
+<input type="button" value="parent.frames.b.work()" onclick="parent.frames.b.work()">
+

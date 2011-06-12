@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+table { 
+  border-collapse: collapse;
+}
+
+td {
+  border: 1px solid black;
+  padding: 3px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+
+<div id="calendar"></div>
+
+<script>
+function Calendar(id, year, month) { 
+  var elem = document.getElementById(id)
+
+  var mon = month - 1
+  var d = new Date(year, mon)
+  
+  var table = ['<table><tr>']
+
+  // fill first row 
+  //  0  1  2  3  4  5  6
+  // 29 30 31| 1  2  3  4  
+  for (var i=0; i<d.getDay(); i++) {
+    table.push('<td></td>')
+  }
+  
+  // main body
+  while(d.getMonth() == mon) {
+    table.push('<td>'+d.getDate()+'</td>')
+
+    if (d.getDay() % 7 == 6) {
+      table.push('</tr><tr>')
+    }
+    
+    d.setDate(d.getDate()+1)  
+  }
+  
+  // table tail
+  for (var i=d.getDay(); i<7; i++) {
+    table.push('<td></td>')
+  }
+  
+  table.push('</tr></table>')
+
+  elem.innerHTML = table.join('\n')
+}
+
+new Calendar("calendar", 2011, 1)
+</script>
+
+</body>
+</html>
