@@ -22,7 +22,10 @@ You are welcome to:
 
 The contributions are carefully reviewed and appended or integrated with the current content.
 
+Steps:
+
  1. Clone the repo
  2. Open `en/nav.html` to browse the book offline.
  3. See the `en/readme.html` for formatting and other details.
+
 
