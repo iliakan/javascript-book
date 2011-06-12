@@ -58,7 +58,6 @@ function TaskParser(srcLoader) {
 		delete parsed.title;
 
 		var text = '<div class="learning-task"> ';
-		text += '<div class="task-meta">'+srcLoader.getUrl()+'</div>';
 
 		text += '<div class="task-formulation">'+ parsed.body + '</div>';
 
@@ -68,6 +67,8 @@ function TaskParser(srcLoader) {
 			text += '<div class="task-section-open" data-title="'+key+'">Open '+key+'</div>'
 			text += '<div class="task-section">'+parsed[key]+'</div>';
 		}
+
+		text += '<a href="view.html?'+srcLoader.getUrl()+'" class="task-meta">'+srcLoader.getUrl()+'</a>';
 
 		text += '</div>';
 

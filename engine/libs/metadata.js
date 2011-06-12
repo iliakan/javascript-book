@@ -27,12 +27,12 @@ var Metadata = new function() {
 	};
 
 	this.idToHref = function(id) {
-		var href = metadata && metadata.idMap && metadata.idMap[id].href;
-		return href || "javascript:alert('ID: " + id + "');return false";
+		var href = metadata && metadata.idMap && metadata.idMap[id] && metadata.idMap[id].href;
+		return href //  || "javascript:alert('ID: " + id + "');return false";
 	};
 
 	this.idToTitle = function(id) {
-		return metadata && metadata.idMap && metadata.idMap[id].title;
+		return metadata && metadata.idMap && metadata.idMap[id] && metadata.idMap[id].title;
 	};
 
 	var headerId = 1

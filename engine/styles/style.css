@@ -1231,6 +1231,7 @@ div.admin-panel h3 a:visited {
     position:absolute;
     right:2px;
     bottom: 2px;
+    display: block;
 }
 
 .smart-header, .warn-header, .ponder-header {

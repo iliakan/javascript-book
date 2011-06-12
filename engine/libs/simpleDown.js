@@ -183,6 +183,9 @@ function SimpleDown() {
 			if (url.charAt(0) == '#') {
 				var id = url.slice(1);
 				url = Metadata.idToHref(id);
+				if (!url) {
+					return '<div class="format-error">ERROR: not found link '+url+'</div>';
+				}
 				if (!text) {
 					text = Metadata.idToTitle(id);
 				}

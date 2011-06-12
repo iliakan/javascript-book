@@ -152,11 +152,15 @@ function NavBuilder() {
 
 		var href = self._pathToRelative(file.path, self.bookDir) + (file.children ? '/00-index.md' : '');
 
+		var idMap = this.metadata.idMap;
 
 		// [#id] references
 		file.data.replace(/\[#([\w-]+?)(\|(?:[^"]|"(?:\\.|[^"\\])*")+?)?]/gim, function(m, id, title) {
 			if (title) title = title.slice(1);
-			self.metadata.idMap[id] = {
+			if (idMap[id]) {
+				alert("Duplicate id:"+id+", clash at href:"+idMap[id].href+" title:"+idMap[id].title);
+			}
+			idMap[id] = {
 				href: href, title: title
 			};
 			return m;
@@ -168,7 +172,10 @@ function NavBuilder() {
 				var id = m3 && m3.slice(1, -1);
 				if (!id) return m; // header without id => no reference
 
-				self.metadata.idMap[id] = {
+				if (idMap[id]) {
+					alert("Duplicate id:"+id+", clash at href:"+idMap[id].href+" title:"+idMap[id].title);
+				}
+				idMap[id] = {
 					href: href,
 					title: m2
 				};

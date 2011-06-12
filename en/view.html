@@ -48,7 +48,7 @@
 
             var navLink = '<a href="nav.html">Navigation</a>';
             document.getElementById('result').innerHTML =  navLink+ '<h1>'+sections.title
-                    +'</h1>'+sections.toc+(sections.teaser ? (sections.teaser + '<div class="cut"></div>') : '')
+                    +'</h1>'+(sections.toc||'')+(sections.teaser ? (sections.teaser + '<div class="cut"></div>') : '')
                     + (sections.body || '')
                     + navLink;
 

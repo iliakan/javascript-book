@@ -52,13 +52,14 @@ function FormattingTagProcessor(srcLoader) {
 		return this[data.tag](data)
 	};
 
-
+/*
 	// [link ref="..."]...[/link]
 	// TODO: remove, deprecated
 	this.link = function(data) { // Linking to files is prohibited. Link only to ref
+
 		return '<a href="' + Metadata.idToHref(data.attrs.id) + '">' + (data.attrs.body || Metadata.idToTitle(data.attrs.id) || 'Link: ' + data.attrs.id) + '</a>';
 	};
-
+*/
 	// remove all planning stuff like [todo ...]
 	this.todo = function() {
 		return '';
