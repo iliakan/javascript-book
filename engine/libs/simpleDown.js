@@ -18,7 +18,7 @@ function SimpleDown() {
 	};
 
 
-	this.makeHtml = function(text) {
+	this.makeHtml = function(text, tocObj) {
 
 		// Split at <pre>, <script>, <style> and </pre>, </script>, </style> tags.
 		// We don't apply any processing to the contents of these tags to avoid messing
@@ -35,7 +35,7 @@ function SimpleDown() {
 
 		text = this.deTab(text);
 
-		text = this.makeHeaders(text);
+		text = this.makeHeaders(text, tocObj);
 		text = this.applyFormatting(text);
 		text = this.makeParagraphs(text);
 		text = this.makeItalicsAndBold(text);
@@ -201,32 +201,30 @@ function SimpleDown() {
 	};
 
 
-	this.makeHeaders = function(text) {
+	this.makeHeaders = function(text, tocObj) {
 
 		// atx-style headers:
 		//  # Header 1
 		//  ## Header 2
-		//  ## Header 2 with closing     hashes ##
+		//  ## Header 2 with closing hashes ##
 		//  ...
 		//  ###### Header 6 [lalala]  <-- sets id
 		//
 
-		/*
-		 text = text.replace(/
-		 ^(\#{1,6})				// $1 = string of #'s
-		 [ \t]*
-		 (.+?)					// $2 = Header text
-		 [ \t]*
-		 \#*						// optional closing #'s (not counted)
-		 \n+
-		 /gm, function() {...});
-		 */
-
 		text = text.replace(/^(#{1,6})[ \t]*(.+?)[ \t]*(\[[\w-]+?])?\#*(?:$|\n+)/gm,
 			function(wholeMatch, m1, m2, m3) {
-				var h_level = m1.length; // h1 should be only in title
+				var level = m1.length; // h1 should be only in title
 				var id = (m3 && m3.slice(1, -1) || Metadata.makeHeaderId(m2));
-				return "<h" + h_level + ' id="' + id + '">' + m2 + "</h" + h_level + ">";
+
+				if (tocObj) {
+					tocObj.push({
+						level: level,
+						id: id,
+						title: m2
+					})
+				}
+
+				return "<h" + level + ' id="' + id + '">' + m2 + "</h" + level + ">";
 			}
 		);
 

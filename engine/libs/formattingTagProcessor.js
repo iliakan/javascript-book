@@ -59,11 +59,6 @@ function FormattingTagProcessor(srcLoader) {
 		return '<a href="' + Metadata.idToHref(data.attrs.id) + '">' + (data.attrs.body || Metadata.idToTitle(data.attrs.id) || 'Link: ' + data.attrs.id) + '</a>';
 	};
 
-	// [#...]
-	this['#'] = function(data) {
-		return '<a id="' + data.attrs.id + '"></a>';
-	};
-
 	// remove all planning stuff like [todo ...]
 	this.todo = function() {
 		return '';
@@ -244,12 +239,16 @@ function FormattingTagProcessor(srcLoader) {
 		style = style.join(';');
 
 		if (attrs.src) {
-			code = srcLoader.load(attrs.src);
+			try {
+				code = srcLoader.load(attrs.src);
+			} catch(e) {
+				return '<div class="format-error">ERROR: failed to load src="'+attrs.src+'"</div>';
+			}
 		}
 
 		var result = "<pre class=\"" + className + "\" style=\"" + style + "\">\n" + code + "\n</pre>";
 
-		/* TODO
+		/* TODO?
 		 if ($params['example.title']) {
 		 $result = '<div class="example-title">'.t('Example').
 		 ': '.$params['example.title'].

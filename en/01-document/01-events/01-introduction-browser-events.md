@@ -29,7 +29,7 @@ That means, if two events happen simultanteously, for example `mouseover` (mouse
 
 There are several ways of assigning an event handler. All of them are given in details below.
 
-<h3>Using a attribute of HTML-tag</h3>
+### Using a attribute of HTML-tag
 
 A handler can be set directly in the markup, right into the attribute named `on<em>event</em>`.
 
@@ -55,7 +55,7 @@ Please recall that HTML-tag attribute names are case-insensitive, so `oNcLiCk` w
 
 But it is generally considered a good style to use lowercase.
 
-<h4>When to use this method</h4>
+#### When to use this method
 
 This way of assigning handlers is very convenient - it's simple and all-inline, that's why it is sometimes used for really simple tasks.
 
@@ -70,7 +70,7 @@ But, after all, no one writes somewhat complex handlers in HTML. Instead of it, 
 </ul>
 
 
-<h3>The element is `this`</h3>
+### The element is `this`
 
 Although usage of this event-binding method is not recommended, let's demonstrate the value of `this` with it.
 
@@ -83,7 +83,7 @@ Below, the `button` outputs it's contents using `this.innerHTML`:
 [/html]
 
 
-<h3>Using a DOM-object property</h3>
+### Using a DOM-object property
 
 A closest relative of the way described above - is an assignment using the property named `on<em>event</em>`.
 
@@ -186,7 +186,7 @@ document.getElementById('button').onclick = function() {
 
 [/smart]
 
-<h4>When to use</h4>
+#### When to use
 
 Assiging handlers using a property is a very simple and popular way.
 
@@ -207,13 +207,13 @@ input.onclick = function() { alert(2) } // replaces the previous handler
 Of course, it's possible to copy old handler and run it manually inside a new one. But it is better to use more advanced methods of assignment.
 
 
-<h3>Special methods</h3>
+### Special methods
 
 In a complex javascript application, it's fairly ok that different interface components may be interested in handling the same event.
 
 A classical example is a "document loaded" event and many graphical components which wait for it to initialize themselves.
 
-<h4>Microsoft solution</h4>
+#### Microsoft solution
 
 The solution provided by Microsoft and used only in Internet Explorer less than `9`.
 
@@ -285,7 +285,7 @@ The exception is `attachEvent` method. Handlers assigned with `attachEvent` do n
 [/warn]
 
 
-<h4>Handlers assignment by W3C standard</h4>
+#### Handlers assignment by W3C standard
 
 W3C or official event handler assignment works in all modern browsers and for IE9.
 
@@ -322,7 +322,7 @@ The incompatibilities is not just different syntax, but there are few other diff
 
 
 
-<h3>Handlers order</h3>
+### Handlers order
 
 Special methods allow to assign multiple handlers to the same event on single object.
 
@@ -331,7 +331,7 @@ Browser does not guarantee the order in which they execute.
 Generally, the order of assignment is not related with the order of execution. The order may happen to be same, or inversed or random.
 
 
-<h3>A cross-browser way of assigning event handlers</h3>
+### A cross-browser way of assigning event handlers
 
 The task is not so simple as it seems.
 
@@ -367,7 +367,7 @@ But you don't need `this` and don't care about memory leaks, then the solution i
 [task src="task/hide-on-click.md"]
 
 
-<h2>Summary</h2>
+## Summary
 
 
 There are 3 ways of assigning event handlers: markup, `on<i>event</i>` and special methods.

@@ -122,6 +122,8 @@ h2 a:hover, h3 a:hover, h4 a:hover {
     line-height: 1.1;
 }
 
+
+
 .teaser-with-toc {
     line-height: 1.1;
 }
@@ -1109,8 +1111,16 @@ ul.secondary {
 
 .toc {
     border: 1px solid #CCCCCC;
-    margin: 0 12px 5px 5px;
+    
+    position: fixed;
+    font-size: 80%;
+    left: 0;
+    top:  0;
+    max-width: 300px;
+    margin:  1px;
+    padding-left: 20px;
 }
+
 
 .toc-teaser, * html .toc-teaser {
     float: left;

@@ -51,7 +51,17 @@ function Bookifier() {
 
 		var tagExpander = new TagExpander(srcLoader);
 
-		sections.body = tagExpander.expandSquareTags(sections.body);
+		var tocArr = [];
+
+
+		sections.body = tagExpander.expandSquareTags(sections.body, tocArr);
+
+		var tocBuilder = new TocBuilder();
+
+		var toc = tocBuilder.build(tocArr, url);
+
+		sections.toc = toc;
+
 		if (sections.teaser) {
 			sections.teaser = tagExpander.expandSquareTags(sections.teaser);
 		}

@@ -54,7 +54,7 @@ function TagExpander(srcLoader) {
 	 * Extract all [tags.. ] from the text and pass them to tagProcessor.processSquareTag
 	 * @param text with square tags
 	 */
-	this.expandSquareTags = function(text) {
+	this.expandSquareTags = function(text, tocArr) {
 
 		// '[ref str="lala ]" test=5 blabla "test\"]"]' -> $0, ref, all the rest
 		// the regexp allows backslashed quotes inside quotes " \" "
@@ -102,7 +102,7 @@ function TagExpander(srcLoader) {
 
 //		console.log('out 1: '+text)
 
-		text = simpleDown.makeHtml(text);
+		text = simpleDown.makeHtml(text, tocArr);
 
 //		console.log('out 2: '+text)
 
