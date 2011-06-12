@@ -39,7 +39,7 @@ The specification: <a href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-6
 <li>The `form.elements[name/index]` property references it's elements.</li>
 </ul>
 
-[img src="/files/browser/dom/form.png"]
+[img src="/assets/browser/dom/form.png"]
 
 For example:
 [html run height=40]

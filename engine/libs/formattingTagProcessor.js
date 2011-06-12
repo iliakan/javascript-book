@@ -52,23 +52,12 @@ function FormattingTagProcessor(srcLoader) {
 		return this[data.tag](data)
 	};
 
-/*
-	// [link ref="..."]...[/link]
-	// TODO: remove, deprecated
-	this.link = function(data) { // Linking to files is prohibited. Link only to ref
-
-		return '<a href="' + Metadata.idToHref(data.attrs.id) + '">' + (data.attrs.body || Metadata.idToTitle(data.attrs.id) || 'Link: ' + data.attrs.id) + '</a>';
-	};
-*/
 	// remove all planning stuff like [todo ...]
 	this.todo = function() {
 		return '';
 	};
 
-	// TODO!
-	// check for file.
-	// if fails, check for file/.play
-	// if fails, return <div class="format-error">ERROR ... </div>
+
 	this.play = function(data) {
 		var attrs = data.attrs;
 
@@ -113,11 +102,11 @@ function FormattingTagProcessor(srcLoader) {
 	this.img = function(data) {
 		var attrs = data.attrs;
 		if (attrs.src.charAt(0) == '/') {
-			attrs.src = '..'+attrs.src
+			attrs.src = attrs.src.slice(1);
 		}
 		var a = [];
 		for(var k in attrs) {
-			a.push(k+'="'+attrs[k]+'"')
+			a.push(k+'="'+attrs[k]+'"');
 		}
 
 		return '<img ' + a.join(' ') + '>';

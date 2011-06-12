@@ -10,7 +10,7 @@ The browser kindly provides us with a hierarchy of objects which we can use to c
 
 Browser provides a large hierarchy of objects to control it. You can see a part of it below.
 
-[img src="/files/browser/JSTop.png"]
+[img src="/assets/browser/JSTop.png"]
 
 On the top is the `window`, also called global object.
 

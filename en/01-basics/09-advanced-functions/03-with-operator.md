@@ -70,7 +70,7 @@ Note how properties from different levels of the object are used in one line. Ma
 
 The variable lookup order is <code>size =&gt; box =&gt; window</code>:
 
-[img src="/files/intro/scope/with_obj_size.png"]
+[img src="/assets/intro/scope/with_obj_size.png"]
 
 
 ## Setting example   

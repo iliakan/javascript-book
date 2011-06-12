@@ -22,7 +22,7 @@ Let's consider the following HTML as the starting point:
 
 The DOM will look like that:
 
-[img src="/files/browser/dom/simpledom.png"]
+[img src="/assets/browser/dom/simpledom.png"]
 
 At the top level, there is an `html` node, with two children: `head` and `body`, among which only `head` has a child tag `title`.
 
@@ -68,7 +68,7 @@ Let's see the DOM of a more complicated document.
 
 And here is the DOM if we draw hierarchy in lines.
 
-[img src="/files/browser/dom/simpledom2.png"]
+[img src="/assets/browser/dom/simpledom2.png"]
 
 
 
@@ -86,7 +86,7 @@ For example:
 
 Below is a screenshot from Firebug for the document above. Basically it's layout is same as HTML, plus the minus icon [-] for nodes. 
 
-[img src="/files/browser/dom/simpledom2_tools.png"]
+[img src="/assets/browser/dom/simpledom2_tools.png"]
 
 <b>But the DOM displayed in developer tools is not full</b>. There are elements, which exist in DOM, but not shown in developer tools.
 
@@ -97,7 +97,7 @@ Now let's make the picture closer to reality and introduce whitespace text eleme
 
 The following picture shows text nodes containing whitespaces.
 
-[img src="/files/browser/dom/simpledom2_white.png"]
+[img src="/assets/browser/dom/simpledom2_white.png"]
 
 By the way, note that last `li` does not have a whitespace text tag inside. That's exactly because there is no text at all inside it.
 

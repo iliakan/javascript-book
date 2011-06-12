@@ -87,7 +87,7 @@ That takes time, and the state change is not shown until the new image is loaded
 
 The much better real-life way is to join all button states in a single image, called <i>CSS sprite</i>:
 
-[img src="/files/browser/events/rollover-sprite/button.png"]
+[img src="/assets/browser/events/rollover-sprite/button.png"]
 
 This image is set as background, and background-position is adjusted to show the current state:
 

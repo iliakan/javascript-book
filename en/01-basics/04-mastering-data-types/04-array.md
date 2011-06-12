@@ -188,7 +188,7 @@ alert(arr[1]) // string "array"
 
 <b>Methods `shift/unshift` are slow, because they have to renumber whole array.</b> Method `splice` may also lead to renumbering.
 
-[img src="/files/intro/array/shiftpush.png"]
+[img src="/assets/intro/array/shiftpush.png"]
 
 So, using `shift/unshift` is generally slower than `push/pop`. The larger array - the more work to renumber it.
 

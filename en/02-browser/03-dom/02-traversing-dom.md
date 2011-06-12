@@ -13,7 +13,7 @@ The root is the DOM always `document.documentElement`. This special property wil
 
 Another starting point can be the `document.body`, which represents the `BODY` tag.
 
-[img src="/files/browser/dom/documentElement.png"]
+[img src="/assets/browser/dom/documentElement.png"]
 
 Both entry points are valid. But <b>`document.body` can be `null`</b>.
 
@@ -74,7 +74,7 @@ So, there are additional properties for siblings, parent, etc.
 
 The `firstChild` and `lastChild` properties allow to quickly access first or last child.
 
-[img src="/files/browser/dom/children.png"]
+[img src="/assets/browser/dom/children.png"]
 
 They are basically same as corresponding `childNodes` indexes:
 
@@ -97,7 +97,7 @@ For example:
 [html run file=tutorial/browser/dom/siblings.html link][/html]
 
 Picture for the document above (without whitespace nodes):
-[img src="/files/browser/dom/siblings.png"]
+[img src="/assets/browser/dom/siblings.png"]
 
 <b>The browser always maintains correct helper links.</b> It is possible to modify the DOM, add/remove elements, but no need to reassign the links manually, browser does that.
 

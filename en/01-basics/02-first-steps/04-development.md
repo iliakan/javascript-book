@@ -23,7 +23,7 @@ Install it and restart the browser.
 
 Firebug should show up in the right-bottom corner of the browser: 
 
-[img src="/files/intro/error/firebug-gray.png"]
+[img src="/assets/intro/error/firebug-gray.png"]
 
 
 ### Open and enable Console   
@@ -32,7 +32,7 @@ Click on the bug icon to open Firebug.
 
 The Console functionality is initially disabled, so we need to click and enable it:
 
-[img src="/files/intro/error/firebug-console-gray.png"]
+[img src="/assets/intro/error/firebug-console-gray.png"]
 
 
 ### Enter the buggy page   
@@ -42,7 +42,7 @@ Make sure Firebug is open, and then visit a buggy page: <a href="/files/tutorial
 You can see it's source by pressing Ctrl-U or going to menu <code>View -&gt; View Source</code>.
 
 Firebug Console should show you the error:
-[img src="/files/intro/error/firebug-bug.png"]
+[img src="/assets/intro/error/firebug-bug.png"]
 
 Obviously, there is no variable or function `lalala`. 
 
@@ -60,11 +60,11 @@ In IE starting with version 8, there is a similar native debugger, disabled by d
 
 Go to menu Tools -&gt; Internet Options:
 
-[img src="/files/intro/error/ie-options.png"]
+[img src="/assets/intro/error/ie-options.png"]
 
 Switch to `Advanced` tab and scroll until you see <i>checked</i> `Disable Script Debugging` item. Uncheck it:
 
-[img src="/files/intro/error/ie-options2.png"]
+[img src="/assets/intro/error/ie-options2.png"]
 
 
 ### Try it   
@@ -73,7 +73,7 @@ Now, visit the buggy page: <a href="/files/tutorial/intro/error/bug.html">bug.ht
 
 A window should open suggesting you to start debugging. Press "Yes" and enjoy.
 
-[img src="/files/intro/error/ie-bug.png"]
+[img src="/assets/intro/error/ie-bug.png"]
 
 
 ## Other browsers   
@@ -83,7 +83,7 @@ A window should open suggesting you to start debugging. Press "Yes" and enjoy.
 
 Go to menu <code>Tools -&gt; Developer Tools</code>.
 
-[img src="/files/intro/error/chrome.png"]
+[img src="/assets/intro/error/chrome.png"]
 
 
 ### Safari   
@@ -92,7 +92,7 @@ In Safari, you should first enable the Develop Menu.
 
 Go menu `Preferences`, tab `Advanced`:
 
-[img src="/files/intro/error/safari.png"]
+[img src="/assets/intro/error/safari.png"]
 
 Check the "Show Develop menu" option.
 
@@ -100,14 +100,14 @@ Then you need to enable menu in <code>Preferenes -&gt; Show Menu bar</code>.
 
 Now the tools become available through the Menu bar, under `Develop` item:
 
-[img src="/files/intro/error/safari-develop.png"]
+[img src="/assets/intro/error/safari-develop.png"]
 
 
 ### Opera   
 
 In Opera, you need to enable `Show Menu bar` first. The developer tools are called "Opera Dragonfly" and available under <code>Tools -&gt; Advanced</code> menu:
 
-[img src="/files/intro/error/opera.png"]
+[img src="/assets/intro/error/opera.png"]
 
 
 ### IE&lt;8   

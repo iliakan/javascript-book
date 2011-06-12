@@ -29,7 +29,7 @@ For example, there are 3 nested divs:
 
 The bubbling guarantees that click on `Div 3` will trigger `onclick` first on the innermost element 3 (also caled the <em>target</em>), then on the element 2, and the last will be element 1.
 
-[img src="/files/browser/events/event-order-bubbling.gif"]
+[img src="/assets/browser/events/event-order-bubbling.gif"]
 
 The order is called a <i>bubbling order</i>, because an event bubbles from the innermost element up through parents, like a bubble of air in the water.
 
@@ -54,7 +54,7 @@ When handlers trigger on parents:
 <li>`this` - is the current element, the one event has bubbled to, the one which runs the handler.</li>
 </ul>
 
-[img src="/files/browser/events/event-order-bubbling-target.png"]
+[img src="/assets/browser/events/event-order-bubbling-target.png"]
 
 In the example below, each `DIV` has an `onclick` handler which outputs both `target` and `this`.
 
@@ -123,7 +123,7 @@ In all browsers, except IE&lt;9, there are two stages of event processing.
 
 The event first goes down - that's called <i>capturing</i>, and then <i>bubbles</i> up. This behavior is standartized in W3C specification.
 
-[img src="/files/browser/events/event-order-w3c.gif"]
+[img src="/assets/browser/events/event-order-w3c.gif"]
 
 According to this model, the event:
 <ol>

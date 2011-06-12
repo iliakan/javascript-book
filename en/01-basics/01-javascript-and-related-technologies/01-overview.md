@@ -41,7 +41,7 @@ That's because you surely don't want a web-page script to execute with your priv
 
 <b>Most JavaScript abilities are limited by browser window.</b>
 
-[img src="/files/intro/jslimit.jpg"]
+[img src="/assets/intro/jslimit.jpg"]
 
 <ul>
 <li>JavaScript can't read/write to hard disk, copy files and call other programs. It doesn't have direct access to the OS. Newer browsers provide such abilities, but in a very limited and secure way.</li>

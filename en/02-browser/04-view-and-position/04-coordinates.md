@@ -14,11 +14,11 @@ There are two coordinate systems in the browser.
 
 When the page is not scrolled, window and document coordinates are the same and share the zero point:
 
-[img src="/files/browser/dom/coords.png"]
+[img src="/assets/browser/dom/coords.png"]
 
 After the scroll, the visible area moves from the document start:
  
-[img src="/files/browser/dom/coords2.png"]
+[img src="/assets/browser/dom/coords2.png"]
 
 Actually, it is easy to transform between these coordinate systems. <b>Document coordinates are window coordinates plus scroll.</b>
 
@@ -29,7 +29,7 @@ Most of time, only document coordinates are used, because they remain same after
 
 <i>Element coordinates</i> are the coordinates of the left-upper corner. There is unfortunately no single property which gives coordinates. But they can be calculated using `offsetTop/offsetLeft` and `offsetParent`.
 
-[img src="/files/browser/dom/offsetSum.png"]
+[img src="/assets/browser/dom/offsetSum.png"]
 
 A natural (but as we'll see, a buggy) way of calculating absolute coordinates is to traverse up the `offsetParent` chain and sum `offsetLeft/offsetTop`, like this:
 

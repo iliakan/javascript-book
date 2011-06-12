@@ -36,7 +36,7 @@ table.onclick = function(event) {
 
 A click can happen on any tag inside the table. For example, on the <code>&lt;STRONG&gt;</code> tag. It then bubbles up:
 
-[img src="/files/browser/events/bagua.png"]
+[img src="/assets/browser/events/bagua.png"]
 
 To find the cell, we need to follow `parentNode` chain:
 

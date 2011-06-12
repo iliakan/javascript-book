@@ -11,7 +11,7 @@ This section describes how to get/calculate coordinates of elements and their po
 ## Prerequisite: CSS box model   
 
 The CSS box model is painted below:
-[img src="/files/browser/dom/boxmodel.png"]
+[img src="/assets/browser/dom/boxmodel.png"]
 
 It is described in <a href="http://www.w3.org/TR/CSS21/box.html">the CSS Box model specification</a>.
 Knowing it's components is a preliminary knowledge to going any further. 
@@ -54,7 +54,7 @@ The box is positioned absolutely, has borders, paddings, margins, and so scrollb
 
 The CSS picture:
 
-[img src="/files/browser/dom/metric1.png"]
+[img src="/assets/browser/dom/metric1.png"]
 
 
 ## Box metrics   
@@ -73,7 +73,7 @@ Next we'll learn more about other times of width and height available in JavaScr
 
 Size of the <i>client area</i>: content area with paddings, but without  scrollbars. 
 
-[img src="/files/browser/dom/metric2.png"]
+[img src="/assets/browser/dom/metric2.png"]
 
 The sizes can be calculated as:
 [js]
@@ -83,7 +83,7 @@ clientHeight = 200(height) + 40(paddings) = 240
 
 If there is no padding, and the box is scrollable, <b>clientWidth/Height show the real content area size:</b>
 
-[img src="/files/browser/dom/metricClientWidth.png"]
+[img src="/assets/browser/dom/metricClientWidth.png"]
 
 On the picture above, CSS `width` is with the scrollbar. You can't actually insert something of 300px in the box. The real available width is `clientWidth`.
 
@@ -110,7 +110,7 @@ element.style.height = element.scrollHeight+'px'
 
 The picture below illustrates `scrollHeight` and `scrollTop` for a vertically scrollable box.
 
-[img src="/files/browser/dom/elemScroll.png"]
+[img src="/assets/browser/dom/elemScroll.png"]
 
 [smart header="scrollLeft/scrollTop are writeable"]
 Unlike other properties, which are read-only, you can change `scrollLeft/scrollTop`, and the browser scrolls the element.
@@ -141,7 +141,7 @@ In other words, the width of top/left border in pixels.
 <li>`clientTop = 25` - top border width</li>
 </ul>
 
-[img src="/files/browser/dom/metric3.png"]
+[img src="/assets/browser/dom/metric3.png"]
 
 <b>There are two exceptions to the general border-width meaning:</b>
 
@@ -162,7 +162,7 @@ The full rule for `offsetParent`:
 <li>For other types of positioning - a closest <a href="http://www.w3.org/TR/CSS21/visuren.html#position-props">positioned element</a>.</li>
 
 
-[img src="/files/browser/dom/metricOffset.png"]
+[img src="/assets/browser/dom/metricOffset.png"]
 </dd>
 </dl>
 
@@ -213,5 +213,5 @@ Also used in IE, because `document.body` may be shifted there.
 
 The summarizing picture for all properties except scrolls:
 
-[img src="/files/browser/dom/metricSummary.png"]
+[img src="/assets/browser/dom/metricSummary.png"]
 

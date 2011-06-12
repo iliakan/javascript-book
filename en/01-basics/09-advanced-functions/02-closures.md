@@ -29,17 +29,17 @@ The process consists of two steps:
 
 There is a current `LexicalEnvironment` object. In the case above, it's `window` (`a` is `undefined` at the time of function creation).
 
-[img src="/files/intro/scope/le_window1.png"]
+[img src="/assets/intro/scope/le_window1.png"]
 
 When a function is <u>created</u>, it gets a hidden property, named `[[Scope]]`, which references current `LexicalEnvironment`.
 
-[img src="/files/intro/scope/le_window2.png"]
+[img src="/assets/intro/scope/le_window2.png"]
 </li>
 <li>Later, when the function runs, it creates it's own `LexicalEnvironment` and links it with `[[Scope]]`. 
 
 So when a variable is not found in the local `LexicalEnvironment`, it is searched outside:
 
-[img src="/files/intro/scope/le_window3.png"]
+[img src="/assets/intro/scope/le_window3.png"]
 </li>
 </ol>
 
@@ -124,7 +124,7 @@ var user = new User('John')
 
 Marking up `LexicalEnvironments`:
 
-[img src="/files/intro/scope/user1.png"]
+[img src="/assets/intro/scope/user1.png"]
 
 
 <b>Note, the `this` context is not related to scopes and variables.</b> It does not participate here.

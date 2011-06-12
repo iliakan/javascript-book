@@ -37,7 +37,7 @@ The tree node title (first child of `LI`) is a text node. Add the text to it's `
 Generally, it could be a good idea to modify the markup, so that title will be in a <code>&lt;span class="title"&gt;</code>, descendants count will have an element with it's own class too etc. That could be good for applying CSS as well.
 
 But from the other side, the less tags - the faster it runs. There's no silver bullet, only silver fork.
-[img src="/files/browser/dom/silverfork.jpg"]
+[img src="/assets/browser/dom/silverfork.jpg"]
 
 The solution is here: [play src="tutorial/browser/dom/tree"]. 
 

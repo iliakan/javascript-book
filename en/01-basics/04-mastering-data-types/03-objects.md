@@ -75,7 +75,7 @@ You can also set values of multiple properties when creating an object, using a 
 
 Here's an example.
 
-[img src="/files/intro/objectLiteral.png"]
+[img src="/assets/intro/objectLiteral.png"]
 
 Literal syntax is a more readable alternative to multiple assignments:
 
@@ -338,7 +338,7 @@ var user = {
 }
 [/js]
 
-[img src="/files/intro/object/methods.png"]
+[img src="/assets/intro/object/methods.png"]
 
 [smart]
 To check if a method is supported, we usually check it's existance by `if`:

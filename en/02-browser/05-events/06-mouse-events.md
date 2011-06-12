@@ -416,7 +416,7 @@ By assigning them to `event.pageX/pageY` you match the top-left corner with the 
 In the following example, the ball image can be dragged around:
 <div style="height:80px">
 Click the ball and drag to move it.
-[img src="/files/browser/events/ball.gif"]
+[img src="/assets/browser/events/ball.gif"]
 </div>
 
 [js autorun]
@@ -449,7 +449,7 @@ Cancelling browser default action for drag'n'drop is required here.
 The fixed example:
 <div style="height:80px">
 Click the ball and drag to move it.
-[img src="/files/browser/events/ball.gif"]
+[img src="/assets/browser/events/ball.gif"]
 </div>
 
 [js autorun hide="Show full code with uncommented ondragstart"]
