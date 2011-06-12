@@ -86,7 +86,7 @@ function Bookifier() {
 
 		var tocBuilder = new TocBuilder();
 
-		var toc = tocBuilder.build(tocArr, url);
+		var toc = tocBuilder.build(tocArr, srcLoader.getUrl());
 
 		sections.toc = toc;
 

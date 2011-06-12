@@ -1,5 +1,0 @@
-
-# Type detection  [167]
-
-
-

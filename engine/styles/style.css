@@ -1118,6 +1118,8 @@ ul.secondary {
     max-width: 270px;
     margin:  1px;
     padding-left: 20px;
+    padding-right: 5px;
+    padding-bottom: 5px;
 }
 
 

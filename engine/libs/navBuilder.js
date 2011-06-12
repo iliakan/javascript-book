@@ -160,6 +160,7 @@ function NavBuilder() {
 			if (idMap[id]) {
 				alert("Duplicate id:"+id+", clash at href:"+idMap[id].href+" title:"+idMap[id].title);
 			}
+			//console.log("1.add ", id, file.path)
 			idMap[id] = {
 				href: href, title: title
 			};
@@ -173,8 +174,9 @@ function NavBuilder() {
 				if (!id) return m; // header without id => no reference
 
 				if (idMap[id]) {
-					alert("Duplicate id:"+id+", clash at href:"+idMap[id].href+" title:"+idMap[id].title);
+					alert("Duplicate id:"+id+" in "+file.path+", clash at href:"+idMap[id].href+" title:"+idMap[id].title);
 				}
+				//console.log("2.add ", id, file.path)
 				idMap[id] = {
 					href: href,
 					title: m2

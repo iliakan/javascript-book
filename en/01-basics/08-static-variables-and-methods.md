@@ -1,5 +1,0 @@
-
-# Static variables and methods 
-
-
-
