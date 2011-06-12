@@ -207,9 +207,27 @@ No format happens inside <code>[verbatim]</code> bb-tag:
 
 <p>Please never click "Trust always" on it.</p>
 
+<h2>Best Practices</h2>
+
+Put language-independent assets in the root "files" folder. This way different languages can reuse them.
+If you want to comment the code, use markers:
+<pre>
+  [js]
+  var a = 5  (1)
+
+  alert(a)  (2)
+  [/js]
+
+   &lt;ol&gt;
+   &lt;li&gt; Assign a &lt;/li&gt;
+   &lt;li&gt; Output a &lt;/li&gt;
+   &lt;/ol&gt;
+</pre>
+
+
 <h2>Contribution</h2>
 
-<p>Help us to create a really great JavaScript tutorial.</p>
+<p>Help us to create a really great JavaScript book.</p>
 
 You are welcome to:
 <ul>
@@ -227,6 +245,7 @@ You are welcome to:
 
 
 <p>Thank you.</p>
+
 
 
 </body>
