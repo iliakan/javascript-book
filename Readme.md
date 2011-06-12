@@ -26,6 +26,7 @@ Steps:
 
  1. Clone the repo
  2. Open `en/nav.html` to browse the book offline.
- 3. See the `en/readme.html` for formatting and other details.
+ 3. Book files are located in `en` for English. Edit them in your favorite editor.
+ See the `en/readme.html` for formatting and other details.
 
 
