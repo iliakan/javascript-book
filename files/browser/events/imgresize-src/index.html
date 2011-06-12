@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <style type="text/css">
+        .resizable {
+            border-right: 5px solid teal;
+            border-bottom: 5px solid teal;
+        }
+        .resizable img {
+            display:block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="resizable" id="resizable"><img src="heroes.jpg" width="500" height="282"/></div>
+
+<script>
+
+   
+    
+    // helper functions
+    
+  
+    function fixEvent(event) {
+        if ( event.pageX == null && event.clientX != null ) {
+            var html = document.documentElement, body = document.body;
+            event.pageX = event.clientX + (html && html.scrollLeft || body && body.scrollLeft || 0) - (html.clientLeft || 0);
+            event.pageY = event.clientY + (html && html.scrollTop || body && body.scrollTop || 0) - (html.clientTop || 0);
+        }
+    }
+
+
+    function getOffset(elem) {
+        var box = elem.getBoundingClientRect()
+        
+        var body = document.body
+        var docElem = document.documentElement
+        
+        var scrollTop = window.pageYOffset || docElem.scrollTop || body.scrollTop
+        var scrollLeft = window.pageXOffset || docElem.scrollLeft || body.scrollLeft
+        
+        var clientTop = docElem.clientTop || body.clientTop || 0
+        var clientLeft = docElem.clientLeft || body.clientLeft || 0
+        
+        var top  = box.top +  scrollTop - clientTop
+        var left = box.left + scrollLeft - clientLeft
+        
+        return { top: Math.round(top), left: Math.round(left) }
+    }
+    
+    // we could add more
+
+    
+</script>
+
+</body>
+</html>

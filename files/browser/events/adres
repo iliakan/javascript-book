@@ -1,0 +1,57 @@
+алтуфьевское шоссе д. 95б
+
+
+
+<div style="width:50px; height:50px"><img src="http://www.toothfairycyberspace.com/mousie.gif" id="mousie" tabindex="0"></div>
+
+<script>
+    function getOffset(elem) {
+        var box = elem.getBoundingClientRect()
+        
+        var body = document.body
+        var docElem = document.documentElement
+        
+        var scrollTop = window.pageYOffset || docElem.scrollTop || body.scrollTop
+        var scrollLeft = window.pageXOffset || docElem.scrollLeft || body.scrollLeft
+        
+        var clientTop = docElem.clientTop || body.clientTop || 0
+        var clientLeft = docElem.clientLeft || body.clientLeft || 0
+        
+        var top  = box.top +  scrollTop - clientTop
+        var left = box.left + scrollLeft - clientLeft
+        
+        return { top: Math.round(top), left: Math.round(left) }
+    }
+
+
+document.getElementById('mousie').onclick = function() {
+  this.style.position = 'absolute'
+  var offset = getOffset(this)
+  this.style.left = offset.left + 'px'
+  this.style.top = offset.top + 'px'
+
+  this.focus()
+
+  this.onkeydown = function(e) {
+    e = e || event
+    switch(e.keyCode) {
+    case 37: // left
+      this.style.left = parseInt(this.style.left)-50+'px'
+      return false
+    case 38: // up
+      this.style.top = parseInt(this.style.top)-50+'px'
+      return false
+    case 39: // right
+      this.style.left = parseInt(this.style.left)+50+'px'
+      return false
+    case 40: // bottom
+      this.style.top = parseInt(this.style.top)+50+'px'
+      return false
+    
+    }
+  }
+}
+</script>
+  
+
+

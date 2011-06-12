@@ -1,0 +1,21 @@
+<html>
+<body>
+<script>
+
+function truncate(str, maxlength) {
+    if (str.length > maxlength) {
+        str = str.substr(0,maxlength-3) + '...'
+    }
+
+    return str
+}
+
+alert(truncate("and here is what I want to say on that matter:", 20))
+
+alert(truncate("hi to all!", 20))
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+<h1>Creation of the list</h1>
+
+<script>
+  var ul = document.createElement('ul')
+  document.body.appendChild(ul)
+
+  while (true) {
+    var data = prompt("Enter the contents for the item", "")
+
+    if (data === null) {
+       break
+    }
+
+    var li = document.createElement('li')
+    li.appendChild(document.createTextNode(data))
+    ul.appendChild(li)
+  }
+</script>
+     
+</body>
+</html>

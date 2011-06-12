@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+<script>
+
+  function checkSpam(str) {
+    str = str.toLowerCase()
+        
+    return str.indexOf('viagra') >= 0 || str.indexOf('xxx') >= 0
+  }
+  
+  alert( checkSpam('buy ViAgRA now') )
+  alert( checkSpam('free xxxxx') )
+  alert( checkSpam("innocent rabbit") )
+
+</script>
+
+</body>
+</html>

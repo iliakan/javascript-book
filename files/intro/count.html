@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+<script>
+
+
+    function countSum() {
+        var sum = 0;
+
+        do {
+            var num = prompt("Enter a number?", 0);
+
+            // check it out, see the string converted into number with '+' ?
+            sum += +num;
+
+            // pay attention: not while(num), because it is possible that num === 0
+            // we need a strict type checking equality here
+        } while (num !== null);
+
+        return sum;
+    }
+
+    var sum = countSum();
+    alert("The sum is: "+sum);
+
+</script>
+
+</body>
+</html>

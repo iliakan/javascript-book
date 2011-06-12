@@ -1,0 +1,29 @@
+
+<input type="text" id="text">
+
+<script>
+function getCode(event) {
+    if (event.which == null) {
+        return chr = String.fromCharCode(event.keyCode) // IE
+    } else if (event.which!=0 && event.charCode!=0) {
+        alert(event.which)
+        return String.fromCharCode(event.which)   // остальные
+    } else {
+        // спецклавиша
+        return 'special key'
+    }
+
+   return chr
+}
+
+document.getElementById('text').onkeypress = function(e) {
+    e = e || event
+    
+    alert( String.fromCharCode(e.keyCode || e.charCode) )
+    
+    alert(getCode(e))
+}
+</script>
+
+
+

@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+<script>
+
+function find(array, value) {
+
+	for(var i=0; i<array.length; i++) {
+		if (array[i] === value) return i;
+	}
+   
+	return -1;
+}
+
+var arr = ["a", -1, 2, "b"];
+
+var index = find(arr, 2);
+
+alert(index);
+
+
+</script>
+
+</body>
+</html>

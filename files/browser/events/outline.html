@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+a:focus, input:focus { /* usually works */
+  outline: none;
+}
+
+a:active, input:active {  /* for IE */
+  outline: none; 
+}
+
+/* for buttons in firefox */
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner {
+  border: none;
+}
+</style>
+</head>
+<body>
+<a href="#" onclick="return false">Test link</a>
+<input type="button" value="test button">
+<input type="text" value="test input">
+</body>
+
+</html>

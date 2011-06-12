@@ -1,0 +1,76 @@
+.mouse-thead td { font-weight: bold; text-align: center }
+.mouse-table ul { list-style: none; padding: 0; margin: 0 }
+
+.mouse-down, .mouse-up { font-weight: bold; text-align: center }
+
+
+.mouse-table td {
+	border-right: 1px black solid;
+	border-bottom: 1px black solid;
+	padding: 5px;
+	text-align: center;
+	
+}
+
+.mouse-table {
+	border-left: 1px black solid;
+	border-top: 1px black solid;
+}
+
+.mouse-dl dt { font-weight: bold }
+
+
+.green {
+	height: 50px;
+	width: 160px;
+	background: green;
+}
+.red {
+	height: 20px;
+	width: 110px;
+	background: red;
+	color: white;
+	font-weight: bold;
+	padding: 5px;
+	text-align: center;
+        margin: 20px;
+}
+
+
+
+.d0 { text-align:center;margin:auto; }
+.d1 p { margin: 0 }
+.d1 {
+margin:2em;
+background-color:green;
+width:13em;
+height:13em;
+text-align:center;
+}
+.d1 .number {
+  line-height: 2em;
+}
+.d2 {
+text-align:center;
+margin:auto;
+background-color:blue;
+width:9em;
+height:9em;
+}
+.d1 .d2 ,number {
+  line-height: 2em;
+}
+.d3 {
+text-align:center;
+margin:auto;
+background-color:red;
+width:5em;
+height:5em;
+}
+.d1 .d2 .d3 .number {
+  line-height: 5em;
+}
+.d1 .d2 .d2a {
+  color:white;
+  line-height: 2em;
+}

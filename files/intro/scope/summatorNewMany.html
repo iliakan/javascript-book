@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+<script>
+
+function Summator() {
+  var result = 0
+
+  this.add = function(count) {    
+    for(var i=0; i<count; i++) {
+      var input = prompt('number?',0)
+      result += +input
+    }    
+  }
+  
+  this.outputResult = function() {
+    alert("current result="+result)
+  }
+}
+
+var summator = new Summator()
+summator.add(2)
+
+summator.outputResult()
+
+
+summator.add(1)
+summator.outputResult()
+
+
+
+</script>
+</body>
+</html>
+
+

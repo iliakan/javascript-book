@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<body>
+
+    <script type="text/javascript">
+
+        var menu = {
+            width: 200,
+            height: 300,
+            title: "My menu"
+        };
+
+        function isNumeric(val) {
+            var numVal = +val;
+
+            return val + '' === numVal + '';
+        }
+
+        function multiplyNumeric(obj) {
+            for(var key in obj) {
+                var val = obj[key];
+                if (isNumeric(val)) {
+                    obj[key] = val*2;
+                }
+            }
+        }
+
+        multiplyNumeric(menu);
+        
+        alert("menu width="+menu.width+" height="+menu.height+" title="+menu.title);
+
+    </script>
+
+
+</body>
+</html>

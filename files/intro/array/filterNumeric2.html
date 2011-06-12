@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+
+function isNumeric(val) {
+    var numVal = +val;
+
+    return val + '' === numVal + '';
+}
+
+// this function modifies array itself
+function filterNumericInPlace(arr) {
+    var i = 0;
+
+    while (i < arr.length) {
+        var val  = arr[i];
+        if (!isNumeric(val)) {
+            arr.splice(i,1);
+            continue;
+        }
+        i++;
+    }
+}
+
+var arr = ["a",1, 2, "b"];
+
+filterNumericInPlace(arr);
+alert(arr);
+
+
+</script>
+
+</body>
+</html>

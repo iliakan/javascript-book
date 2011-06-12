@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+    
+  .button {
+    width: 186px;
+	  height: 52px;    
+    background: url(button_static.png); 
+  }
+  
+  .button-hover {
+    background-image: url(button_hover.png);    
+  }
+    
+  .button-click {
+    background-image: url(button_click.png);    
+  }
+    
+</style>
+</head>
+<body>
+
+<div id="btn" class="button"></div>
+
+<script>
+var button = document.getElementById('btn')
+
+button.onmouseover = function() {
+  addClass(this, 'button-hover')
+}
+
+button.onmouseout = function() {
+  removeClass(this, 'button-hover')
+  removeClass(this, 'button-click')
+}
+
+button.onmousedown = function() {
+  addClass(this, 'button-click')  
+}
+
+button.onmouseup = function() {
+  removeClass(this, 'button-click')  
+}
+
+
+// -------------- helpers --------------
+
+function addClass(el, cls) {
+	for(var c = el.className.split(' '),i=c.length-1; i>=0; i--) {
+		if (c[i] == cls) return
+	}
+	
+	el.className += ' '+cls
+}
+
+function removeClass(el, cls) {
+  for(var c = el.className.split(' '),i=c.length-1; i>=0; i--) {
+		if (c[i] == cls) c.splice(i,1)
+	}
+	
+	el.className = c.join(' ')
+}
+
+</script>
+
+</body>
+</html>

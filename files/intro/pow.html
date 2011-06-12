@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+<script>
+
+  function pow(x, n) {
+    var result = x
+    
+    for(var i=1; i<n; i++) {
+      result *= x;
+    }
+        
+    return result
+  }
+  
+  var x = prompt("x?", '')
+  var n = prompt("n?", '')
+  
+  alert( pow(x, n) )
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <style>
+  .external {
+    background-color: yellow;
+  }
+  </style>
+
+</head>
+<body>
+<ul>
+    <li>
+        <a href="http://google.com">http://google.com</a>
+    </li>
+    <li>
+        <a href="/tutorial">/tutorial.html</a>
+    </li>
+    <li>
+        <a href="ftp://example.com/file.zip">ftp://example.com/file.zip</a>
+    </li>
+    <li>
+        <a href="http://nodejs.org">http://nodejs.org</a>
+    </li>
+</ul>
+
+
+
+<script>
+
+var links = document.getElementsByTagName('a')
+for(var i=0; i<links.length; i++) {
+    var a = links[i]
+    var href = a.getAttribute('href')
+    if (href && href.indexOf('://') > 0 && href.indexOf(location.protocol + '//' + location.host) != 0) {
+        a.className = 'external'
+    }
+}
+
+
+</script>
+
+</body>
+</html>

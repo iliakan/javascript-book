@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<p>Large image will load after initialization</p>
+
+<script src="bindready.js"></script>
+<script src="onready.js"></script>
+
+<script>
+onReady(function() {                                               
+  document.body.appendChild(document.createTextNode('init 1! '))
+})
+
+onReady(function() {                                               
+  document.body.appendChild(document.createTextNode('init 2! '))
+})
+</script>
+
+<script>
+// prevent caching with random param
+document.write('<img src="web.jpg?nocache='+Math.random()+'" width="200">')
+</script>
+
+</body>
+</html>

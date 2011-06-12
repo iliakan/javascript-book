@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+  <body>
+    <div>Allowed readers:</div>
+    <ul>
+      <li>Bob</li>
+      <li>Alice</li>
+    </ul>
+
+    <!-- a comment node -->
+
+    <script>   
+      function go() {
+        var children = document.body.children
+
+        for(var i=0; i<children.length; i++) {
+            alert(children[i])
+        }
+      }
+    </script>
+
+    <button onclick="go()" style="width:100px">Go!</button>
+
+  </body>
+</html>

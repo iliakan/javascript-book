@@ -1,0 +1,23 @@
+<html>
+<body>
+<b>iframe from another domain</b>
+<div id="test">Send me a message!</div>
+<script>
+function listener(event){
+	if ( event.origin !== "http://javascript.info" )
+		return;
+
+	document.getElementById("test").innerHTML = "received: " + event.data;
+}
+
+if (window.addEventListener){
+	window.addEventListener("message", listener,false);
+} else {
+	window.attachEvent("onmessage", listener);
+}
+
+
+</script>
+
+</body>
+</html>

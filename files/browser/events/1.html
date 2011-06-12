@@ -1,0 +1,64 @@
+Editable grid sketch
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+#goods td {
+  border: 1px solid black;
+  height: 20px;
+  padding: 5px;
+}
+#goods {
+border-collapse: collapse;
+}
+#goods .editing {
+  padding: 1px;
+}
+</style>
+</head>
+<body>
+
+<table id="goods">
+  <tr>
+    <th>Name</th><th>Mark</th><th>Comment</th>
+  </tr>
+  <tr>
+    <td>John</td>
+    <td>Very Good</td>
+    <td>John is very clever.</td>
+  </tr>
+  <tr>
+    <td>Miranda</td>
+    <td>Average</td>
+    <td>She's fine, but..</td>
+  </tr>
+  <tr>
+    <td>Simpson</td>
+    <td>Terrifying</td>
+    <td>Just look at what he did with the school!</td>
+  </tr>
+</table>
+
+<script>
+  document.getElementById('goods').onclick = function(e) {
+    e = e || event   
+    var target = e.target || e.srcElement
+  
+    if (target.nodeName == 'TD') {
+      var input = document.createElement('input')
+      input.type = 'text'
+      input.value = target.innerHTML
+      input.style.border = '1px solid red'
+      input.style.height = target.clientHeight - 8 + 'px'
+      input.style.width = target.clientWidth - 4 +'px'
+      target.innerHTML = ''
+      target.className = 'editing'
+      target.appendChild(input)
+    }
+  }
+</script>
+
+     </body>
+</html>

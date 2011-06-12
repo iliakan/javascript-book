@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Тест mouseover/mouseout</title>
+</head>
+<style>
+.green {
+	height: 50px;
+	width: 160px;
+	background: green;
+}
+.red {
+	height: 20px;
+	width: 110px;
+	background: red;
+	color: white;
+	font-weight: bold;
+	padding: 5px;
+}
+</style>
+<body>
+<center>
+<H1>Тест mouseover/mouseout</H1>
+<div id="green" class="green"
+    onmouseover="return logMouseMove('mouseover   ',event)"
+    onmouseout="return logMouseMove('mouseout    ',event)"
+    onmouseenter="return logMouseMove('mouseenter ',event)"
+    onmouseleave="return logIt('mouseleave ',event)">
+<div id="red" class="red">Текст</div>
+</div>
+<br>
+
+<a href="#"  class="page"
+    onClick="document.forms['testform'].elements[0].value ='';  lines=0; return false">очистить</a>
+<p>
+<script type="text/javascript">
+onload = function() { lines=0 }
+var lines= 0;
+var maxlines= 24;
+
+var typeName= new Array('None', 'Element', 'Attribute', 'Text', 'CDATA',
+    'Proc', 'Comment', 'Document', 'DocType', 'DocFrag');
+
+function showmesg(t)
+{
+   var old= document.forms['testform'].elements[0].value;
+   if (lines >= maxlines)
+   {
+   	var i= old.indexOf('\n');
+	if (i >= 0)
+	    old= old.substr(i+1);
+   }
+   else
+   	lines++;
+
+   document.forms['testform'].elements[0].value= old + t + '\n';
+}
+
+function logIt(evt,e)
+{
+    var target= e.srcElement ? e.srcElement : e.target;
+    var id= target ? (target.id ? target.id : "NO ID") : "NO TARGET";
+    showmesg(evt+' type='+typeName[target.nodeType]+' id='+id);
+    if (e.preventDefault)
+	e.preventDefault();
+    else
+	e.returnValue= false;
+     return false;
+}
+</script>
+
+<form name="testform">
+<textarea rows=20 cols=40></textarea></p>
+</tt>
+<p>
+Ваш браузер:<br><tt>
+<script>
+document.write(navigator.userAgent);
+</script>
+</center>
+</body>
+
+</html>

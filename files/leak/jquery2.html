@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+</head>
+<body>
+
+<div id="data"></div>
+
+<script>
+  
+  function go() {
+  
+    $('<div/>')
+      .html(new Array(1000).join('text'))
+      .click(function() { })
+      .appendTo('#data')
+
+    document.getElementById('data').innerHTML = ''
+      
+  }
+
+  var interval = setInterval(go, 10)
+</script>
+
+The leakage is in progress...
+
+<input type="button" onclick="clearInterval(interval)" value="stop"/>
+
+</body>
+</html>
