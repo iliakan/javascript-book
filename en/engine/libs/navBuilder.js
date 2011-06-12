@@ -217,7 +217,7 @@ function NavBuilder() {
 		this.currentDir = location.pathname.replace(/\/[^\\\/]*$/, '');
 
 		// used in map for navigation in the book
-		this.bookDir = this.currentDir + '/book/en';
+		this.bookDir = this.currentDir; // + '/book/en';
 		files = this._getFiles(this.bookDir);
 
 		// full path is not needed any more

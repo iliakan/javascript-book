@@ -27,9 +27,7 @@
     //file:///C:/tmp/xhrtest/showdown/src/1.html?document/events/01-introduction-browser-events.md
     var bookifier = new Bookifier();
 
-    Metadata.setup({
-        domain: 'http://javascript.info'
-    });
+    Metadata.read();
 
     if (!location.search) {
         alert('No document');
@@ -37,10 +35,11 @@
         var path = location.search.substr(1);
         sections = bookifier.convert(path);
         sections.head && document.write(sections.head);
+        sections.title && document.write('<title>'+sections.title+'</title>');
 
         $(function() {
 
-            document.getElementById('result').innerHTML = sections.teaser + '<div class="cut"></div>' + sections.body;
+            document.getElementById('result').innerHTML = '<h1>'+sections.title+'</h1>'+sections.teaser + '<div class="cut"></div>' + sections.body;
 
             SyntaxHighlighter.highlight()
         })

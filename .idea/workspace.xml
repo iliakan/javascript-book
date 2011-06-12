@@ -24,36 +24,54 @@
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="navBuilder.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/engine/libs/navBuilder.js">
+        <entry file="file://$PROJECT_DIR$/en/engine/libs/navBuilder.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="42" selection-start="1914" selection-end="1914" vertical-scroll-proportion="-10.32">
+            <state line="219" column="42" selection-start="4976" selection-end="4976" vertical-scroll-proportion="-8.96">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="navReader.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/engine/libs/navReader.js">
+        <entry file="file://$PROJECT_DIR$/en/engine/libs/navReader.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="9" selection-start="670" selection-end="670" vertical-scroll-proportion="0.0">
+            <state line="23" column="28" selection-start="580" selection-end="580" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="view.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/en/view.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="nav.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/book/en/nav.html">
+        <entry file="file://$PROJECT_DIR$/en/nav.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="40" selection-start="636" selection-end="636" vertical-scroll-proportion="0.5320417">
+            <state line="26" column="40" selection-start="725" selection-end="725" vertical-scroll-proportion="0.65871835">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rebuildNav.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/en/rebuildNav.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="0" selection-start="511" selection-end="511" vertical-scroll-proportion="-13.730769">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="metadata.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/engine/libs/metadata.js">
+        <entry file="file://$PROJECT_DIR$/en/engine/libs/metadata.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="0" selection-start="284" selection-end="284" vertical-scroll-proportion="0.0">
+            <state line="10" column="8" selection-start="131" selection-end="131" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -69,11 +87,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/nav.html" />
-        <option value="$PROJECT_DIR$/engine/styles/style.css" />
-        <option value="$PROJECT_DIR$/engine/libs/taskParser.js" />
-        <option value="$PROJECT_DIR$/engine/clientlibs/misc.js" />
-        <option value="$PROJECT_DIR$/engine/libs/srcLoader.js" />
         <option value="$PROJECT_DIR$/view.html" />
         <option value="$PROJECT_DIR$/formatting.txt" />
         <option value="$PROJECT_DIR$/engine/libs/simpleDown.js" />
@@ -85,6 +98,11 @@
         <option value="$PROJECT_DIR$/engine/libs/navReader.js" />
         <option value="$PROJECT_DIR$/book/en/nav.html" />
         <option value="$PROJECT_DIR$/engine/libs/navBuilder.js" />
+        <option value="$PROJECT_DIR$/en/engine/libs/navBuilder.js" />
+        <option value="$PROJECT_DIR$/en/engine/libs/metadata.js" />
+        <option value="$PROJECT_DIR$/en/engine/libs/navReader.js" />
+        <option value="$PROJECT_DIR$/en/view.html" />
+        <option value="$PROJECT_DIR$/en/nav.html" />
       </list>
     </option>
   </component>
@@ -114,6 +132,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -131,18 +150,8 @@
               <option name="myItemId" value="jsbook" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="book" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jsbook" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="engine" />
+              <option name="myItemId" value="en" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -153,56 +162,19 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="jsbook" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="engine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="book" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jsbook" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="engine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clientlibs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="book" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jsbook" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="book" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="en" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Favorites" />
     </panes>
   </component>
@@ -249,7 +221,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3488873" sideWeight="0.0" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33524767" sideWeight="0.0" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -305,106 +277,51 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/engine/styles/linkindication.css">
+    <entry file="file://$PROJECT_DIR$/en/engine/libs/navBuilder.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/engine/styles/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1381" column="13" selection-start="23513" selection-end="23513" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/engine/libs/srcLoader.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="29" selection-start="952" selection-end="952" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="36" selection-start="1554" selection-end="1554" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/engine/libs/loadFile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="4" selection-start="345" selection-end="345" vertical-scroll-proportion="0.24390244">
+        <state line="219" column="42" selection-start="4976" selection-end="4976" vertical-scroll-proportion="-8.96">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/engine/libs/taskParser.js">
+    <entry file="file://$PROJECT_DIR$/en/metadata.applet.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="1" selection-start="1429" selection-end="1429" vertical-scroll-proportion="0.85365856">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/readme.html">
+    <entry file="file://$PROJECT_DIR$/en/engine/libs/navReader.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="164" column="0" selection-start="4040" selection-end="4040" vertical-scroll-proportion="0.7609375">
+        <state line="23" column="28" selection-start="580" selection-end="580" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/engine/libs/simpleDown.js">
+    <entry file="file://$PROJECT_DIR$/en/engine/libs/metadata.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="232" column="0" selection-start="6934" selection-end="6934" vertical-scroll-proportion="0.025525525">
+        <state line="10" column="8" selection-start="131" selection-end="131" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/engine/libs/formattingTagProcessor.js">
+    <entry file="file://$PROJECT_DIR$/en/view.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="23" selection-start="2118" selection-end="2118" vertical-scroll-proportion="0.025525525">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/engine/clientlibs/misc.js">
+    <entry file="file://$PROJECT_DIR$/en/rebuildNav.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="87" selection-start="482" selection-end="482" vertical-scroll-proportion="0.36585367">
+        <state line="21" column="0" selection-start="511" selection-end="511" vertical-scroll-proportion="-13.730769">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/engine/libs/tagExpander.js">
+    <entry file="file://$PROJECT_DIR$/en/nav.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="65" selection-start="297" selection-end="345" vertical-scroll-proportion="0.2733918">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/engine/libs/bookifier.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="435" selection-end="435" vertical-scroll-proportion="0.024390243">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/engine/libs/navReader.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="9" selection-start="670" selection-end="670" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/engine/libs/metadata.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="284" selection-end="284" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/engine/libs/navBuilder.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="42" selection-start="1914" selection-end="1914" vertical-scroll-proportion="-10.32">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/book/en/nav.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="40" selection-start="636" selection-end="636" vertical-scroll-proportion="0.5320417">
+        <state line="26" column="40" selection-start="725" selection-end="725" vertical-scroll-proportion="0.65871835">
           <folding />
         </state>
       </provider>

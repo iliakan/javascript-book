@@ -1,7 +1,6 @@
 function NavReader() {
-	this.currentDir = location.pathname.replace(/\/[^\\\/]*$/, '');
 
-	Metadata.read(this.currentDir);
+	Metadata.read();
 
 	var navigation = Metadata.getNavigaton();
 
@@ -20,7 +19,7 @@ function NavReader() {
 				text += '<span class="folder">'+file.title+'</span>';
 				text += this.buildTree(file.children);
 			} else {
-				text += '<a href="../../view.html?'+file.path+'">'+file.title+'</a>';
+				text += '<a href="view.html?'+file.path+'">'+file.title+'</a>';
 			}
 			text += '</li>';
 		}

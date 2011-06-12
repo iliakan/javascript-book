@@ -7,7 +7,9 @@ var Metadata = new function() {
 		metadata = obj;
 	};
 
-	this.read = function(dir) {
+	this.read = function() {
+		var dir = location.pathname.replace(/\/[^\\\/]*$/, '');
+
 		var m = JSON.parse(loadFile(dir+'/metadata.applet.json'));
 
 		this.setup(m);
