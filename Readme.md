@@ -24,9 +24,12 @@ The contributions are carefully reviewed and appended or integrated with the cur
 
 Steps:
 
- 1. Clone the repo
+ 1. Clone the repo OR grab it at <https://github.com/iliakan/javascript-book/zipball/master> if you don't know Git.
  2. Open `en/nav.html` to browse the book offline.
  3. Book files are located in `en` for English. Edit them in your favorite editor. Or copy the directory to another language and translate.
- See the `en/readme.html` for formatting and other details.
+
+See the `en/readme.html` for formatting and other details.
+
+
 
 
