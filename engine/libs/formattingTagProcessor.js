@@ -111,7 +111,16 @@ function FormattingTagProcessor(srcLoader) {
 	};
 
 	this.img = function(data) {
-		return '<img ' + data.attrsMatch + '>';
+		var attrs = data.attrs;
+		if (attrs.src.charAt(0) == '/') {
+			attrs.src = '..'+attrs.src
+		}
+		var a = [];
+		for(var k in attrs) {
+			a.push(k+'="'+attrs[k]+'"')
+		}
+
+		return '<img ' + a.join(' ') + '>';
 	};
 
 	// [verbatim] ... [/verbatim] leaves contents as is
