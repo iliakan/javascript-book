@@ -58,6 +58,8 @@ function TaskParser(srcLoader) {
 		delete parsed.title;
 
 		var text = '<div class="learning-task"> ';
+		text += '<div class="task-meta">'+srcLoader.getUrl()+'</div>';
+
 		text += '<div class="task-formulation">'+ parsed.body + '</div>';
 
 		delete parsed.body;

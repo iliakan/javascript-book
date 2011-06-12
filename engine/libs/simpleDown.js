@@ -39,7 +39,6 @@ function SimpleDown() {
 		text = this.applyFormatting(text);
 		text = this.makeParagraphs(text);
 		text = this.makeItalicsAndBold(text);
-		text = this.makeItalicsAndBold(text);
 
 		for (var label in labels) {
 			text = text.replace(label, labels[label])
@@ -211,20 +210,22 @@ function SimpleDown() {
 		//  ###### Header 6 [lalala]  <-- sets id
 		//
 
+		var self = this;
 		text = text.replace(/^(#{1,6})[ \t]*(.+?)[ \t]*(\[[\w-]+?])?\#*(?:$|\n+)/gm,
 			function(wholeMatch, m1, m2, m3) {
 				var level = m1.length; // h1 should be only in title
 				var id = (m3 && m3.slice(1, -1) || Metadata.makeHeaderId(m2));
 
+				var title = self.applyFormatting(m2);
 				if (tocObj) {
 					tocObj.push({
 						level: level,
 						id: id,
-						title: m2
+						title: title
 					})
 				}
 
-				return "<h" + level + ' id="' + id + '">' + m2 + "</h" + level + ">";
+				return "<h" + level + ' id="' + id + '">' + title + "</h" + level + ">";
 			}
 		);
 

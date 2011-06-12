@@ -8,15 +8,17 @@ if (typeof module != 'undefined') {
  */
 function SrcLoader(url) {
 
-	function getBaseDir(url) {
+	this.getBaseDir = function() {
 		if (url.lastIndexOf('/')) {
 			return url.substr(0, url.lastIndexOf('/'));
 		} else {
 			return '.';
 		}
-	}
+	};
 
-	var baseDir = getBaseDir(url);
+	this.getUrl = function() {
+		return url;
+	};
 
 	/**
 	 * Returns full URL to src, from current dir
@@ -28,7 +30,7 @@ function SrcLoader(url) {
 		if (src.charAt(0) == '/') {
 			src = src.substr(0); // /tutorial/bla -> tutorial/bla (relative)
 		} else {
-			src = baseDir + '/' + src;
+			src = this.getBaseDir() + '/' + src;
 		}
 
 		return src;

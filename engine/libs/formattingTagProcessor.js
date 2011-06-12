@@ -93,7 +93,8 @@ function FormattingTagProcessor(srcLoader) {
 
 		// TODO: add online mode
 		// Metadata.getDomain()+'/play/
-		return '<a href="'+url+'" class="liplay" target="_blank">'+attrs.vertical+'</a>';
+		var title = attrs.vertical || attrs.src;
+		return '<a href="'+url+'" class="liplay" target="_blank">'+title+'</a>';
 		//debugger
 	};
 
