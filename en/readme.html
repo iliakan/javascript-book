@@ -18,6 +18,23 @@ It is used for sorting.</p>
 <p>The title is inferred from the first header of the page.
 For a folder (chapter), the file <code>00-index.md</code> is used for this purpose.</p>
 
+
+<h2>Navigation</h2>
+
+<p>Browser navigation by using <code>nav.html</code>.</p>
+
+<p><b>Navigation does not autopickup your changes.</b>
+If you change the structure or references, then the navigation needs to be rebuilt.</p>
+
+<p>JavaScript is unable to traverse the directory tree, that's why a signed Java Applet is used. It gets executed only when rebuilding navigation.</p>
+
+<p>Actually, the applet is small, simplified and secured to maximum. All it can do is to get file names inside a folder and write to file which ends with '.applet.json'. For additional security, it only works locally, so if anyone tries to put it on the web, nothing would work.
+
+<p>The sources are in the <code>engine/jpath</code> folder. If you feel really paranoid, recompile it and sign by your certificate.</p>
+
+<p>Please never click "Trust always" on it.</p>
+
+
 <h2>Layout</h2>
 
 <h3>Page layout</h3>
@@ -202,18 +219,6 @@ No format happens inside <code>[verbatim]</code> bb-tag:
     `no format [#here]`
     [/verbatim]
 </pre>
-
-<h2>Rebuilding navigation</h2>
-
-<p>If you change the structure or references, then the navigation needs to be rebuild to pickup the changes.</p>
-
-<p>JavaScript is unable to traverse the directory tree, that's why a signed Java Applet is used. It gets executed only when rebuilding navigation.</p>
-
-<p>Actually, the applet is small, simplified and secured to maximum. All it can do is to get file names inside a folder and write to file which ends with '.applet.json'. For additional security, it only works locally, so if anyone tries to put it on the web, nothing would work.
-
-<p>The sources are in the <code>engine/jpath</code> folder. If you feel really paranoid, recompile it and sign by your certificate.</p>
-
-<p>Please never click "Trust always" on it.</p>
 
 <h2>Best Practices</h2>
 
