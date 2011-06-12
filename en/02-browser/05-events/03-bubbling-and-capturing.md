@@ -3,7 +3,7 @@
 
 DOM elements can be nested inside each other. And somehow, the handler of the parent works even if you click on it's child.
 
-The reason is <i>event bubbling</code>.
+The reason is <i>event bubbling</i>.
 
 =Cut
 

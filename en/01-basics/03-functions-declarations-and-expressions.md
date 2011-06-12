@@ -72,7 +72,7 @@ alert( getNothing() === undefined ) // true
 
 ### Local variables   
 
-A function may contain variables, defined by `var`. Such variables are called <i>local</code> and are only visible inside the function.
+A function may contain variables, defined by `var`. Such variables are called <i>local</i> and are only visible inside the function.
 
 [js]
 function sum(a, b) {
