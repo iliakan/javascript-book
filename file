@@ -1,0 +1,13 @@
+diff --git a/en/01-basics/01-javascript-and-related-technologies/01-overview.md b/en/01-basics/01-javascript-and-related-technologies/01-overview.md
+index 6d5c45f..6e13e4b 100644
+--- a/en/01-basics/01-javascript-and-related-technologies/01-overview.md
++++ b/en/01-basics/01-javascript-and-related-technologies/01-overview.md
+@@ -6,7 +6,7 @@ Let's see what's so special in javascript, why javascript and what other useful
+ =Cut
+ 
+ 
+-## What is javascript?   
++## What is javascript?   //Что такое JavaScript?
+ 
+ <b>Javascript is a scripting language, created for making html-pages live</b>. It turns the web into something more powerful than just interlinked html pages.
+ 

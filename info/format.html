@@ -1,0 +1,242 @@
+<!DOCTYPE HTML>
+<html>
+<body style="width:700px;margin:auto;font-family: Georgia, Arial, sans-serif">
+
+<h2>Book structure</h2>
+
+<p>At the top level, books are listed by language: en, ru ...
+Each language is a separate book.</p>
+
+<p>The book content resides in files with <code>.md</code> extension.
+There may be asset files like scripts, styles etc.
+A book content may use them, but no parsing and formatting is applied to non-<code>.md</code> files.</p>
+
+<p>Book pages and chapters must start with a digital number followed by a hyphen: 01-..., 02-... etc.
+It is used for sorting.</p>
+
+<p>The title is inferred from the first header of the page.
+For a folder (chapter), the file <code>00-index.md</code> is used for this purpose.</p>
+
+<p>Tasks for the chapter must be in the <code>task</code> subfolder.</p>
+
+
+<h2>Navigation</h2>
+
+<p>Browser navigation by using <code>nav.html</code>.</p>
+
+<p><b>Navigation does not autopickup your changes.</b>
+If you change the structure or references, then the navigation needs to be rebuilt.</p>
+
+<p>JavaScript is unable to traverse the directory tree, that's why a signed Java Applet is used. It gets executed only when rebuilding navigation.</p>
+
+<p>Actually, the applet is small, simplified and secured to maximum. All it can do is to get file names inside a folder and write to file which ends with '.applet.json'. For additional security, it only works locally, so if anyone tries to put it on the web, nothing would work.
+
+<p>The sources are in the <code>engine/jpath</code> folder. If you feel really paranoid, recompile it and sign by your certificate.</p>
+
+<p>Please never click "Trust always" on it.</p>
+
+
+<h2>Layout</h2>
+
+<h3>Page layout</h3>
+<pre>
+    # Title
+
+    This is a short intro to the page.
+    The cut below is optional, but recommended.
+    If there is no cut, then several first lines are used.
+
+    =Cut
+
+    The body.
+
+    =Head
+
+    Scripts, styles, other unformatted stuff that goes to HEAD.
+</pre>
+
+<p>All sections (starting with <code>"="</code>) are optional.</p>
+
+<h3>Task layout</h3>
+
+<pre>
+    # Title
+
+    The body, task formulation.
+
+    =Hint 1
+    ...
+    =Hint n
+    ...
+    =Solution
+    ...
+
+</pre>
+
+<p>All sections are optional, the solution should exist.</p>
+
+<h2>Formatting</h2>
+
+<h3>Headers</h3>
+
+<p>Headers starts from <code>#</code>:</p>
+<pre>
+# Title
+## SubTitle
+</pre>
+
+<p>There should be only one 1st-level header in the document: the title.</p>
+
+<p>A header may have id:</p>
+<pre>
+## Header with id [id]
+</pre>
+
+<h3>External Links</h3>
+<p>Links can be written as <code>[title](url)</code>, for example:</p>
+<pre>
+    [Google](http://google.com)
+    ["Title with backslashed quote: \", [ and ] "](http://somewhere.com)
+</pre>
+
+<p>To put a link which name is same as URL, use empty <code>()</code>:</p>
+<pre>
+    [http://google.com]()
+</pre>
+
+<h3>Internal links and references</h3>
+<p>All internal links must be made through references, not URLs.
+The purpose of such structure is to ensure consistency across the book. All references are global and unique.</p>
+
+<p>A <i>reference</i> is created with <code>[#id]</code> anywhere in the text. A reference must be latin alphanumeric with hyphens.</p>
+
+<pre>
+    [#events-this]
+</pre>
+
+<p>It may have a title after <code>|</code>:</p>
+
+<pre>
+    [#closure-peculiarity|Closure Peculiarity]
+</pre>
+<p>Headers with <code>[id]</code> can be used as titled references.</p>
+
+<p>To make an internal link link, use <code>[title](#id)</code>, for example:</p>
+<pre>
+    Somewhere: [#good-info]
+
+    Now the link: [Good reading](#good-info)
+</pre>
+
+<p>A link can also use the reference title:</p>
+<pre>
+    This will show up as "Good reading" link: [](#good-info)
+</pre>
+
+<h2>Bold, italic</h2>
+
+Use <code>*text*</code> for italic, <code>**text**</code> for bold.
+
+If there are spaces, it won't get formatted: <code>a * b * c</code> leaves formatting as is, because there are spaces around '*'.'
+
+Instead of asterisks, one can use underlines, like this: <code>_italic_ __bold__</code>.
+
+<h2>Code</h2>
+
+<h3>Inline code</h3>
+
+<p>The inline code in backtricks <code>`code`</code> is wrapped into <code>CODE</code> tag.</p>
+
+<p>To use backtricks inside the code, put double backtricks around it:</p>
+<pre>
+    `` `which` `` -> &lt;code&gt;`which`&lt;/code&gt;
+</pre>
+
+<p>All special chars inside code are replaced inside <code>`...`</code>. You can write <code>`&lt;body&gt;`</code>.
+But even if you want to use tags, they won't work. For example:</p>
+<pre>
+    `&lt;body&gt;` -> &lt;code&gt;&amp;lt;body&amp;gt;&lt;/code&gt;
+</pre>
+
+<p>To use tags inside the inline code code, use the <code>CODE</code> tag:</p>
+<pre>
+    &lt;code&gt;on&lt;i&gt;event&lt;/i&gt;&lt;/code&gt;
+</pre>
+
+
+<h3>Code blocks</h3>
+
+<p>A code block is wrapped in bb-tags: </p>
+
+<pre>
+    [html]
+    &lt;!DOCTYPE HTML&gt;
+    &lt;html&gt;
+    ...
+    &lt;/html&gt;
+    [/html]
+</pre>
+
+<p>Other languages supported(by extensions): <code>js, css, java, ruby, php, txt, py, xml, xslt, html, erl</code>.</p>
+
+A code block can be made runnable by adding a <code>run</code> attribute:
+<pre>
+    [html run]
+    &lt;p&gt; A "run" button will appear above the code block &lt;/p&gt;
+    [/html]
+</pre>
+
+The attribute <code>autorun</code> makes html/js code run automatically.
+For book pages, the execution happens on the same domain, in iframe for HTML or eval for JS.
+
+Important parts of the code can be delimited by <code>*!* ... */!*</code>.
+<pre>
+    [js]
+    var body = *!*document.body*/!* // inline
+
+    *!*
+    alert(body) // block
+    body.innerHTML = 5
+    */!*
+    [/js]
+</pre>
+
+<h3>Code inclusions</h3>
+
+For a larger code, you may want to put it into a file and use the <code>src</code> attribute:
+
+<pre>
+    [js run src="assets/my.js"][/js]
+</pre>
+
+The path is resolved relative to the current page. The absolute path is resolved relative to the book. External URLs like http://... are not allowed.
+
+
+<h2>Verbatim pieces</h2>
+
+No format happens inside <code>[verbatim]</code> bb-tag:
+<pre>
+    [verbatim]
+    `no format [#here]`
+    [/verbatim]
+</pre>
+
+<h2>Best Practices</h2>
+
+Put language-independent assets in the root "files" folder. This way different languages can reuse them.
+If you want to comment the code, use markers:
+<pre>
+  [js]
+  var a = 5  (1)
+
+  alert(a)  (2)
+  [/js]
+
+   &lt;ol&gt;
+   &lt;li&gt; Assign a &lt;/li&gt;
+   &lt;li&gt; Output a &lt;/li&gt;
+   &lt;/ol&gt;
+</pre>
+
+</body>
+</html>
