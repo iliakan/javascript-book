@@ -12,7 +12,7 @@ For each item:
 
 <b>All elements must be created dynamically.</b>
 
-The working example is here: [play full src="/assets/browser/dom/createList"]
+The working example is here: [play full src="/assets/browser/dom/createList.html"]
 
 P.S. `prompt` returns `null` if user pressed ESC.
 

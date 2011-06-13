@@ -11,11 +11,11 @@ pow(1, 100) = 1*1*...*1 = 1
 
 Create a page with prompts for `x` and `n`, then outputs the result of `pow(x,n)`.
 
-The demo: [play src="tutorial/intro/pow"]
+The demo: [play src="/assets/intro/pow.html"]
 
 
 =Solution
 
-The solution: [play src="/assets/intro/pow"]
+The solution: [play src="/assets/intro/pow.html"]
 
 

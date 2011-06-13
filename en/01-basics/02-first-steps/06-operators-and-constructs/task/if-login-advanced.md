@@ -9,7 +9,7 @@ If the input is <b>"Monty" or "Chip"</b>, then `prompt` for a password, for any 
 
 If the password is <b>"Cheese" for Monty and "Gadget" for Chip</b>, then output "Access granted", otherwise output "Wrong password".
 
-See it in action here: [play src="tutorial/intro/if_pass2"]
+See it in action here: [play src="/assets/intro/if_pass2.html"]
 
 
 =Hint 1
@@ -20,5 +20,5 @@ The `prompt` returns `null` when cancelled.
 
 The solution is based on nested `if`:
 
-Open it at [play src="/assets/intro/if_pass2"]. Please, pay attention to code formatting and extra line spaces in high-level `if`. <b>Spaces are sweet for better readability.</b>
+Open it at [play src="/assets/intro/if_pass2.html"]. Please, pay attention to code formatting and extra line spaces in high-level `if`. <b>Spaces are sweet for better readability.</b>
 

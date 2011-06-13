@@ -23,7 +23,7 @@ Should be like this (placeholder got background for demo purposes):
 
 [iframe height=140 src="tutorial/browser/dom/replaceDiv/solution/index.html"]
 
-The source document: [play src="/assets/browser/dom/replaceDiv/2"].
+The source document: [play src="/assets/browser/dom/replaceDiv/2.html"].
 
 <b>P.S... Do it without any additional CSS.</b>
 

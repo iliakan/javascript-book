@@ -18,7 +18,7 @@ The document:
 </body>
 [/html]
 
-The source is at [play src="/assets/browser/dom/custom_attribute"].
+The source is at [play src="/assets/browser/dom/custom_attribute.html"].
 
 
 =Solution

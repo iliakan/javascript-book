@@ -1,7 +1,7 @@
 
 # Rounded button 
 
-Take the document at [play src="/assets/browser/dom/roundedButton/source"] and create the <code>&lt;A&gt;</code> link with given style by pure JavaScript, <i>without any HTML tags at all</i>:
+Take the document at [play src="/assets/browser/dom/roundedButton/source.html"] and create the <code>&lt;A&gt;</code> link with given style by pure JavaScript, <i>without any HTML tags at all</i>:
 
 [html src="/assets/browser/dom/roundedButton/task.html" height=auto link autorun][/html]
 
@@ -19,7 +19,7 @@ There are two variants.
 <li>Use `elem.style` subproperties to assign style items one-by-one. That changes only style properties which get assigned.</li>
 </ol>
 
-The solution follows the second way: [play src="/assets/browser/dom/roundedButton/solution"]. 
+The solution follows the second way: [play src="/assets/browser/dom/roundedButton/solution.html"]. 
 
 CSS properties:
 

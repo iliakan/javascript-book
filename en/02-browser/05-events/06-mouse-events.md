@@ -157,7 +157,7 @@ Check it on the iframe below:
 
 <iframe style="border:1px solid black; overflow: hidden; height:130px; width: 600px" src="/files/tutorial/browser/events/mouseoverout.html">
 
-The source code in the playground: [play src="/assets/browser/events/mouseoverout"].
+The source code in the playground: [play src="/assets/browser/events/mouseoverout.html"].
 
 
 

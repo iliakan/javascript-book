@@ -20,6 +20,6 @@ Note. Remember `charAt`, `substr` and check `str.toUpperCase()` function which t
 
 There is a number of ways to implement such task.
 
-A possible solution is [play src="/assets/intro/array/camelize"|here].
+A possible solution is [play src="/assets/intro/array/camelize.html"|here].
 
 

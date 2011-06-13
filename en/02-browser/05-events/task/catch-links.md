@@ -12,7 +12,7 @@ Below is how it should work (in iframe):
 <li>The DIV contents can contain nested tags both outside the links ( like <code>&lt;P&gt;</code>) and inside them (like `I` or `B`).</li>
 </ul>
 
-The source page is at [play src="/assets/browser/events/links-src"]
+The source page is at [play src="/assets/browser/events/links-src.html"]
 
 
 
@@ -43,6 +43,6 @@ We catch the event on `contents` and ascend the `parentNode` until either proces
   }  
 [/js]
 
-See the full solution at [play src="/assets/browser/events/links"].
+See the full solution at [play src="/assets/browser/events/links.html"].
 
 

@@ -14,6 +14,6 @@ alert(arr)  // [1,2]
 
 =Solution
 
-The solution is to iterate over array and use `arr.splice` to remove non-numeric values. Check it out [play src="/assets/intro/array/filterNumeric2"|here].
+The solution is to iterate over array and use `arr.splice` to remove non-numeric values. Check it out [play src="/assets/intro/array/filterNumeric2.html"|here].
 
 

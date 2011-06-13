@@ -25,6 +25,6 @@ function checkSpam(str) {
 }
 [/js]
 
-The full solution is at [play src="/assets/intro/checkSpam"].
+The full solution is at [play src="/assets/intro/checkSpam.html"].
 
 

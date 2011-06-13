@@ -8,9 +8,9 @@ Write the code to `prompt` user for a value, and `alert`:
 <li>0, if the value is zero.</li>
 </ul>
 
-See it in action here: [play src="tutorial/intro/if_sign"]
+See it in action here: [play src="/assets/intro/if_sign.html"]
 
 =Solution
 
-[play src="/assets/intro/if_sign"]
+[play src="/assets/intro/if_sign.html"]
 

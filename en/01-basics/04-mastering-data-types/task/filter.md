@@ -20,6 +20,6 @@ arr = filter(arr, function(val) { return val > 0 })
 
 =Solution
 
-There is nothing really special in this task. Passing functions around and applying them is easy in javascript. Check the solution [play src="/assets/intro/array/filter"|here].
+There is nothing really special in this task. Passing functions around and applying them is easy in javascript. Check the solution [play src="/assets/intro/array/filter.html"|here].
 
 
