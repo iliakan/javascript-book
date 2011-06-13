@@ -213,7 +213,7 @@ alert(1 || 0)  // *!*1*/!*, the last evaluated value
 alert(0 || 1)  //  *!*1*/!*, the last evaluated value
 [/js]
 
-What is both operands are false? 
+What if both operands are falsy? 
 [js run]
 // Left operand is false,
 // the evaluation goes to the right operand 

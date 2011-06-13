@@ -115,11 +115,10 @@ As you already know, JavaScript is not Java. In fact, they don't have much in co
 
 <b>A Java applet is a program for a browser just like an executable file.</b> A programmer writes it in Java, then compiles and puts a link on it into HTML. A browser then opens a page, finds the reference to an applet, downloads and executes it (if Java is enabled).
 
-
 An important difference between a Java applet and JavaScript is their abilities. 
 
 <ul class="balance">
-<li class="plus">Java can do <i>everything</i>, just like an installed executable. For security purposes, an unsafe action requires visitor's confirmation.</li>
+<li class="plus">Java can do <i>everything</i>, just like an installed  executable. For security, an unsafe action requires visitor's confirmation.</li>
 <li class="plus">Java development is easier: IDEs are cool.</li>
 <li class="minus">Java takes more time to load and is heavy to start running.</li>
 <li class="minus">Java needs to be installed and enabled.</li>
@@ -135,7 +134,7 @@ Adobe Flash initially appeared as a cross-browser platform and language for mult
 
 <ul class="balance">
 <li class="list-plus">Great stuff for networking (sockets, UDP for P2P)</li>
-<li class="list-plus">Support for complex multimedia: images, audio, video is much more advanced compared to HTML5. Camera and microphone are here too.</li>
+<li class="list-plus">Support for complex multimedia: images, audio, video is must more advanced compared to HTML5. Camera and microphone are here too.</li>
 <li class="list-plus">Comfortable IDE for Flash, no browser incompatibilities.</li>
 <li class="minus">Flash has to be installed and enabled.</li>
 <li class="minus">Flash is not integrated with HTML page, it runs in a separate container within the page.</li>
@@ -177,19 +176,19 @@ These technologies are much less widespread.
 </li><li>
 <strong>Silverlight</strong> is an Adobe Flash competitor from Microsoft based on .NET. It runs best on Windows, the cross-platform support improves gradually time. Mostly used for Windows-based applications and intranet.
 </li><li>
-<strong>VBscript</strong> is an outdated attempt of Microsoft to do a JavaScript-like language based on Visual Basic. No longer under active development, VBScript lacks many abilities of JavaScript and hence is almost unused in modern web programming.
+<strong>VBscript</strong> is an outdated attempt of Microsoft to do a JavaScript-like language based on Visual Basic. It is not being developed, VBScripts lack many abilities of JavaScript and hence are almost not used in  modern web programming.
 </li></ul>
 
 
 ## Summary   
 
-JavaScript is unique because it's widespread and it's well integrated with HTML/CSS.
+JavaScript is unique because it is a wide-spread and it's integration with HTML/CSS is best.
 
-JavaScript has a bright and more-or-less compatible future.
+JavaScript has the bright and more-or-less compatible future.
 
 But a good JavaScript programmer should keep other technologies in mind too. For example, Flash, Java have their own unique features. They are able to call JavaScript functions and vice versa.
 
-So there are tasks which can be solved using combinations of JavaScript + Flash, JavaScript + Java.
+So there are tasks which can be solved using a combinations of JavaScript + Flash, JavaScript + Java.
 
 Examples are: selecting uploading multiple files at once (Flash), using camera and microphone (Flash), doing complex multimedia and graphics, including calculations (Flash, Java) and much more. You'll meet them on your way.
 

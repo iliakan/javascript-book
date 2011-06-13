@@ -215,7 +215,7 @@ if ("\n0\n") alert(2) // 2, if treats "\n0\n" as true
 
 <b>It is possible that `a == b`, but in boolean context `a` is `true` and `b` is `false`.</b>
 
-<div class="ponder"><div class="smart-head">A way to frighen Java programmers.</div>
+<div class="ponder"><div class="smart-head">A way to frighten Java programmers.</div>
 
 To convert a value to boolean, you may use double-negation: `!!val` or direct call `Boolean(val)`.
 

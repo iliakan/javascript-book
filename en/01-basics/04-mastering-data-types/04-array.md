@@ -201,7 +201,7 @@ So, using `shift/unshift` is generally slower than `push/pop`. The larger array 
 
 <b>The `length` property in JavaScript is not quite a length, it is `last index + 1`</b>.
 
-That becomes important in <i>sparse</i> arrays, whith 'holes' in indexes.
+That becomes important in <i>sparse</i> arrays, with 'holes' in indexes.
 
 In the next example we add two elements to empty `fruits`, but `length` becomes `100`:
 
