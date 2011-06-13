@@ -157,14 +157,11 @@ table td {
 
 .toc {
     border: 1px solid #CCCCCC;
-    position: absolute;
-    font-size: 80%;
-    left: 0;
-    top:  0;
-    max-width: 270px;
+    font-size: 90%;
+    max-width: 300px;
+    
     margin:  1px;
-    padding-left: 20px;
-    padding-right: 5px;
+    padding-top: 5px;
     padding-bottom: 5px;
 }
 
