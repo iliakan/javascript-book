@@ -7,18 +7,21 @@
 <p>At the top level, books are listed by language: en, ru ...
 Each language is a separate book.</p>
 
-<p>The book content resides in files with <code>.md</code> extension.
+<p><b>The book content resides in files with <code>.md</code> extension.</b>
 There may be asset files like scripts, styles etc.
 A book content may use them, but no parsing and formatting is applied to non-<code>.md</code> files.</p>
 
-<p>Book pages and chapters must start with a digital number followed by a hyphen: 01-..., 02-... etc.
+<p><b>Book pages and chapters must start with a digital number followed by a hyphen</b>: 01-..., 02-... etc.
 It is used for sorting.</p>
 
+<p>Anything ending with <code>.bak</code> is ignored.</p>
+
 <p>The title is inferred from the first header of the page.
-For a folder (chapter), the file <code>00-index.md</code> is used for this purpose.</p>
+For a folder (chapter), the file <code>00-index.md</code> is used for this purpose. This file should have at least a header. You can also add few introductory paragraphs.</p>
 
 <p>Tasks for the chapter must be in the <code>task</code> subfolder.</p>
 
+<p>Encoding is <b>UTF-8</b>. Line breaks are <b>unix-style: \n</b>.</p>
 
 <h2>Navigation</h2>
 
@@ -223,20 +226,13 @@ No format happens inside <code>[verbatim]</code> bb-tag:
 
 <h2>Best Practices</h2>
 
-Put language-independent assets in the root "files" folder. This way different languages can reuse them.
-If you want to comment the code, use markers:
-<pre>
-  [js]
-  var a = 5  (1)
+<ul><li>
+Put files and other assets locally. Try to evade the root <code>assets</code> folder unless the content is really global.
+</li>
+<li>Use SVG for illustrations.</li>
+</ul>
 
-  alert(a)  (2)
-  [/js]
 
-   &lt;ol&gt;
-   &lt;li&gt; Assign a &lt;/li&gt;
-   &lt;li&gt; Output a &lt;/li&gt;
-   &lt;/ol&gt;
-</pre>
 
 </body>
 </html>
