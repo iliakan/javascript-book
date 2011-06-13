@@ -9,6 +9,8 @@ function NavReader() {
 	};
 
 	this.buildTree = function(children) {
+		if (!children) return '';
+
 		var text = '<ul>';
 
 		for(var i=0; i<children.length; i++) {
