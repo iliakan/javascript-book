@@ -1,5 +1,5 @@
 
-**in progress, not yet released**
+**alpha, not yet released**
 
 # Welcome!
 
