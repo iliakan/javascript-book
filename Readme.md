@@ -28,7 +28,7 @@ Steps:
  2. Open `en/nav.html` to browse the book offline.
  3. Book files are located in `en` for English. Edit them in your favorite editor. Or copy the directory to another language and translate.
 
-See the `en/readme.html` for formatting and other details.
+See the `readme.html` for formatting and other details.
 
 -----------
 
