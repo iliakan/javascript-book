@@ -1,7 +1,8 @@
 
 # Welcome!
 
-Here you've found the offline-capable, modern and somewhat interactive JavaScript tutorial.
+Here you are. The offline-capable, modern and somewhat interactive JavaScript tutorial. Open-source all-around.
+
 The area of coverage starts from core features and may be extended. JavaScript is large. JavaScript is hot. Learn JavaScript.
 
 You can see the book online at <http://javascript.info> or clone the repo, browse and contribute locally.
