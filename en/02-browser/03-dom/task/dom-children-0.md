@@ -1,7 +1,7 @@
 
 # DOM children 
 
-In the <a href="http://javascript.info/files/tutorial/browser/dom/example.html">example document</a>:
+In the <a href="http://JavaScript.info/files/tutorial/browser/dom/example.html">example document</a>:
 
 <ul>
 <li>Write the code to access the `UL` using `children`.</li>

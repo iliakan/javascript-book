@@ -219,7 +219,7 @@ Of course, it's possible to copy old handler and run it manually inside a new on
 
 ### Special methods   
 
-In a complex javascript application, it's fairly ok that different interface components may be interested in handling the same event.
+In a complex JavaScript application, it's fairly ok that different interface components may be interested in handling the same event.
 
 A classical example is a "document loaded" event and many graphical components which wait for it to initialize themselves.
 

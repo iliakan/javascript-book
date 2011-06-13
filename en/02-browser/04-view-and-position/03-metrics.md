@@ -1,7 +1,7 @@
 
 # Metrics 
 
-It is possible to position elements with javascript. A simple example of such positioning is a tooltip which follows mouse.
+It is possible to position elements with JavaScript. A simple example of such positioning is a tooltip which follows mouse.
 
 This section describes how to get/calculate coordinates of elements and their position.
 

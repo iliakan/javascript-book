@@ -1,9 +1,9 @@
 
 # String 
 
-The String is by far one of the most used type in javascript.
+The String is by far one of the most used type in JavaScript.
 
-There are programming languages that differ "chars" from "strings". But in javascript, there are only strings, no chars. That really makes life simpler.
+There are programming languages that differ "chars" from "strings". But in JavaScript, there are only strings, no chars. That really makes life simpler.
 
 Another feature is that internally all strings are unicode, no matter which encoding is used.
 
@@ -79,7 +79,7 @@ alert(str) // '\'
 
 ## Methods and properties   
 
-There are many properties in javascript strings. Let's discuss the most important ones first.
+There are many properties in JavaScript strings. Let's discuss the most important ones first.
 
 
 ### Length   
@@ -342,7 +342,7 @@ Now you know:
 
 In addition to concatenation which is done by "+" operator, that's all we need in most of cases.
 
-Later we'll discuss regular expression, that's important in javascript also.
+Later we'll discuss regular expression, that's important in JavaScript also.
 
 To learn about other methods of String, you can browse <a href="https://developer.mozilla.org/en/Core_JavaScript_1.5_Reference/Objects/String">Mozilla manual</a>.
 

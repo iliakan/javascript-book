@@ -225,7 +225,7 @@ Most browsers do not generate `keypress` for such keys. Instead, for special key
 
 The good news is that modern browsers and (even older) IE agree on keycodes for almost all special keys (with the exception of branded keys like IE start button).
 
-Another example is hotkeys. When we implement a custom hotkey with javascript, it should work same no matter of case and current language. We don't want a character. We just want a scan code.
+Another example is hotkeys. When we implement a custom hotkey with JavaScript, it should work same no matter of case and current language. We don't want a character. We just want a scan code.
 
 
 ### Scan codes VS char codes   
@@ -261,7 +261,7 @@ Try that on the test stand above. Type '-' and watch <code>keydown keyCode</code
 
 Some special actions can be prevented. If the backspace is pressed, but the `keydown` returns `false`, the character will not be deleted. 
 
-But of course certain actions can't be cancelled, especially OS-level ones. Alt+F4 closes browser window in most operating systems, no matter what you do in javascript. 
+But of course certain actions can't be cancelled, especially OS-level ones. Alt+F4 closes browser window in most operating systems, no matter what you do in JavaScript. 
 
 
 ## Tasks and examples   

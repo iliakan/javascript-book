@@ -1,7 +1,7 @@
 
 # window === window.window 
 
-We know that `window` is a global object. Javascript searches everything in <code><code>window</code></code> as the last resort.
+We know that `window` is a global object. JavaScript searches everything in <code><code>window</code></code> as the last resort.
 
 Then what is `window.window`, is it true that `window === window.window` ?
 

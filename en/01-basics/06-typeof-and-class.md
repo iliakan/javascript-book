@@ -7,7 +7,7 @@ To support polimorphism, we need a way to get the type of a variable. There is a
 
 =Cut
 
-As we know, there are several <i>primitive</i> types in javascript:
+As we know, there are several <i>primitive</i> types in JavaScript:
 <dl>
 <dt>null, undefined</dt>
 <dd>Special values.</dd>

@@ -3,7 +3,7 @@
 
 A function, like a variable, can be defined anywhere in the code.
 
-Javascript provides several ways of defining them:
+JavaScript provides several ways of defining them:
 <ul>
 <li>Function Declaration</li>
 <li>Function Expression</li>
@@ -143,7 +143,7 @@ When it comes to execution, the declarations are ignored. So the `if` statement 
 
 ## Function Expression   
 
-A function in javascript is a first-class value, just like a number or string.
+A function in JavaScript is a first-class value, just like a number or string.
 
 <b>Anywhere where you could put a value, you can also put a function</b>, declared "at place" with a <i>function expression</i> syntax: `function(arguments) { ... }`.
 
@@ -187,7 +187,7 @@ if (1) {
 sayHi() 
 [/js]
 
-In the example above, the result in same in all browsers. 
+In the example above, the result is the same in all browsers. 
 
 
 ### Use declarations, please   
@@ -215,7 +215,7 @@ Besides, functions declared this way can be called before it's definition.
 
 ## Function is a value   
 
-A function in javascript is a regular value. We could even output it:
+A function in JavaScript is a regular value. We could even output it:
 
 [js run]
 function f() { alert(1) }
@@ -381,7 +381,7 @@ Short function names can be allowed if:
 <li>A function is temporary and used only in nearest code. Same logic as with variables.</li>
 <li>A function is used everywhere in the code. So from the one hand, there is no danger to forget what it does, and from the other hand, you have less writing. 
 
-The real-world examples are '$', '$$', '$A', '$F' etc. Javascript libraries use these names to make frequent calls shorter.</li>
+The real-world examples are '$', '$$', '$A', '$F' etc. JavaScript libraries use these names to make frequent calls shorter.</li>
 </ul>
 
 In other cases, the name of a function should be a verb or multiple words starting with a verb.
@@ -389,7 +389,7 @@ In other cases, the name of a function should be a verb or multiple words starti
 
 ## Summary   
 
-Functions in javascript are regular values. They can be assigned, passed around and called when needed.
+Functions in JavaScript are regular values. They can be assigned, passed around and called when needed.
 
 <ul>
 <li>A function which returns nothing actually returns special value: `undefined`.</li>

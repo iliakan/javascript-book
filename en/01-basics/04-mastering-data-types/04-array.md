@@ -158,7 +158,7 @@ You just set the length and browser trims the array.
 
 ## `Array` is `Object`, consequences.   
 
-In fact `Array` in javascript is internally an `Object` extended with auto-length and special methods. 
+In fact `Array` in JavaScript is internally an `Object` extended with auto-length and special methods. 
 
 This is different from arrays in some languages which represent a contiguous segment of memory, and also different from queue/stack structures based on linked-lists.
 
@@ -174,7 +174,7 @@ arr[0] = 5
 Although that's not recommended. Numeric arrays are suited for numeric keys, objects are for associative key-value pairs. There's usually no reason to mix them.
 [/warn]
 
-In javascript, arrays being a hash table gives certain performance benefits and drawbacks.
+In JavaScript, arrays being a hash table gives certain performance benefits and drawbacks.
 
 For instance, `push/pop` operate on last element of array only, so they are blazingly fast, say O(1).
 
@@ -199,7 +199,7 @@ So, using `shift/unshift` is generally slower than `push/pop`. The larger array 
 
 ## Sparse arrays, details of `length`   
 
-<b>The `length` property in javascript is not quite a length, it is `last index + 1`</b>.
+<b>The `length` property in JavaScript is not quite a length, it is `last index + 1`</b>.
 
 That becomes important in <i>sparse</i> arrays, whith 'holes' in indexes.
 
@@ -264,7 +264,7 @@ More often we need to remove an item without leaving holes between indexes. Ther
 
 ### Method `splice`   
 
-Method `splice` is a swiss-knife for javascript arrays, <b>it can delete elements and replace them</code>.
+Method `splice` is a swiss-knife for JavaScript arrays, <b>it can delete elements and replace them</code>.
 
 It's syntax is as follows:
 
@@ -349,10 +349,10 @@ alert(arr)  // 1,2,3,4,5
 
 ### Method `slice`   
 
-You can also extract a portion of array using `slice(begin[, end]`:
+You can also extract a portion of array using `slice(begin[, end])`:
 
 [js run]
-var arr = ["Why", "learn", "javascript"];
+var arr = ["Why", "learn", "JavaScript"];
 
 var arr2 = arr.slice(0,2) // take 2 elements starting at 0
 
@@ -364,11 +364,11 @@ Note, this method does not modify array, it just copies a slice of it.
 You can omit second argument to get all elements starting with certain index:
 
 [js run]
-var arr = ["Why", "learn", "javascript"];
+var arr = ["Why", "learn", "JavaScript"];
 
 var arr2 = arr.slice(1) // take all elements starting at 1
 
-alert(arr2.join(', ')) // "learn, javascript"
+alert(arr2.join(', ')) // "learn, JavaScript"
 [/js]
 
 The method also supports negative indices, just like `String#slice`.
@@ -386,7 +386,7 @@ var last = domain.split('.').reverse()[0]
 alert(last)
 [/js]
 
-Note how javascript allows complex syntax like: `reverse()[0]` - to call a method and then take an element of resulting array.
+Note how JavaScript allows complex syntax like: `reverse()[0]` - to call a method and then take an element of resulting array.
 
 Actually, you can compose longer calls, like `reverse()[0][1]()[5]...`, language syntax allows that.
 
@@ -462,7 +462,7 @@ That's a smart way to repeat a string.
 
 ### Multidimensional arrays   
 
-Arrays in javascript can store any data type inside.
+Arrays in JavaScript can store any data type inside.
 
 [js run]
 var arr = ["My", "Small array", true, {name:'John'}, 345]
@@ -498,7 +498,7 @@ We've covered:
 <li>How to add, replace, remove from/to array and its both ends.</li>
 <li>How to iterate over an array.</li>
 <li>How to split a string into array and join it back.</li>
-<li>Relations between `Array` and `Object` in javascript</li>
+<li>Relations between `Array` and `Object` in JavaScript</li>
 </ol>
 
 That's enough 95% of time. For more methods and examples, refer to <a href="https://developer.mozilla.org/en/Core_JavaScript_1.5_Reference/Objects/Array">Array in Mozilla manual</a>.

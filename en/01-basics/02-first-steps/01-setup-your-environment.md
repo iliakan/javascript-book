@@ -1,7 +1,7 @@
 
 # Setup your environment 
 
-To start developing in javascript, a good working place is required.
+To start developing in JavaScript, a good working place is required.
 
 This section contains instructions to setup the programs you may need.
 
@@ -18,7 +18,7 @@ There are many around, but the one you choose should support:
 <li>Autocomplete</li>
 </ol>
 
-If you are using a code editor already, then make sure it supports javascript. Some editors may require additional plugin.
+If you are using a code editor already, then make sure it supports JavaScript. Some editors may require additional plugin.
 
 If you haven't made up your mind about an editor yet, check out the following ones.
 

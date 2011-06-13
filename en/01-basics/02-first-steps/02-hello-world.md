@@ -1,13 +1,13 @@
 
 # Hello, World! 
 
-Javascript is an interpreted language. That means: no compilation. You just write code and attach it to HTML.
+JavaScript is an interpreted language. That means: no compilation. You just write code and attach it to HTML.
 
-The simplest way is to put javascript directives into `SCRIPT` tag somewhere inside the page.
+The simplest way is to put JavaScript directives into `SCRIPT` tag somewhere inside the page.
 
 =Cut
 
-Here is a `SCRIPT` tag containing single javascript statement. Please click the 'Show' button to see the example.
+Here is a `SCRIPT` tag containing single JavaScript statement. Please click the 'Show' button to see the example.
 
 [html run height=100]
 <!DOCTYPE HTML>

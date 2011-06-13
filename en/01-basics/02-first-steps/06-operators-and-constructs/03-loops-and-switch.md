@@ -3,7 +3,7 @@
 
 Loop constructs allow to repeat a block of code multiple times, while the given  condition is true.
 
-Javascript has three types of loops.
+JavaScript has three types of loops.
 
 =Cut
 
@@ -135,7 +135,7 @@ The code labelled with asterisk is never executed for negative `i`, thanks to `c
 
 ## Jumping over blocks with labels   
 
-Loop labels is something special in javascript.
+Loop labels is something special in JavaScript.
 
 They are used to break/continue through several nested loops.
 
@@ -194,14 +194,14 @@ In the given example, `break` jumps over `some_code`, to the end of the block la
 
 That looks like `goto`, but it is not, because you can't break outside loops, and you also can't break to a place of code <i>before</i>. 
 
-Javascript has no goto. Even in latest editions of the standard.
+JavaScript has no goto. Even in latest editions of the standard.
 
 [task src="task/output-prime-numbers.md"]
 
 
 ## The `switch` construct   
 
-Another useful construct in javascript is `switch`. It provides a short syntax for multiple equality tests.
+Another useful construct in JavaScript is `switch`. It provides a short syntax for multiple equality tests.
 
 It looks like this:
 [js]
@@ -293,7 +293,7 @@ switch(arg) {
 
 <ul>
 <li>If you enter `0` or `1` it starts execution from the corresponding `case`, executes the first alert, then the second one and stops at `break`.</li>
-<li>If you enter `2`, `switch` goes right to `case 3`, skipping first alert.</li>
+<li>If you enter `2`, `switch` goes right to `case 2`, skipping first alert.</li>
 <li><b>If you type in `3`, `switch` goes to default case.</b> That's because `prompt` returns string `'3'`, not number. Switch uses `===` to check equality, so `case 3` will not match.</li>
 </ul>
 

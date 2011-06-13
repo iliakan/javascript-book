@@ -107,7 +107,7 @@ var b = 2 + (
 )
 [/js]
 
-Javascript tries to be even smarter than that. The output in the example below is `8`, the newline is ignored. And don't ask me why.
+JavaScript tries to be even smarter than that. The output in the example below is `8`, the newline is ignored. And don't ask me why.
 [js run]
 var b = 2 * 2
 + 4
@@ -165,7 +165,7 @@ var name = "John", song = "La-la-la"
 
 
 [smart]
-In javascript you can assign to a variable which you haven't defined using `var`:
+In JavaScript you can assign to a variable which you haven't defined using `var`:
 
 [js]
 noVar = "value"
@@ -252,7 +252,7 @@ Read more about naming principles and how to make good names in the article [](#
 
 ### Language types   
 
-Javascript defined the following basic types:
+JavaScript defined the following basic types:
 <dl>
 <dt>number</dt>
 <dd>Any number, integer and non-integer: `1`, `2`, `1.5` etc.</li>
@@ -269,7 +269,7 @@ Javascript defined the following basic types:
 
 ### Weak typing   
 
-Variables in javascript are <i>weakly typed</i>. That means two things:
+Variables in JavaScript are <i>weakly typed</i>. That means two things:
 
 <ol>
 <li>Every value has a type</li>
@@ -303,7 +303,7 @@ Generally, `undefined` means "no value".
 
 Did you note these "//" from the previous example? That were comments.
 
-Comments in javascript have two different forms. Single line comment starts with `//` and continues to the end of line.
+Comments in JavaScript have two different forms. Single line comment starts with `//` and continues to the end of line.
 
 [js]
 // let's see who is here:
@@ -343,7 +343,7 @@ var i = 5;
 var b;
 [/js]
 
-Standalone blocks are never used in javascript. But curly braced statements come as a part of more complex syntax constructs like `for`, `if`, `while`, functions, etc. 
+Standalone blocks are never used in JavaScript. But curly braced statements come as a part of more complex syntax constructs like `for`, `if`, `while`, functions, etc. 
 
 We'll get to them in the next sections.
 

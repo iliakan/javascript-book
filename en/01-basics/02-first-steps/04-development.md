@@ -1,7 +1,7 @@
 
 # Browser Developer's Tools 
 
-By default, browsers hide javascript errors. Right, a visitor doesn't want to know about them, if he isn't into JavaScript.
+By default, browsers hide JavaScript errors. Right, a visitor doesn't want to know about them, if he isn't into JavaScript.
 
 For develpers, there are great tools to see errors and debug scripts, in all major browsers.
 

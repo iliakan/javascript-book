@@ -1,7 +1,7 @@
 
 # Operators 
 
-Javascript has following basic operators...
+JavaScript has following basic operators...
 
 =Cut
 
@@ -18,7 +18,7 @@ i = (2+i) * 3 / i;
 alert(i)
 [/js]
 
-Just to note. Integers division returns a float. In contrast to java, where `7/2 = 3` (integer division), javascript will give you a normal `3.5`.
+Just to note. Integers division returns a float. In contrast to java, where `7/2 = 3` (integer division), JavaScript will give you a normal `3.5`.
 
 <u>Modulo operator</u> `%` returns a remainder.
 
@@ -110,7 +110,7 @@ Following bitwise operators are supported:
 <li>ZERO-FILL RIGHT SHIFT ( &gt;&gt;&gt; )</li>
 </ul>
 
-Unlike C language, bitwise operations are not very fast in javascript: So they shouldn't be used low-level optimizations.
+Unlike C language, bitwise operations are not very fast in JavaScript: So they shouldn't be used low-level optimizations.
 
 Most of them are rarely used. Especially, the exotic zero-fill right shift. If you are interested, read the <a href="https://developer.mozilla.org/en/JavaScript/Reference/Operators/Bitwise_Operators">manual</a>.
 
@@ -175,7 +175,7 @@ alert( 21 >> 4 ) // 21 / 16 = 1
 
 ## Logical (boolean) operators   
 
-Like many other languages, javascript provides boolean evaluations.
+Like many other languages, JavaScript provides boolean evaluations.
 
 The operators are: 
 <ul>
@@ -279,7 +279,7 @@ i *= 2; // 14
 Note, boolean operators can't be used like that. For example, `a ||= b` will give error, because there is no operator `"||="` (check the list above).
 
 [smart header="Comma operator"]
-There is an "advanced" javascript operator, named the `comma operator`.
+There is an "advanced" JavaScript operator, named the `comma operator`.
 
 The <i>comma operator</i> allows to list statements delimited by "," and returns the value of the last one.
 

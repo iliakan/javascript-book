@@ -25,7 +25,7 @@ The following example demonstrates it:
 
 To remove a single class, it is extracted from the string either by replace function or after splitting it by whitespaces and then joining back. 
 
-All javascript frameworks contain built-in functions for such job.
+All JavaScript frameworks contain built-in functions for such job.
 
 
 ## `style`   

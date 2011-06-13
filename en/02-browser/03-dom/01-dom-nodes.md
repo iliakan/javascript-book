@@ -78,7 +78,7 @@ It is quite easy to walk DOM using a browser developer tool.
 For example:
 
 <ol>
-<li>Open <a href="http://javascript.info/files/tutorial/browser/dom/simpledom2.html">simpledom2.html</a></li>
+<li>Open <a href="http://JavaScript.info/files/tutorial/browser/dom/simpledom2.html">simpledom2.html</a></li>
 <li>Open Firebug or any other developer tool</li>
 <li>Go HTML tab in Firebug or Elements in Safari/Chrome or.. whatever.</li>
 <li>Here you are.</li>
@@ -143,5 +143,5 @@ The comment above is also stored in DOM tree, with <i>comment node</i> type and 
 
 Now you should have understanding of DOM structure, how it looks like, which nodes it includes.
 
-The next chapter describes how to traverse it using javascript.
+The next chapter describes how to traverse it using JavaScript.
 

@@ -1,7 +1,7 @@
 
 # Pre-coding tips  
 
-There are currently several main javascript/html engines available. 
+There are currently several main JavaScript/html engines available. 
 
 A regular web-site should look equally good in all of them.
 
@@ -13,7 +13,7 @@ A regular web-site should look equally good in all of them.
 
 <ul>
 <li><strong>Firefox</strong> and other less known browsers which use an open-source engine called <i>Gecko</i>.</li>
-<li><strong>Safari/Chrome</strong> which both use an open-source rendering engine called <i>Webkit</i>, but different javascript implementations. Chrome uses <i>Google V8</i> and Safari uses it's own closed-source javascript engine. Because they both use Webkit, there's a lot in common between them.</li>
+<li><strong>Safari/Chrome</strong> which both use an open-source rendering engine called <i>Webkit</i>, but different JavaScript implementations. Chrome uses <i>Google V8</i> and Safari uses it's own closed-source JavaScript engine. Because they both use Webkit, there's a lot in common between them.</li>
 <li><strong>Opera</strong> uses it's closed source engine called <i>Presto</i>.</li>
 <li><strong>Internet Explorer</strong> uses the closed-source engine called <i>Trident</i>. The engine is old and terrifying in IE6, IE7, but upgraded in IE8 and upgraded to much better standards compliance in IE9.</li>
 </ul>
@@ -48,7 +48,7 @@ For modern sites there is a good DOCTYPE:
 
 This DOCTYPE make modern browsers render in Standards Mode and older ones in Almost Standards Mode (which is the maximum they can do).
 
-Note, that the modern rendering mode is not just an HTML issue. There are javascript properties which also depend on the rendering mode, especially CSS-box and positioning-related.
+Note, that the modern rendering mode is not just an HTML issue. There are JavaScript properties which also depend on the rendering mode, especially CSS-box and positioning-related.
 
 Also, styles can be applied differently, for example Internet Explorer 7+ in standards-compliant mode (strict !DOCTYPE), can apply the `:hover` pseudo-class to any element (as it should), while in a non-strict mode it can only apply :hover to links. 
 
@@ -60,7 +60,7 @@ Not using correct DOCTYPE will cost you time debugging. <code>&lt;!DOCTYPE HTML&
 
 ### Manuals and how to search in them   
 
-<b>There are 2 main manuals on the net about javascript.</b> One comes from Microsoft and called <a href="http://msdn.microsoft.com/">MSDN</a>. They also call JavaScript a "JScript".
+<b>There are 2 main manuals on the net about JavaScript.</b> One comes from Microsoft and called <a href="http://msdn.microsoft.com/">MSDN</a>. They also call JavaScript a "JScript".
 
 Another one is documentation center of <a href="https://developer.mozilla.org/">Mozilla Developer Network</a>.
 
@@ -80,12 +80,12 @@ It contains information about lots of incompatibilities. Also, there is a combo 
 
 ### The ECMAScript specification   
 
-The language specification (formal description of syntax, basic objects and algorithms) of javascript is called <a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">ECMAScript</a>. 
+The language specification (formal description of syntax, basic objects and algorithms) of JavaScript is called <a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">ECMAScript</a>. 
 
-[smart header="Why not just &quot;Javascript&quot; ?"]
-You may ask: "Why standard for Javascript is not just <i>Javascript</i>?".
+[smart header="Why not just &quot;JavaScript&quot; ?"]
+You may ask: "Why standard for JavaScript is not just <i>JavaScript</i>?".
 
-That's because javascript&trade; is a registered trademark of Oracle corporation (used to be Sun trademark, but now Oracle acquired Sun). 
+That's because JavaScript&trade; is a registered trademark of Oracle corporation (used to be Sun trademark, but now Oracle acquired Sun). 
 
 The title "ECMAScript" was choosen to keep the specification independent from trademark owners.
 [/smart]

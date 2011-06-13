@@ -10,7 +10,7 @@ Note, there is no single method in JavaScript that can do so. Use `charAt`.
 
 =Solution
 
-We can't just replace the first character, because strings are immutable in javascript. 
+We can't just replace the first character, because strings are immutable in JavaScript. 
 
 The only way is to reconstruct the string:
 

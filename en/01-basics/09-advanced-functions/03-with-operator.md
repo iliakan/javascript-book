@@ -2,7 +2,7 @@
 # The "with" operator 
 
 The `with` operator allows to use an arbitrary object as the scope.
-It is used in the code around, but deprecated in modern javascript.
+It is used in the code around, but deprecated in modern JavaScript.
 
 =Cut
 
@@ -129,9 +129,9 @@ There is no `size` property in the `box`. So the lookup process doesn't stop at 
 
 That's possibly not the result we want. Such bugs are rare, but very hard to debug.
 
-Another reason for not recommending `with` is javascript compression algorithms which can't handle `with` reliably.
+Another reason for not recommending `with` is JavaScript compression algorithms which can't handle `with` reliably.
 
-And finally, the intermediate scope introduced by `with` slows down the execution. Modern javascript interpreters want to be extremely fast, as close to native code as possible. So, removing `with` removes one of performance problems.
+And finally, the intermediate scope introduced by `with` slows down the execution. Modern JavaScript interpreters want to be extremely fast, as close to native code as possible. So, removing `with` removes one of performance problems.
 
 Instead of `with`, it is recommended to use a temporary variable:
 [js]

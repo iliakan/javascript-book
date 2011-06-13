@@ -1,7 +1,7 @@
 
 # Event delegation  
 
-The <i>event delegation</i> helps to simplify event handling by smart use of bubbling. It is one of the most important javascript patterns.
+The <i>event delegation</i> helps to simplify event handling by smart use of bubbling. It is one of the most important JavaScript patterns.
 
 =Cut
 
@@ -73,12 +73,12 @@ Let's first discuss a one-level clickable menu from the list:
 <ul id="menu">
   <li><a class="button" href="/php">PHP</a></li>
   <li><a class="button" href="/html">HTML</a></li>
-  <li><a class="button" href="/javascript">JavaScript</a></li>
+  <li><a class="button" href="/JavaScript">JavaScript</a></li>
   <li><a class="button" href="/flash">Flash</a></li>
 </ul>
 [/html]
 
-The example above is just a semantic HTML/CSS. Clicks on menu elements will be handled by javascript, but items are represented as `A` to ensure accessibility for visitors without javascript (which are mostly search engines).
+The example above is just a semantic HTML/CSS. Clicks on menu elements will be handled by JavaScript, but items are represented as `A` to ensure accessibility for visitors without JavaScript (which are mostly search engines).
 
 The links should become clickable, like in the example below:
 
@@ -214,7 +214,7 @@ What did we win by using event delegation here?
 
 ## Summary   
 
-Event delegation is cool. It is one of the most useful javascript patterns.
+Event delegation is cool. It is one of the most useful JavaScript patterns.
 
 The prerequisite is a single container with elements which allow common handling.
 

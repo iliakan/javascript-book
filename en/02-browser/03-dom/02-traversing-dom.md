@@ -46,7 +46,7 @@ All nodes are referenced, including whitespace ones (excepts IE&lt;9).
 
 Note that `SCRIPT` node is listed too.
 
-In the <a href="http://javascript.info/files/tutorial/browser/dom/example.html">example document</a> above, `document.body.childNodes[1]` is `DIV` in all browsers except IE&lt;9. In older IEs, there are no whitespaces, so `document.body.childNodes[1]` is `UL`.
+In the <a href="http://JavaScript.info/files/tutorial/browser/dom/example.html">example document</a> above, `document.body.childNodes[1]` is `DIV` in all browsers except IE&lt;9. In older IEs, there are no whitespaces, so `document.body.childNodes[1]` is `UL`.
 
 
 ### `children`   

@@ -366,7 +366,7 @@ Coordinate Y:<input type="text" id="mouseY"/>
 ## Right click: `oncontextmenu`   
 
 By default, the browser shows it's own context menu on right mouse click.
-But if a javascript handler is set, it can suppress the native menu.
+But if a JavaScript handler is set, it can suppress the native menu.
 
 The only exception is older versions of Opera which require a special menu option to be enabled. Newer Opera 10.50+ is fine.
 

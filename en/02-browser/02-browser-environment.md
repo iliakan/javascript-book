@@ -26,14 +26,14 @@ There is a pack of standards for DOM, developed by W3C. You can find it at <a hr
 
 Many BOM features are standartized in HTML5, but not all.
 </dd>
-<dt style="color:#c20000">Javascript objects and functions</dt>
-<dd>Javascript itself is a language which gives us access to DOM, BOM and provides objects and functions of its own.
+<dt style="color:#c20000">JavaScript objects and functions</dt>
+<dd>JavaScript itself is a language which gives us access to DOM, BOM and provides objects and functions of its own.
 
-Javascript follows the ECMA-262 standard.
+JavaScript follows the ECMA-262 standard.
 </dd>
 </dl>
 
-The global `window` object mixes browser window functionality (methods `focus()`,`open()` etc) with being a javascript global object. That's why it is both green and red.
+The global `window` object mixes browser window functionality (methods `focus()`,`open()` etc) with being a JavaScript global object. That's why it is both green and red.
 
 
 ## Summary   
@@ -45,8 +45,8 @@ More than that, they are not just good to know, it is advisable that you read DO
 And, by the way, the components can be used separately. 
 
 <ul>
-<li>Javascript is a general purpose language, you can use it in command line, build a <a href="http://nodejs.org">Node.JS-based server</a> in it.</li>
-<li>BOM and DOM can be controlled by an external program or a plugin, using browser API, not just with javascript. E.g <a href="http://seleniumhq.org/docs/09_webdriver.html">Webdriver</a> unit-testing framework works like that.</li>
+<li>JavaScript is a general purpose language, you can use it in command line, build a <a href="http://nodejs.org">Node.JS-based server</a> in it.</li>
+<li>BOM and DOM can be controlled by an external program or a plugin, using browser API, not just with JavaScript. E.g <a href="http://seleniumhq.org/docs/09_webdriver.html">Webdriver</a> unit-testing framework works like that.</li>
 <li>DOM is also used for XML documents, not just HTML, and of course not limited to frontend programming.</li>
 </ul>
 

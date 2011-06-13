@@ -1,7 +1,7 @@
 
 # Objects 
 
-Objects in javascript are kind of two-faced.
+Objects in JavaScript are kind of two-faced.
 
 From one side, an object is an associative array (called <i>hash</i> in some languages). It stores key-value pairs. 
 
@@ -382,7 +382,7 @@ Note the `this` keyword inside `askName` and `sayHi`. When a function is called 
 
 An object can be created literally, using `obj = { ... }` syntax.
 
-Another way of creating an object in javascript is to <em>construct</em> it by calling a function with `new` directive.
+Another way of creating an object in JavaScript is to <em>construct</em> it by calling a function with `new` directive.
 
 
 

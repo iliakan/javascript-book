@@ -7,7 +7,7 @@ Advanced topics become easy to grasp once you know how it works.
 
 =Cut
 
-[sum]In javascript, all local variables and functions are properties of the special internal object, called `LexicalEnvironment`.</b>
+[sum]In JavaScript, all local variables and functions are properties of the special internal object, called `LexicalEnvironment`.</b>
 
 [/sum]
 
@@ -226,7 +226,7 @@ i = 1
 
 All `var` declarations are processed before the execution in  in both cases.</dd>
 
-<strong>Unlike languages like Java, C etc, variables in javascript survive after a loop.</strong>
+<strong>Unlike languages like Java, C etc, variables in JavaScript survive after a loop.</strong>
 
 That's again, because their scope is a function.
 

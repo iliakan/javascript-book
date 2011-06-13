@@ -11,12 +11,12 @@ A script can be put anywhere on the page. The most useful places include:
 
 ..But, generally, a script can be put anywhere.
 
-When browser is rendering a HTML-page and meets <code>&lt;script&gt;</code> - it switches into javascript-mode, executes the code and after it continues with the rest of the page.
+When browser is rendering a HTML-page and meets <code>&lt;script&gt;</code> - it switches into JavaScript-mode, executes the code and after it continues with the rest of the page.
 
 
 ## Page rendering and `SCRIPT`   
 
-The following example demonstrates how browser switches in-out javascript mode.
+The following example demonstrates how browser switches in-out JavaScript mode.
 
 [html run src="/assets/browser/script/rabbits.html" link][/html]
 
@@ -31,7 +31,7 @@ Note the order of execution in the example above:
 
 ## Moving scripts into `HEAD`   
 
-The HTML may be large, where to put javascript? If you want a script to execute early, before the page is displayed, then the `HEAD` section is a good place. 
+The HTML may be large, where to put JavaScript? If you want a script to execute early, before the page is displayed, then the `HEAD` section is a good place. 
 
 [html run height=100]
 <html>
@@ -78,7 +78,7 @@ By the way, CSS styles must be declared in the `HEAD` according to HTML standard
 
 ## External scripts   
 
-Usually, most javascript code is put into an external file, which is attached to HTML, like this:
+Usually, most JavaScript code is put into an external file, which is attached to HTML, like this:
 
 [html]
 <script src="/path/to/script.js"></script>
@@ -86,7 +86,7 @@ Usually, most javascript code is put into an external file, which is attached to
 
 Here `/my/script.js` is absolute path to script (from current site root). You may also use relative path, or put full URL there.
 
-File `/my/script.js` contains javascript code, which will execute immediately after browser recieves the file.
+File `/my/script.js` contains JavaScript code, which will execute immediately after browser recieves the file.
 
 This is very handy replacement for embedded scripts, because same file may be used on many pages. If the web-server is configured correctly, browser will cache the file and will not download it every time.
 
@@ -130,20 +130,20 @@ That is, one can't attach external file and execute code in single <code>&lt;scr
 
 Nowadays, only a validator (a special tool which checks page for correctness in terms of standards) blames for bad markup. Sometimes people use old ugly code and it works.
 
-Although the right, correct markup is useful to know. At least you will be able to differ between professional javascript and outdated crap, written many years ago.
+Although the right, correct markup is useful to know. At least you will be able to differ between professional JavaScript and outdated crap, written many years ago.
 
 <dl>
  <dt>Attribute <code>&lt;script <u>type</u>=...&gt;</code></dt>
 
-  <dd>The older HTML4 standard required this attribute to be set, but HTML5 allows it to be absent. A correct pre-HTML5 value was `type="text/javascript"`.
+  <dd>The older HTML4 standard required this attribute to be set, but HTML5 allows it to be absent. A correct pre-HTML5 value was `type="text/JavaScript"`.
 
 If you put an unsupported value into `type`, e.g. <code>&lt;script type="<b>text/html</b>"&gt;</code>, the contents will be ignored. It is used as a tricky way to add unshown data to the page. Browser does not execute or show  <code>&lt;script&gt;</code> with unknown type. Such script is like a div with forever `style="display:none"`.
 </dd>
 
  <dt>Attribute <code>&lt;script <u>language</u>=...&gt;</code></dt>
-  <dd>You may find this attribute in outdated scripts. It is obsolete and dead. Don't use it for javascript.</dd>
+  <dd>You may find this attribute in outdated scripts. It is obsolete and dead. Don't use it for JavaScript.</dd>
 <dt>Comments before and after scripts</dt>
-<dd>Old manuals and tutorials sometimes recommend to "hide" javascript from browsers that don't support it, using HTML-comments: <code>&lt;!-- ... --&gt;</code>. 
+<dd>Old manuals and tutorials sometimes recommend to "hide" JavaScript from browsers that don't support it, using HTML-comments: <code>&lt;!-- ... --&gt;</code>. 
 
 The browser which required such tricks (very old Nescape) is dead for a long time. Other browsers ignore comments. Don't put them, there's no need indeed.</dd>
 </dl>
@@ -153,11 +153,11 @@ The browser which required such tricks (very old Nescape) is dead for a long tim
 
 ## Summary   
 
-Scripts can be embedded directly using `SCRIPT` or added as external files by a `SCRIPT` with `src="path/to/file.js"` attribute. An external script file is pure Javascript.
+Scripts can be embedded directly using `SCRIPT` or added as external files by a `SCRIPT` with `src="path/to/file.js"` attribute. An external script file is pure JavaScript.
 
 In either way, HTML page rendering is blocked until the script is downloaded and executed.
 
-That's why an advanced technology is to put scripts at the bottom of `BODY`, but in this case a user can start interacting with a page before it is "made alive" by Javascript. 
+That's why an advanced technology is to put scripts at the bottom of `BODY`, but in this case a user can start interacting with a page before it is "made alive" by JavaScript. 
 
 Putting scripts in `HEAD` is easy and guarantees that they will be available before the page is shown.
 

@@ -248,7 +248,7 @@ All DOM queries, which may match multiple elements, return an array-like collect
 
 But indexes and the `length` property is actually the only similarities between `Array` and the returned collection of elements which has a special type <a href="http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-536297177">NodeList</a> or <a href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-75708506">HTMLCollection</a>.
 
-So it doesn't have `push`, `pop` and other properties of javascript array.
+So it doesn't have `push`, `pop` and other properties of JavaScript array.
 
 But instead, this query result is alive for all `getElementsBy*` methods. When you select elements and modify the document - the query result is updated automatically.
 

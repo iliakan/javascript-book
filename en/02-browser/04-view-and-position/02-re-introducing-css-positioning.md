@@ -36,7 +36,7 @@ For this and future examples the document below is used.
     
 ## Information   [today-header]
 
-    <p>A new byte-code standard is defined for javascript... <br/>
+    <p>A new byte-code standard is defined for JavaScript... <br/>
          Ok, just dreaming.</p>
 </div>
 
@@ -95,7 +95,7 @@ Check the code below for the example below for that.
     
 ## Information   [today-header]
 
-    <p>A new byte-code standard is defined for javascript... <br/>
+    <p>A new byte-code standard is defined for JavaScript... <br/>
          Ok, just dreaming.</p>
 </div>
 
@@ -152,7 +152,7 @@ In the example below, the page is scrollable, but `#go-top` link is always at th
     
 ## Information   [today-header]
 
-    <p>A new byte-code standard is defined for javascript... <br/>
+    <p>A new byte-code standard is defined for JavaScript... <br/>
          Ok, just dreaming.</p>
 
    <p>SquirrelFish is a register-based, direct-threaded, high-level bytecode engine, with a sliding register window calling convention. It lazily generates bytecodes from a syntax tree, using a simple one-pass compiler with built-in copy propagation.</p>
@@ -203,7 +203,7 @@ The example below positions a widget absolutely. Because there is no positioned 
     
 ## Information   [today-header]
 
-    <p>A new byte-code standard is defined for javascript... <br/>
+    <p>A new byte-code standard is defined for JavaScript... <br/>
          Ok, just dreaming.</p>
 </div>
 
@@ -244,7 +244,7 @@ Let's say we need to position a header in the right-top corner of the widget. Th
     
 ## Information   [today-header]
 
-    <p>A new byte-code standard is defined for javascript... <br/>
+    <p>A new byte-code standard is defined for JavaScript... <br/>
          Ok, just dreaming.</p>
 </div>
 

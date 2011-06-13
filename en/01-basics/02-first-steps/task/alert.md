@@ -1,7 +1,7 @@
 
 # Alert 
 
-Create a page which outputs a "I am Javascript!". Save the document and open in the browser. Make sure everything works.
+Create a page which outputs a "I am JavaScript!". Save the document and open in the browser. Make sure everything works.
 
 Or, in other words, create the page which works like: [play full src="/assets/browser/script/alert"].
 

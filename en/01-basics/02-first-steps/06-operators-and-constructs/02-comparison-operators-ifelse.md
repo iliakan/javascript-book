@@ -205,7 +205,7 @@ Use strict comparisons `===` to check against `undefined`.
 But even a strict comparison fails with `NaN`, use  `isNaN()` function to check it.
 [/smart]
 
-Why does it behave like that? The short answer is: "because that's written in the standard". A longer one is "Javascript was created in 10 days. What you'd await?".
+Why does it behave like that? The short answer is: "because that's written in the standard". A longer one is "JavaScript was created in 10 days. What you'd await?".
 
 
 

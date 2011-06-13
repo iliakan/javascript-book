@@ -1,7 +1,7 @@
 
 # Function arguments 
 
-In javascript, a function may be called with any number of arguments, no matter how many of them are listed.
+In JavaScript, a function may be called with any number of arguments, no matter how many of them are listed.
 
 =Cut
 
@@ -300,7 +300,7 @@ There is an interesting property of `arguments`, namely `arguments.callee`. It r
 [warn]
 This property is deprecated by ECMA-262 in favor of named function expressions and for better performance.
 
-Javascript implementations can optimize the code much better if they know that keeping `arguments.callee` is not required.
+JavaScript implementations can optimize the code much better if they know that keeping `arguments.callee` is not required.
 
 It will trigger error in "strict mode", which you need to enable. Normally, it works.
 [/warn]

@@ -1,7 +1,7 @@
 
 # Number, Math 
 
-All numbers in javascript, both integer or floating-point are of type `Number`.
+All numbers in JavaScript, both integer or floating-point are of type `Number`.
 
 =Cut
 
@@ -12,7 +12,7 @@ The maximal integer value is about <code>2<sup>53</sup></code>.
 
 ## Written forms   
 
-In javascript, it is possible to write numbers using hexadimal or octal radix:
+In JavaScript, it is possible to write numbers using hexadimal or octal radix:
 [js run]
 alert( 0xFF ) // 255 in hexadimal form, starts with 0x
 alert( 010 ) // 8 in octal form, starts with 0
@@ -43,15 +43,15 @@ What should happen if someone divides by zero?
 
 Usually the answer is "Zero Division Error". At least, for most programming languages it is like that.
 
-But javascript creators decided to go more mathematical way. In maths, when you divide by 0, you get <i>Infinity</i> (or `-Infinity`). 
-Same in javascript:
+But JavaScript creators decided to go more mathematical way. In maths, when you divide by 0, you get <i>Infinity</i> (or `-Infinity`). 
+Same in JavaScript:
 
 [js run]
 alert(1/0)  // Infinity
 alert(-1/0) // -Intinify
 [/js]
 
-`Infinity` is a special numeric value in javascript and behaves just like it should. Infinity is larger than any other number. Adding anything to `Infinity` doesn't change it:
+`Infinity` is a special numeric value in JavaScript and behaves just like it should. Infinity is larger than any other number. Adding anything to `Infinity` doesn't change it:
 
 [js run]
 alert(Infinity > 999999999999999999999999999);
@@ -241,7 +241,7 @@ alert( 0.1.toFixed(20) )  // 0.10000000000000000555
 
 When you sum two inaccuracies, you get the minor calculation error.
 
-Of course, that doesn't mean you can't sum numbers in javascript. In fact, you can.
+Of course, that doesn't mean you can't sum numbers in JavaScript. In fact, you can.
 
 Actually, there are two ways to sum 0.1 and 0.2:
 <ol>
@@ -274,7 +274,7 @@ The reason is, of course, precision loss. The number format cannot store that ma
 
 ## Rounding   
 
-One of most often operations with numbers is rounding. In javascript, there are 3 functions for basic rounding.
+One of most often operations with numbers is rounding. In JavaScript, there are 3 functions for basic rounding.
 
 <dl>
 <dt>`Math.floor`</dt>
@@ -368,7 +368,7 @@ Most often recipes regarding random numbers are represented as a set of tasks. C
 
 ## Summary   
 
-In this section you've learned about numbers in javascript:
+In this section you've learned about numbers in JavaScript:
 
 <ul>
 <li>Which written forms exist.</li>

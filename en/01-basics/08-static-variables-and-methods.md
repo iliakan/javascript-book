@@ -23,7 +23,7 @@ function f() { // PHP code!
 f(); f(); f(); // 1 2 3
 [/php]
 
-In javascript, there is no term or keyword <i>static</i>, but we can put such data directly into function object (like in any other object).
+In JavaScript, there is no term or keyword <i>static</i>, but we can put such data directly into function object (like in any other object).
 
 [js run]
 function f() {

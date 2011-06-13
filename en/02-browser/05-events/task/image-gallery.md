@@ -19,7 +19,7 @@ On event it should change `#largeImg` `src` to `href` of the link and change `al
 [sum]
 The border on hover is handled by pure CSS. That works everywhere except IE6. We could use an IE-only <a href="http://www.xs4all.nl/~peterned/csshover.html">behavior for IE6</a>, or just skip it if not strictly required.
 
-The image can be accessed without javascript through the link.
+The image can be accessed without JavaScript through the link.
 
 That's all a result of proper HTML/CSS structure.
 [/sum]

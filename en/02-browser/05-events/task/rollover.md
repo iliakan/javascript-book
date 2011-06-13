@@ -50,7 +50,7 @@ Note that button substate classes are below the `.button`, to make them more pri
 So adding/removing these classes actually overrides the background.
 [/warn]
 
-Now, the javascript part:
+Now, the JavaScript part:
 
 [js]
 button.onmouseover = function() {

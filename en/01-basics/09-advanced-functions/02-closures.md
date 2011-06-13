@@ -235,11 +235,11 @@ getFunc()() // 1, from window
 
 We discussed the following topics:
 <ul>
-<li>How variables are handled in javascript.</li>
+<li>How variables are handled in JavaScript.</li>
 <li>How scopes work.</li>
 <li>What is a closure and how to use it.</li>
 <li>Possible pitfalls and subtles in working with closures.</li>
 </ul>
 
-Closures in javascript is like a salt. You can live without it, but not very long. Usually people put it everywhere...
+Closures in JavaScript is like a salt. You can live without it, but not very long. Usually people put it everywhere...
 
