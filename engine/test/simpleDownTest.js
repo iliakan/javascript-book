@@ -19,9 +19,9 @@ test('makeLink()', function () {
 
 
 test('makeHeaders()', function () {
-	equals(simpleDown.makeHeaders('# Header'), '<h2 id="header">Header</h2>', 'Header 2');
-	equals(simpleDown.makeHeaders('## My Header ##'), '<h3 id="my-header">My Header</h3>', 'Header 3');
-	equals(simpleDown.makeHeaders('# Header [id]'), '<h2 id="id">Header</h2>', 'Header 2');
+	equals(simpleDown.makeHeaders('# Header'), '<h1 id="header">Header</h1>', 'Header 1');
+	equals(simpleDown.makeHeaders('## My Header ##'), '<h2 id="my-header">My Header</h2>', 'Header 2');
+	equals(simpleDown.makeHeaders('# Header [id]'), '<h1 id="id">Header</h1>', 'Header 1');
 });
 
 

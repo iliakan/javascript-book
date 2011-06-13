@@ -189,10 +189,10 @@ A code block can be made runnable by adding a <code>run</code> attribute:
     [/html]
 </pre>
 
-The attribute <code>autorun</code> makes html/js code run automatically.
-For book pages, the execution happens on the same domain, in iframe for HTML or eval for JS.
+<p>The attribute <code>autorun</code> makes html/js code run automatically.
+For book pages, the execution happens on the same domain, in iframe for HTML or eval for JS.</p>
 
-Important parts of the code can be delimited by <code>*!* ... */!*</code>.
+<p>Important parts of the code can be delimited by <code>*!* ... */!*</code>.</p>
 <pre>
     [js]
     var body = *!*document.body*/!* // inline
@@ -206,14 +206,21 @@ Important parts of the code can be delimited by <code>*!* ... */!*</code>.
 
 <h3>Code inclusions</h3>
 
-For a larger code, you may want to put it into a file and use the <code>src</code> attribute:
+<p>For a larger code, you may want to put it into a file and use the <code>src</code> attribute:</p>
 
 <pre>
     [js run src="assets/my.js"][/js]
 </pre>
 
-The path is resolved relative to the current page. The absolute path is resolved relative to the book. External URLs like http://... are not allowed.
+<p>The path is resolved relative to the current page. The absolute path is resolved relative to the book. External URLs like http://... are not allowed.</p>
 
+<h2>Special chars</h2>
+
+<p>Special characters '&lt;', '&gt;' and '&amp;' are autoreplaced in a smart way. You can put them in the text:</p>
+<pre>
+    a &lt; b  // autoreplaced to a &amp;lt; b
+    &lt;a&gt; // not autoreplaced, tags still work
+</pre>
 
 <h2>Verbatim pieces</h2>
 
