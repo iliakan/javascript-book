@@ -21,14 +21,14 @@ For example, you access `document.body` from an inline script in the `HEAD`, pre
 
 In the example below, first alert outputs `null`:
 
-[html file=tutorial/browser/dom/bodynull.html height="80" link][/html]
+[html src="/assets/browser/dom/bodynull.html" height="80" link][/html]
 
 Contrary to this, `document.documentElement` is available always.
 
 Also note that `document.body` can't be `undefined`. <b>In the world of DOM, an "element not found" or "no such element" is always `null`.</b>
 
-<blockquote>As a more general rule than described above, it is impossible to reference elements that are not yet rendered at the time of script execution. 
-</blockquote>
+[sum]As a more general rule than described above, it is impossible to reference elements that are not yet rendered at the time of script execution. 
+[/sum]
 
 
 ## Child elements   
@@ -42,7 +42,7 @@ An element keeps references to children in `childNodes` array-like property.
 
 All nodes are referenced, including whitespace ones (excepts IE&lt;9).
 
-[html autorun file=tutorial/browser/dom/childNodes.html link][/html]
+[html autorun src="/assets/browser/dom/childNodes.html" link][/html]
 
 Note that `SCRIPT` node is listed too.
 
@@ -57,7 +57,7 @@ It contains all element nodes. Check out the same example as above, but with `ch
 
 It will output only element nodes as it should.
 
-[html autorun file=tutorial/browser/dom/children.html link][/html]
+[html autorun src="/assets/browser/dom/children.html" link][/html]
 
 [warn header="Comment nodes in `children` if IE<9"]Internet explorer lower than 9 also lists comment nodes in `children`.[/warn]
 
@@ -94,7 +94,7 @@ alert(body.lastChild === body.childNodes[body.childNodes.length-1])
 </ul>
 
 For example:
-[html run file=tutorial/browser/dom/siblings.html link][/html]
+[html run src="/assets/browser/dom/siblings.html" link][/html]
 
 Picture for the document above (without whitespace nodes):
 [img src="/assets/browser/dom/siblings.png"]

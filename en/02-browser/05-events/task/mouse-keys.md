@@ -55,7 +55,7 @@ document.getElementById('mousie').onkeydown = function(e) {
 
 The task is a prototype of the real keyboard navigation on an interface.
   
-The source document and mousie await you here: [play src="tutorial/browser/events/mousie-src"].
+The source document and mousie await you here: [play src="/assets/browser/events/mousie-src"].
 
 The `getOffset` for absolute coords is attached too, if you need it.
 
@@ -164,6 +164,6 @@ Note that the default action of arrows is to scroll the page. So we have to `ret
 
 There is no need to remove handlers on `blur`, because the browser will stop triggering `keydown`. So when a user blurs the mousie, it stops reacting on keys.
 
-The final solution is [play src="tutorial/browser/events/mousie"].
+The final solution is [play src="/assets/browser/events/mousie"].
 
 

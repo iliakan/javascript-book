@@ -24,8 +24,8 @@ The main principle of bubbling states:
 
 For example, there are 3 nested divs:
 
-[html file=tutorial/browser/events/bubbling/example/index.html][/html]
-[iframe src="tutorial/browser/events/bubbling/example"]
+[html src="/assets/browser/events/bubbling/example/index.html"][/html]
+[iframe src="/assets/browser/events/bubbling/example/index.html"]
 
 The bubbling guarantees that click on `Div 3` will trigger `onclick` first on the innermost element 3 (also caled the <em>target</em>), then on the element 2, and the last will be element 1.
 
@@ -35,9 +35,9 @@ The order is called a <i>bubbling order</i>, because an event bubbles from the i
 
 <b>Click below to see it bubble:</b>
 
-[iframe src="tutorial/browser/events/bubbling/bubble"]
+[iframe src="/assets/browser/events/bubbling/bubble/index.html"]
 
-[html hide="Click to see the source" file=tutorial/browser/events/bubbling/bubble/index.html link][/html]
+[html hide="Click to see the source" src="/assets/browser/events/bubbling/bubble/index.html" link][/html]
 
 
 ### `this` and `event.target`   
@@ -65,9 +65,9 @@ Note that:
 <li>the `target` is constant through all bubbling process,</li>
 <li>`this` changes and gets highlighted.</li> 
 </ul>
-[iframe src="tutorial/browser/events/bubbling/bubble-target"]
+[iframe src="/assets/browser/events/bubbling/bubble-target/index.html"]
 
-[html hide="Click to see the source" file=tutorial/browser/events/bubbling/bubble-target/index.html link][/html]
+[html hide="Click to see the source" src="/assets/browser/events/bubbling/bubble-target/index.html" link][/html]
 
 [smart]
 In W3C-compliant browsers `this` is also available as `event.currentTarget`.
@@ -145,7 +145,7 @@ elem.addEventListener( type, handler, *!*phase*/!* )
 </dl>
 
 Click in a `div` below to see capturing in action (<u>no IE&lt;9</u>):
-[iframe src="tutorial/browser/events/bubbling/capture"]
+[iframe src="/assets/browser/events/bubbling/capture/index.html"]
 
 It should be 1 -&gt; 2 -&gt; 3.
 
@@ -158,7 +158,7 @@ for(var i=0; i<divs.length; i++) {
 }
 [/js]
 
-Click to open in the playground: [play src="tutorial/browser/events/bubbling/capture"].
+Click to open in the playground: [play src="/assets/browser/events/bubbling/capture"].
 
 [smart]
 In real-life the capturing phase is rarely used. But..
@@ -169,7 +169,7 @@ Now let's assign handlers at both stages.
 
 Click on a `div` below to see the event processing order (<u>no IE&lt;9</u>):
 
-[iframe src="tutorial/browser/events/bubbling/both"]
+[iframe src="/assets/browser/events/bubbling/both/index.html"]
 
 It should be 1 -&gt; 2 -&gt; 3 -&gt; 3 -&gt; 2 -&gt; 1.
 
@@ -183,7 +183,7 @@ for(var i=0; i<divs.length; i++) {
 }
 [/js]
 
-Click to open in the playground: [play src="tutorial/browser/events/bubbling/both"].
+Click to open in the playground: [play src="/assets/browser/events/bubbling/both"].
 
 
 

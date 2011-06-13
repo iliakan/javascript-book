@@ -3,9 +3,9 @@
 
 Create a tree which hides/shows children on click. 
 
-[iframe src="tutorial/browser/events/tree"]
+[iframe src="/assets/browser/events/tree/index.html"]
 
-The source code of the tree is [play src="tutorial/browser/events/tree-src"|here].
+The source code of the tree is [play src="/assets/browser/events/tree-src"|here].
 
 
 =Hint 1
@@ -124,7 +124,7 @@ The polishing involves:
 <li>Disabling selection with `mousedown/selectstart`</li>
 </ul>
 
-You can see the full code of the solution at [play src="tutorial/browser/events/tree"|here].
+You can see the full code of the solution at [play src="/assets/browser/events/tree"|here].
 
 
 

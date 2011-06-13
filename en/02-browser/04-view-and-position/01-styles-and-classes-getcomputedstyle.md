@@ -235,7 +235,7 @@ In the example below, the `getCurrentPixelStyle(elem, prop)` gets a pixel value 
 
 If you are interested to know how it works, read the code carefully and check <a href="http://msdn.microsoft.com/en-us/library/ms535889(v=vs.85).aspx">runtimeStyle</a> and <a href="http://msdn.microsoft.com/en-us/library/ms531129%28VS.85%29.aspx">pixelLeft</a> properties in MSDN. 
 
-[js file="tutorial/browser/dom/getCurrentPixelStyle.js"][/js]
+[js src="/assets/browser/dom/getCurrentPixelStyle.js"][/js]
 <script src="/files/tutorial/browser/dom/getCurrentPixelStyle.js"></script>
 
 The function is in action below (IE only):

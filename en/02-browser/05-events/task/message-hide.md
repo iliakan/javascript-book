@@ -4,9 +4,9 @@
 There is a message list. Add a delete button to each message to remove it.
 
 The result:
-[iframe src="tutorial/browser/events/messages"]
+[iframe src="/assets/browser/events/messages/index.html"]
 
-The source is [play src="tutorial/browser/events/messages-src"|here].
+The source is [play src="/assets/browser/events/messages-src"|here].
 
 
 =Hint 1
@@ -37,6 +37,6 @@ That's simple: grab the container and get all `IMG`. Surely, there can be many i
 
 =Solution
 
-The solution is shown [play src="tutorial/browser/events/messages"|here].
+The solution is shown [play src="/assets/browser/events/messages"|here].
 
 

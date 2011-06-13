@@ -17,7 +17,7 @@ Make all external links yellow by giving them class "external".
 [/html]
 
 The result: 
-[iframe src="tutorial/browser/dom/markLinks"]
+[iframe src="/assets/browser/dom/markLinks/index.html"]
 
 =Hint 1
 
@@ -27,7 +27,7 @@ Also check that the link may start with `http://javascript.info/...`. Such links
 
 =Solution
 
-The solution source: [play src="tutorial/browser/dom/markLinks"]
+The solution source: [play src="/assets/browser/dom/markLinks"]
 
 To skip links leading on current domain, `location.protocol` and `location.host` are used. They keep current scheme (http) and domain (javascript.info).
 

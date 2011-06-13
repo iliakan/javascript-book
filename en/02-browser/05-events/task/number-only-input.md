@@ -3,7 +3,7 @@
 
 Write an input which accepts only digits. There is a demo below.
 
-[iframe src="tutorial/browser/events/numeric-input"]
+[iframe src="/assets/browser/events/numeric-input/index.html"]
 
 
 =Solution
@@ -28,6 +28,6 @@ input.onkeypress = function(e) {
 
 Helper function `getChar` gets the character, `isNumeric` checks for number.
 
-The full solution code is here: [play src="tutorial/browser/events/numeric-input"].
+The full solution code is here: [play src="/assets/browser/events/numeric-input"].
 
 

@@ -10,5 +10,5 @@ Check how it should work [play src="tutorial/intro/endless_loop|here"].
 
 =Solution
 
-Check source for the solution: [play src="tutorial/intro/endless_loop"].
+Check source for the solution: [play src="/assets/intro/endless_loop"].
 

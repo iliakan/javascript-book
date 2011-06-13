@@ -12,6 +12,6 @@
 
 =Solution
 
-[js file="tutorial/intro/object/first.js"][/js]
+[js src="/assets/intro/object/first.js"][/js]
 
 

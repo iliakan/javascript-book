@@ -84,11 +84,11 @@ Most topics of HTML5 are still in "draft" stage, but browsers tend to adopt them
 
 The title "HTML5" is a bit misleading. As you saw, the new standard is not just about HTML, but about interaction and advanced browser features.
 
-<blockquote>The trend is: javascript is enhancing its abilities. It is becoming more and more powerful, trying to reach desktop apps.</blockquote>
+[sum]The trend is: javascript is enhancing its abilities. It is becoming more and more powerful, trying to reach desktop apps.[/sum]
 
 Modern browsers improve their engines to achieve higher javascript execution speed. They also fix bugs and try to follow the standard.
 
-<blockquote>The trend is: javascript is becoming faster and more stable.</blockquote>
+[sum]The trend is: javascript is becoming faster and more stable.[/sum]
 
 It is also very important that new standards HTML5 and ECMAScript 5/6 are mostly compatible with older standards. That means they don't break existing apps.
 
@@ -96,9 +96,9 @@ Well, to be sincere, there is a minor problem with HTML5, named "Browsers run to
 
 But then, with time, the standard evolves and changes, so browsers have to reimplement or correct the feature. This breaks the code which relied on the earlier version. So we'd better think twice before using such draft-stage solutions. This mainly refers to an advanced stuff.
 
-<blockquote>The trend is: things are going to be compatible.
+[sum]The trend is: things are going to be compatible.
 Of course as far as we don't use browser-specific features or early-adopted draft sections of a standard.
-</blockquote>
+[/sum]
 
 
 

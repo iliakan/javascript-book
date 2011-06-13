@@ -433,9 +433,9 @@ alert( new Animal().name )  // Godzilla
 
 
 
-<blockquote>
+[sum]
 Traditionally, all functions which are meant to create objects with `new` have uppercased first letter in the name.
-</blockquote>
+[/sum]
 
 [smart]
 By the way, a call without arguments may omit braces:

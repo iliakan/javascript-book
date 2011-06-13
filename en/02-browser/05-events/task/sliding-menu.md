@@ -3,9 +3,9 @@
 
 Create a menu which opens/closes on click, like this:
 
-[iframe height=100 src="tutorial/browser/events/sliding"]
+[iframe height=100 src="tutorial/browser/events/sliding/index.html"]
 
-The source and images to start from are at [play src="tutorial/browser/events/sliding-src"].
+The source and images to start from are at [play src="/assets/browser/events/sliding-src"].
 
 
 =Hint 1
@@ -73,5 +73,5 @@ Open menu overrides:
   }
 [/css]
 
-You can find the full solution at [play src="tutorial/browser/events/sliding"].
+You can find the full solution at [play src="/assets/browser/events/sliding"].
 

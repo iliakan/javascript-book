@@ -97,10 +97,10 @@ alert( NaN + 1 ) // NaN
 </ul>
 
 
-<blockquote>Mathematical operations can't lead to an error or crash in JavaScript. 
+[sum]Mathematical operations can't lead to an error or crash in JavaScript. 
 
 At worst, `NaN` is returned.
-</blockquote>
+[/sum]
 
 
 
@@ -133,7 +133,7 @@ If the value can't be converted to a number, the operation returns `NaN`:
 alert( +"12test" )  // NaN
 [/js]
 
-<blockquote>
+[sum]
 `isNaN` converts it's argument into a number automatically. So it can be used to check whether a string represents a number:
 
 [js run]
@@ -160,7 +160,7 @@ function isNumeric(n) {
 }
 [/js]
 `isNumeric` correctly checks numericality for all input types.
-</blockquote>
+[/sum]
 
 
 [task src="task/sum.md"]

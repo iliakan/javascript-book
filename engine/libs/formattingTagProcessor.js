@@ -22,7 +22,7 @@ if (typeof module != 'undefined') {
 function FormattingTagProcessor(srcLoader) {
 
 	var langs = 'css java ruby js php txt py xml xslt html erl as'.split(' ');
-	var blocks = 'smart warn ponder summary'.split(' ');
+	var blocks = 'smart warn ponder sum'.split(' ');
 
 	/**
 	 * Replace square tag
@@ -101,9 +101,9 @@ function FormattingTagProcessor(srcLoader) {
 
 	this.img = function(data) {
 		var attrs = data.attrs;
-		if (attrs.src.charAt(0) == '/') {
-			attrs.src = attrs.src.slice(1);
-		}
+
+		attrs.src = fixAbsoluteSrc(attrs.src);
+
 		var a = [];
 		for(var k in attrs) {
 			a.push(k+'="'+attrs[k]+'"');
@@ -169,6 +169,7 @@ function FormattingTagProcessor(srcLoader) {
 		} else {
 			className.push('brush:' + data.tag);
 		}
+
 		var code = data.body, attrs = data.attrs;
 
 		var lines = code.match(/\n/g) || [];
@@ -238,7 +239,9 @@ function FormattingTagProcessor(srcLoader) {
 
 		style = style.join(';');
 
+
 		if (attrs.src) {
+
 			try {
 				code = srcLoader.load(attrs.src);
 			} catch(e) {
@@ -246,6 +249,9 @@ function FormattingTagProcessor(srcLoader) {
 			}
 		}
 
+		// no tags in the code
+		code = code.replace(/&/g, '&amp;').replace(/</g,'&lt;').replace(/>/g, '&gt;');
+		
 		var result = "<pre class=\"" + className + "\" style=\"" + style + "\">\n" + code + "\n</pre>";
 
 		/* TODO?

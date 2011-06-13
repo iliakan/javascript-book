@@ -54,7 +54,7 @@ Using them like `onclick="alert("Click")"` won't work. If you really need it, tr
 It is also possible to call a function for the event handling. 
 The example below runs a function `count_rabbits()` if a button is clicked. 
 
-[html file="tutorial/browser/events/2.html" run height=80][/html]
+[html src="/assets/browser/events/2.html" run height=80][/html]
 
 Please recall that HTML-tag attribute names are case-insensitive, so `oNcLiCk` will work same as `onClick` or `onclick`. 
 

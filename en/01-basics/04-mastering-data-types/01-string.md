@@ -276,13 +276,13 @@ That's much more convenient than `substring`.
 
 Negative indexes are also supported in `substr` by all browsers except IE.
 
-<blockquote>
+[sum]
 Conclusion. 
 
 The method of choice is `slice(start, end)`. 
 
 Or, alternatively, `substr(start, length)` with non-negative `start` (negative doesn't work in IE).
-</blockquote>
+[/sum]
 
 
 

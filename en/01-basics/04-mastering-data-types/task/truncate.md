@@ -18,5 +18,5 @@ This function is useful not just for a task, but for real-life, in truncating us
 
 =Solution
 
-The solution: [play src="tutorial/intro/string/truncate"].
+The solution: [play src="/assets/intro/string/truncate"].
 

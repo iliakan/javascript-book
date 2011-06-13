@@ -1,13 +1,13 @@
 
 # Tree 
 
-Here's a tree: [play src="tutorial/browser/dom/treeSource"]. 
+Here's a tree: [play src="/assets/browser/dom/treeSource"]. 
 
 Write a code to add a bracketed descendants count to each list item (`LI`). Skip those `LI` which don't have other list items inside.
 
 Put the code at the bottom of `BODY` so it runs during page rendering.
 
-[iframe src="tutorial/browser/dom/tree"]. 
+[iframe src="/assets/browser/dom/tree/index.html"]. 
 
 =Hint 1
 
@@ -39,7 +39,7 @@ Generally, it could be a good idea to modify the markup, so that title will be i
 But from the other side, the less tags - the faster it runs. There's no silver bullet, only silver fork.
 [img src="/assets/browser/dom/silverfork.jpg"]
 
-The solution is here: [play src="tutorial/browser/dom/tree"]. 
+The solution is here: [play src="/assets/browser/dom/tree"]. 
 
 
 

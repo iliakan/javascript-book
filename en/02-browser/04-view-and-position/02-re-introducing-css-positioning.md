@@ -43,9 +43,9 @@ For this and future examples the document below is used.
 The footer.
 [/html]
 
-<blockquote>
+[sum]
 An element with `position: static` is also called an <i>not positioned element</i>, with any other positioning type - a <i>positioned element</i>.
-</blockquote>
+[/sum]
 
 
 ## `Relative`   
@@ -110,10 +110,10 @@ As you may see running the example above, the element is shifted:
 
 These `left/top` properties wouldn't work for `position:static`.
 
-<blockquote>
+[sum]
 `position: relative` moves the element, but the place which it occupied, remains empty.
 
-In the example above, the the footer does not shift up to occupy the freed space.</blockquote>
+In the example above, the the footer does not shift up to occupy the freed space.[/sum]
 
 
 ## `Fixed`   

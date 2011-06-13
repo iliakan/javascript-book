@@ -5,14 +5,14 @@ Make all links inside the <code>&lt;DIV id="content"&gt;</code> ask if the visit
 
 Below is how it should work (in iframe):
 
-[iframe height=100 border=1 src="tutorial/browser/events/links"]
+[iframe height=100 border=1 src="tutorial/browser/events/links/index.html"]
 
 <ul>
 <li>The `DIV` content may be AJAX-loaded. It's `innerHTML` can be replaced any time, and the links behavior should not change. Use delegation.</li>
 <li>The DIV contents can contain nested tags both outside the links ( like <code>&lt;P&gt;</code>) and inside them (like `I` or `B`).</li>
 </ul>
 
-The source page is at [play src="tutorial/browser/events/links-src"]
+The source page is at [play src="/assets/browser/events/links-src"]
 
 
 
@@ -43,6 +43,6 @@ We catch the event on `contents` and ascend the `parentNode` until either proces
   }  
 [/js]
 
-See the full solution at [play src="tutorial/browser/events/links"].
+See the full solution at [play src="/assets/browser/events/links"].
 
 

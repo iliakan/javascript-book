@@ -44,7 +44,7 @@ There is also a variation named `document.writeln(text)` which appends '\n' afte
 
 There is only one restriction on `document.write`.
 
-<blockquote>Both `document.write` and `document.writeln` method should output text into an unready (open) document.</blockquote>
+[sum]Both `document.write` and `document.writeln` method should output text into an unready (open) document.[/sum]
 
 When the page finishes loading, the document becomes <i>closed</i>. An attempt to `document.write` in it will cause the contents to be erased. 
 
@@ -105,11 +105,11 @@ The advantages of `document.write` are:
 <li>It is very fast, because the browser doesn't have to modify an existing DOM structure.</li>
 </ol>
 
-<blockquote>
+[sum]
 Sometimes the scripts are added by the `document.write`. Don't use this method, as the rest of the page will await for script loading and execution. 
 
 If the remote server hands up, the page will may take too much to load. And, anyway, why should the page wait for the remote server? 
 
 Try to replace `document.write` with DOM methods, if remote architecture allows that.
-</blockquote>
+[/sum]
 

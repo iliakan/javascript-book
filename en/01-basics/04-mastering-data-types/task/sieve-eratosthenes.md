@@ -26,5 +26,5 @@ Implement the Eratosthenes' Sieve in JavaScript. Compute the sum of all primes u
 
 The answer is 1060.
 
-The solution is at [play src="tutorial/intro/array/sieve"].
+The solution is at [play src="/assets/intro/array/sieve"].
 

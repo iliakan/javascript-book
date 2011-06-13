@@ -12,5 +12,5 @@ See it in action here: [play src="tutorial/intro/if_sign"]
 
 =Solution
 
-[play src="tutorial/intro/if_sign"]
+[play src="/assets/intro/if_sign"]
 

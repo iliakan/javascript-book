@@ -1,7 +1,7 @@
 
 # Check inside table 
 
-For the document [play src="tutorial/browser/dom/searchTask"] 
+For the document [play src="/assets/browser/dom/searchTask"] 
 
 Write a function `checkInsideTable(id)` which returns `true` if an element with given <code><code>id</code></code> is inside the table with `id="age-table"`.
 

@@ -11,7 +11,7 @@ function TagExpander(srcLoader) {
 
 	var langs = 'css java ruby js php txt py xml xslt html erl as';
 
-	var keywordsNeedClose = ('verbatim link smart warn ponder'+' '+langs).split(' ');
+	var keywordsNeedClose = ('sum verbatim link smart warn ponder'+' '+langs).split(' ');
 
 
 	// str = 'str="lala\\" ]" test=5 blabla "test\\"]" | help me'

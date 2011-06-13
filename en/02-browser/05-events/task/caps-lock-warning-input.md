@@ -3,9 +3,9 @@
 
 Create an input that warns user if the Caps Lock is on. Releasing Caps Lock removes the warning. This may help to prevent errors when entering password.
 
-[iframe height=60 src="tutorial/browser/events/capslock"]
+[iframe height=60 src="tutorial/browser/events/capslock/index.html"]
 
-The source document: [play src="tutorial/browser/events/capslock-src"].
+The source document: [play src="/assets/browser/events/capslock-src"].
 
 =Hint 1
 
@@ -93,7 +93,7 @@ function removeCapsWarning() {
 [/html]
 
 
-The full code for the solution is here: [play src="tutorial/browser/events/capslock"].
+The full code for the solution is here: [play src="/assets/browser/events/capslock"].
 
 
 

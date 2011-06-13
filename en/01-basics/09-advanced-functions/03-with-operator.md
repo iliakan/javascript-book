@@ -105,7 +105,7 @@ In the example above, `elem.style.position`, `elem.style.left` and `elem.style.t
 
 ## Why `with` is deprecated?   
 
-<blockquote> People don't like `with`, because it gives the illusion of working with the object.</blockquote>
+[sum] People don't like `with`, because it gives the illusion of working with the object.[/sum]
 
 Unfortunately, that's just an illusion. It is possible to lookup a variable, to change it, but if you try to add it.. Whops! Failure!..
 

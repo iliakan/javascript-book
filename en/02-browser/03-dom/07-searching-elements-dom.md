@@ -279,7 +279,7 @@ Also, `querySelectorAll` is special here. For the sake of performance, it return
 
 Consider the following html:
 
-[html file="tutorial/browser/dom/searchTask.html"][/html]
+[html src="/assets/browser/dom/searchTask.html"][/html]
 
 Here are the tasks which base on the HTML above.
 

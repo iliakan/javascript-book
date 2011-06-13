@@ -1,0 +1,1002 @@
+/* styles for the online site only */
+
+.body-main {
+    display: block;
+    text-align: center;
+}
+
+
+.teaser-with-toc {
+    line-height: 1.1;
+}
+
+.book-navigation .page-links {
+    padding: 1em;
+    border: none;
+}
+
+.book-navigation-upper .page-links {
+    border-bottom: 1px solid #888888;
+}
+
+
+.block h2, .block  h2.title {
+    font-size: 1em;
+    padding: 5px 10px;
+    color: #fff;
+    background-color: #C33;
+    margin: 0 0 0.5em 0;
+}
+
+.block h2 a, .block h2.title a {
+    color: #fff;
+}
+
+.block h2 a:hover, .block h2.title a:hover {
+    color: red;
+}
+
+.sticky h2, .sticky h2 a {
+    color: #343434 !important;
+    font-weight: bold;
+}
+
+
+
+/*////////////////////////////CUSTOM BODY STYLES/////////////////////////////////*/
+
+
+.mission {
+    float: left;
+    font-style: italic;
+    color: #8a8a8a;
+    font-size: 0.9em;
+}
+
+#top-links {
+    float: right;
+}
+
+.top-links-ul, .top-links-ul li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.top-links-ul li {
+    float: left;
+    padding: 0 0 0 2em;
+    font-family: Arial;
+    font-size: 12px;
+    padding: 0 0 0 2em;
+}
+
+.top-links-ul li a {
+    color: #000;
+    padding: 0 5px;
+}
+
+#logo-container {
+    padding-top: 3px;
+    margin-bottom: 3px;
+}
+
+#money-bg {
+}
+
+#logo-picture img {
+    display: block;
+}
+
+#logo-picture {
+    float: left;
+    padding-right: 15px;
+}
+
+#logo {
+    background-color: #c82128;
+    float: left;
+    padding: 8px 50px;
+    color: #fff;
+    border-right: 3px solid #fff;
+}
+
+#logo h1 {
+    font-size: 38px;
+    line-height: 100%;
+    padding: 0 0 2px 0;
+    margin: 0;
+}
+
+#logo h1.logo-picture-true {
+    text-align: left;
+    display: inline;
+    height: 100%;
+}
+
+#logo strong.logo-picture-true {
+    text-align: left;
+}
+
+#logo h1.logo-picture-true-slogan-false {
+    line-height: 150%;
+    display: inline;
+}
+
+#logo strong {
+    font-weight: normal;
+    color: #ffa0a0;
+    font-size: 0.8em;
+    line-height: normal;
+    display: block;
+}
+
+#logo a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#logo a:hover {
+    color: #fff;
+}
+
+/******** Primary menu ************************************************/
+.rws-primary-menu {
+    background-color: #999;
+    color: #fff;
+    font-family: "Myriad Pro", "Times New Roman", Georgia, Arial, Verdana, sans-serif;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.rws-primary-menu a {
+    color: #fff;
+}
+
+.rws-primary-menu .block, .rws-primary-menu .block-menu {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background-color: transparent;
+}
+
+.rws-primary-menu h2 {
+    display: none;
+}
+
+.rws-primary-menu ul, .rws-primary-menu ul.menu {
+    margin: 0;
+    padding: 0;
+}
+
+.rws-primary-menu li, .rws-primary-menu li.leaf, .rws-primary-menu ul.links li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    float: left;
+    font-size: 16px;
+}
+
+.rws-primary-menu li a {
+    display: block;
+    padding: 0.35em 1.3em 0.5em 1.3em;
+    color: #fff !important;
+}
+
+.rws-primary-menu li a:hover {
+    background-color: #4a4a4a;
+    color: #f5f5f1;
+}
+
+.rws-primary-menu li a.active {
+    color: #fff;
+    background-color: #4a4a4a;
+}
+
+/******************** SEARCH *****************************************/
+.rws-primary-menu #search-theme-form {
+    float: right;
+    padding: 4px;
+    border: none;
+}
+
+.rws-primary-menu #search-theme-form label {
+    display: none;
+}
+
+.rws-primary-menu .form-submit {
+    background-color: #eaeaea;
+    border: 1px solid #b8b8b8;
+    margin: 0;
+    float: left;
+    height: 21px;
+    padding: 1px 8px;
+}
+
+.rws-primary-menu #search-theme-form div {
+    display: inline;
+}
+
+.rws-primary-menu .form-text {
+    font-family: Arial;
+    background-color: #fff;
+    border: 1px solid #b8b8b8;
+    margin: 0;
+    float: left;
+    height: 17px;
+    padding: 1px 4px;
+    font-family: Arial;
+    width: 130px;
+}
+
+/****************** Columns********************************************/
+.column-1 {
+    width: 161px;
+    padding: 0px 10px 10px 0px;
+    float: left;
+    border-right: 1px solid #c9c9c6;
+    text-align: left;
+    overflow: hidden;
+    margin-bottom: 30px;
+    /*background-color:#f5f5f1;*/
+}
+
+.column-2 {
+    width: 524px;
+    padding: 0px 10px 10px 10px;
+    float: left;
+    /*
+    border-left:1px solid #c9c9c6;
+    border-right:1px solid #c9c9c6;
+    */
+    margin-left: -1px;
+    text-align: left;
+    overflow: hidden;
+    margin-bottom: 30px;
+    /*background-color:#f5f5f1;*/
+}
+
+.no-left-column {
+    width: 695px;
+    margin-left: 0;
+}
+
+.no-right-column {
+    width: 807px;
+}
+
+.no-right-and-left-columns {
+    width: 978px;
+    margin-left: 0;
+}
+
+.column-3 {
+    width: 273px;
+    padding: 0px 0px 10px 10px;
+    float: left;
+    border-left: 1px solid #c9c9c6;
+    margin-left: -1px;
+    text-align: left;
+    overflow: hidden;
+    margin-bottom: 30px;
+    /*background-color:#f5f5f1;*/
+}
+
+/******** MENUs and BLOCKs in COLUMN 1 *******************************************/
+
+.column-1 .block-menu {
+}
+
+.column-1 .block-menu ul,
+ul.menu {
+    margin: 0;
+    padding: 0;
+}
+
+ul.menu li,
+ul.menu li.leaf,
+ul.menu li.expanded,
+ul.menu li.collapsed {
+    margin: 0;
+    list-style: none;
+    list-style-image: none;
+    font-size: 1.1em;
+    padding: 0 0 10px 0;
+}
+
+/** expanded **/
+ul.menu li ul.menu {
+    padding-left: 10px;
+    margin-top: 3px;
+    font-size: 0.8em;
+    line-height: normal;
+}
+
+ul.menu li ul.menu li.leaf, ul.menu  li ul.menu li.collapsed {
+    padding: 0 0 0.5em 0;
+}
+
+ul.menu .active {
+    font-weight: bold;
+}
+
+.column-1 .block {
+    border-bottom: 1px solid #c9c9c6;
+    margin-bottom: 15px;
+}
+
+/*************** LOGIN FORM ******************************************************/
+#user-login-form {
+    text-align: left;
+}
+
+#user-login-form input {
+    width: 99%;
+}
+
+#user-login-form input.form-submit {
+    width: auto;
+}
+
+/******** COLUMN 2 NODES *********************************************************/
+.sticky {
+    border: 1px solid #c0c0c0;
+    background: #fff url("images/featured.gif") no-repeat 18px 0 !important;
+    padding-top: 35px !important;
+}
+
+/*************** NODE ***********************************/
+.node {
+    padding-right: 10px;
+    margin-bottom: 5px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #c7c99e;
+    /*clear: both;*/
+}
+
+.links {
+    text-align: right;
+    font-size: 0.9em;
+}
+
+/*
+.node .links {
+	clear: both;
+}*/
+
+/*
+.content p{line-height:145%;}
+*/
+
+.submitted, .submitted a {
+    color: #999;
+    font-size: 11px;
+}
+
+.submitted {
+    text-align: right;
+    display: block;
+    margin-bottom: 10px;
+    float: right;
+}
+
+.comment .submitted {
+    margin-bottom: 0;
+}
+
+.sticky .submitted, .sticky  .submitted a {
+    color: #83837d;
+}
+
+.block {
+    margin-bottom: 30px;
+}
+
+.block .content {
+    padding: 0 8px 4px 8px;
+}
+
+/*************** column-2-blocks ****************************/
+.column-2-blocks {
+    margin-top: 20px;
+}
+
+.column-2-blocks-left, .column-2-blocks-right {
+    width: 251px;
+    float: left;
+    overflow: hidden;
+}
+
+.column-2-blocks-left .block, .column-2-blocks-right .block {
+    margin-bottom: 10px;
+}
+
+.column-2-blocks-no-right-and-left-columns .column-2-blocks-left, .column-2-blocks-no-right-and-left-columns .column-2-blocks-right {
+    width: 478px;
+}
+
+.column-2-blocks-no-left-column .column-2-blocks-left, .column-2-blocks-no-left-column .column-2-blocks-right {
+    width: 337px;
+}
+
+.column-2-blocks-no-right-column .column-2-blocks-left, .column-2-blocks-no-right-column .column-2-blocks-right {
+    width: 393px;
+}
+
+.column-2-blocks-left {
+    border: 1px solid #c9c9c6;
+    border-left: none;
+    border-bottom: none;
+    overflow: hidden;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
+.column-2-blocks-right {
+    border: 1px solid #c9c9c6;
+    border-right: none;
+    border-bottom: none;
+    overflow: hidden;
+    margin-left: -1px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.no-left-block {
+    margin-left: 251px;
+}
+
+.content_after_blocks {
+    clear: both;
+    padding-top: 10px;
+    border-top: 1px solid #c9c9c6;
+}
+
+.main-content-block {
+    padding-bottom: 25px;
+}
+
+.main-content-block .block {
+    margin: 18px 0 2px 0;
+}
+
+#block-top {
+    margin-top: 0;
+    border-bottom: 1px solid #c9c9c6;
+    margin-bottom: 10px;
+}
+
+#block-top .column-2-blocks-left, #block-top .column-2-blocks-right {
+    border-top: none;
+    padding-top: 0;
+}
+
+#block-top h2 {
+    background-color: #c82128;
+}
+
+#content-top {
+    border-bottom: 1px solid #c9c9c6;
+    margin-bottom: 8px;
+}
+
+/****** FOOTER *************************************************/
+#footer {
+    text-align: left;
+    clear: both;
+    background: transparent url("images/bg_node.gif") repeat-x top left;
+    font-size: 0.84em;
+    padding: 15px 16px;
+    color: #707070;
+}
+
+#footer h2 {
+    display: none;
+}
+
+#footer .block-menu ul, #footer1 .block-menu ul.menu {
+    margin: 0;
+    padding: 0;
+}
+
+#footer .block-menu li, #footer .block-menu li.leaf {
+    margin: 0;
+    list-style: none;
+    font-size: 1.1em;
+    float: left;
+}
+
+#footer .block-menu ul a {
+    display: block;
+    padding: 10px 20px 10px 0;
+}
+
+#footer .block {
+    clear: both;
+    margin-bottom: 10px;
+}
+
+#footer .block .content {
+    padding: 0;
+}
+
+#footer p {
+    padding: 0 0 5px 0;
+}
+
+/*** Comments ***/
+.comment {
+    border-left: 1px solid #c9c9c6;
+    border-bottom: 1px solid #c9c9c6;
+    padding: 10px 0 6px 13px;
+    margin: 0 0px 0px 0;
+}
+
+.comment .picture img {
+    float: left;
+    margin: 0 10px 3px 0;
+    border: 1px solid #dadada;
+    padding: 1px;
+}
+
+.comment .submitted {
+    font-size: 1em;
+    font-size: 11px;
+    display: inline;
+}
+
+.comment .submitted a {
+}
+
+.comment-author {
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.comment-date {
+    margin-bottom: 6px;
+}
+
+.this-link {
+    color: #aab7b7;
+    font-size: 11px;
+}
+
+.this-link a {
+    color: #aab7b7;
+}
+
+.this-link a:visited {
+    color: #aab7b7;
+}
+
+.comment .this-link {
+    margin-right: 15px;
+}
+
+.comment .new {
+    background: #c82128;
+    color: #fff;
+    padding: 1px 4px 1px 4px;
+}
+
+.comment .new a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.comment .new a:hover {
+    color: red;
+}
+
+.comment p {
+    padding-bottom: 6px;
+}
+
+.comment .content {
+    clear: right;
+}
+
+.links-comment {
+    float: right;
+    margin: 0;
+    padding: 0;
+    color: #869999;
+}
+
+.links-comment ul.links {
+    margin: 0;
+    padding: 0;
+}
+
+.links-comment .links li {
+    padding: 0;
+    margin-right: 15px;
+}
+
+.links-comment a {
+    color: #869999;
+}
+
+.links-comment a:hover {
+    color: red;
+}
+
+.links-comment  li.comment_reply a.comment_reply {
+    color: #349f00;
+}
+
+#comment-form .form-item {
+    margin-top: 0;
+}
+
+#comment-form .resizable-textarea {
+    clear: both;
+}
+
+#comment-form .form-item label {
+    float: left;
+    padding-right: 10px;
+}
+
+ul.tips {
+    clear: both;
+}
+
+.node .picture img {
+    border: 1px solid #dadada;
+    padding: 1px;
+    float: right;
+    margin-left: 2px;
+}
+
+ul.links {
+    display: inline;
+}
+
+.breadcrumb {
+    font-size: 16px;
+}
+
+.preview .node {
+    padding: 10px;
+}
+
+.profile .picture {
+    float: none;
+}
+
+.signature p {
+    border-top: 1px solid #d6ddb9;
+    font-size: 0.9em;
+    margin: 10px 0;
+    padding: 0;
+}
+
+.taxonomy {
+    background: #e7e7d6 url("images/bg_taxonomy.gif") no-repeat top left;
+    padding: 0.3em 0.6em;
+    border: 1px dashed #fff;
+    margin-top: 5px;
+}
+
+.developer {
+    color: #707070;
+    color: #9a9a9a;
+    clear: both;
+    display: block;
+    margin-top: 4px;
+}
+
+.developer a {
+    color: #707070;
+    color: #9a9a9a;
+    font-weight: normal;
+    background: transparent url("images/star.gif") no-repeat center left;
+    padding-left: 15px;
+}
+
+.developer strong a {
+    text-decoration: none;
+    background: none;
+    padding-left: 0;
+}
+
+.version {
+    color: #f5f5f1;
+    padding-left: 20px;
+}
+
+/***************** ADMIN MENU PRIMARY****************************/
+
+#rws-uni-tabs {
+    background-color: #23749e;
+    margin: 0;
+    padding: 0;
+    clear: both;
+}
+
+#rws-uni-tabs li {
+    float: left;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#rws-uni-tabs li a {
+    display: block;
+    padding: 0.31em 1.5em 0.45em 1.5em;
+    color: #fff;
+}
+
+#rws-uni-tabs li a:hover {
+    background-color: #3a9ed1;
+    color: #fff;
+}
+
+.edit-this-link {
+    background-color: #23749e;
+    font-weight: bold;
+    font-family: Tahoma;
+    font-size: 0.8em;
+    padding: 3px 6px;
+    white-space: nowrap;
+    clear: none;
+    border-bottom: 1px solid #093c57;
+    border-right: 1px solid #093c57;
+}
+
+.edit-this-link:hover {
+    color: #89d7ff;
+}
+
+/*********** MESSAGES *************/
+div.messages {
+    padding: 8px;
+    margin: 1px 0 2px 0;
+}
+
+div.error {
+    background: #ff9797;
+    padding-left: 28px;
+    border: 1px solid #ff0000;
+    font-weight: bold;
+    color: #fff;
+    display: block;
+}
+
+div.status {
+    background: #eefcea;
+    padding-left: 28px;
+    border: 1px solid #aade91;
+    font-weight: bold;
+    color: #35a000;
+    display: block;
+}
+
+.error a {
+    color: #fff;
+}
+
+.error a:hover {
+    color: #ffe7e7;
+}
+
+div.messages ul {
+    padding: 0;
+}
+
+/********************* box *******************/
+.box {
+    margin-top: 25px;
+
+}
+
+.item-list ul {
+    padding-left: 0;
+    margin-top: 5px;
+}
+
+.block-region {
+    color: #000;
+    font-weight: bold;
+    font-family: Tahoma;
+    padding-left: 10px;
+}
+
+/***** FIX OPEN ID **************************/
+#user-login-form li.openid-link, #user-login li.openid-link {
+    margin-left: 0;
+    padding-left: 1.5em;
+    background-position: top left;
+}
+
+#user-login-form #edit-submit {
+    margin-bottom: 10px;
+}
+
+/*********** FIX TINYMCE ********************/
+
+/*
+* Tabs CSS
+*
+* Adds styles for the primary and secondary tabs.
+*
+*/
+
+div.tabs {
+    margin: 0 0 0 0;
+}
+
+ul.primary {
+    margin: 0;
+    margin-left: 0px;
+    padding: 0 0 0 10px;
+    border-width: 0;
+    list-style: none;
+    white-space: nowrap;
+    line-height: normal;
+    background: url(images/tab-bar.png) repeat-x left bottom;
+}
+
+ul.primary li {
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+ul.primary li a {
+    display: block;
+    height: 24px;
+    margin: 0;
+    padding: 0 0 0 5px; /* width of tab-left.png */
+    border-width: 0;
+    font-weight: bold;
+    text-decoration: none;
+    color: #777;
+    background-color: transparent;
+    background: url(images/tab-left-new.gif) no-repeat 0 -38px;
+}
+
+ul.primary li a .tab {
+    display: block;
+    height: 20px; /* 24px (parent) - 4px (padding) */
+    margin: 0;
+    padding: 4px 13px 0 6px;
+    border-width: 0;
+    line-height: 20px;
+    background: url(images/tab-right-new.gif) no-repeat 100% -38px;
+    cursor: pointer;
+}
+
+ul.primary li a:hover {
+    border-width: 0;
+    background-color: transparent;
+    background: url(images/tab-left-new.gif) no-repeat 0 -76px;
+}
+
+ul.primary li a:hover .tab {
+    background: url(images/tab-right-new.gif) no-repeat 100% -76px;
+}
+
+ul.primary li.active a,
+ul.primary li.active a:hover {
+    border-width: 0;
+    color: #000;
+    background-color: transparent;
+    background: url(images/tab-left-new.gif) no-repeat 0 0;
+}
+
+ul.primary li.active a .tab,
+ul.primary li.active a:hover .tab {
+    background: url(images/tab-right-new.gif) no-repeat 100% 0;
+}
+
+ul.secondary {
+    margin: 0;
+    margin-left: 0px;
+    padding: 0 0 0 5px;
+    border-bottom: 1px solid #c0c0c0;
+    list-style: none;
+    white-space: nowrap;
+    background: url(images/tab-secondary-bg.png) repeat-x left bottom;
+}
+
+ul.secondary li {
+    float: left;
+    margin: 0 5px 0 0;
+    padding: 5px 0;
+    border-right: none;
+}
+
+ul.secondary a {
+    display: block;
+    height: 24px;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #c0c0c0;
+    text-decoration: none;
+    color: #777;
+    background: url(images/tab-secondary.png) repeat-x 0 -56px;
+}
+
+ul.secondary a .tab {
+    display: block;
+    height: 18px; /* 24px (parent) - 6px (padding) */
+    margin: 0;
+    padding: 3px 8px;
+    line-height: 18px;
+}
+
+ul.secondary a:hover {
+    background: url(images/tab-secondary.png) repeat-x left bottom;
+}
+
+ul.secondary a.active,
+ul.secondary a.active:hover {
+    border: 1px solid #c0c0c0;
+    color: #000;
+    background: url(images/tab-secondary.png) repeat-x left top;
+}
+
+/* IE */
+
+ul.primary li a,
+ul.primary li a .tab,
+ul.secondary li a,
+ul.secondary li a .tab {
+    _display: inline; /* Otherwise the blocks mistakenly get 100% width in IE5 */
+    _di\splay: inline-block; /* Otherwise the blocks mistakenly get 100% width in IE6 */
+}
+
+ul.primary,
+ul.secondary {
+    _width: 100%; /* Otherwise IE5 treats the ul as floated */
+    _w\idth: auto; /* Reset to auto width for IE6 */
+}
+
+
+#comments .indented .indented .indented .indented .indented
+ .indented .indented .indented .indented .indented {
+    margin: 0;
+}
+
+/*********************************************administer*/
+
+div.admin-panel {
+    background-color: #edeeeb;
+    border: 1px solid #c7c7c7;
+    padding: 2px 2px 0px;
+    margin-bottom: 15px;
+}
+
+div.admin-panel h3 {
+    background-color: #23749E;
+    padding: 4px 0 7px 10px;
+    font-weight: normal;
+    margin: 0;
+    font-size: 1.5em;
+    line-height: 1em;
+    color: #fff;
+}
+
+div.admin-panel h3 a {
+    color: #fff;
+    border-bottom: 2px solid #80c1e3;
+    text-decoration: none;
+    line-height: 1em;
+}
+
+div.admin-panel h3 a:hover {
+    color: #fff;
+    border-color: #fff;
+}
+
+div.admin-panel h3 a:visited {
+    color: #fff;
+}
+
+* html div.admin .left,
+* html div.admin .right {
+    display: inline;
+}

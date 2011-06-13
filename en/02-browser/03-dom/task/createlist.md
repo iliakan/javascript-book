@@ -12,7 +12,7 @@ For each item:
 
 <b>All elements must be created dynamically.</b>
 
-The working example is here: [play full src="tutorial/browser/dom/createList"]
+The working example is here: [play full src="/assets/browser/dom/createList"]
 
 P.S. `prompt` returns `null` if user pressed ESC.
 
@@ -20,7 +20,7 @@ P.S. `prompt` returns `null` if user pressed ESC.
 
 The solution is self-descriptive:
 
-[html link file="tutorial/browser/dom/createList.html"][/html]
+[html link src="/assets/browser/dom/createList.html"][/html]
 
 
 Note checking for `null` value as a loop-breaking condition. The `prompt` only returns it when ESC is pressed.

@@ -244,7 +244,7 @@ When a user focuses on a link, input or textfield, some browsers outline it.
 
 Try clicking on these in Firefox, Safari/Chrome, IE. They are different in what they outline and how.
 
-[iframe link border=1 height=60 src="tutorial/browser/events/outline-src"]
+[iframe link border=1 height=60 src="tutorial/browser/events/outline-src/index.html"]
 
 Sometimes you want to handle focusing on your own, and don't need browser indication. Fortunately, we can disable it by pure CSS.
 
@@ -267,7 +267,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 }
 [/css]
 
-[iframe link border=1 height=60 src="tutorial/browser/events/outline"]
+[iframe link border=1 height=60 src="tutorial/browser/events/outline/index.html"]
 
 
 ## Summary   

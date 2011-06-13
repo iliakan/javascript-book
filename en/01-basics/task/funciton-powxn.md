@@ -16,6 +16,6 @@ The demo: [play src="tutorial/intro/pow"]
 
 =Solution
 
-The solution: [play src="tutorial/intro/pow"]
+The solution: [play src="/assets/intro/pow"]
 
 

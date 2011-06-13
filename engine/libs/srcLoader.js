@@ -28,7 +28,7 @@ function SrcLoader(url) {
 	this.getFullUrl = function(src) {
 
 		if (src.charAt(0) == '/') {
-			src = src.substr(0); // /tutorial/bla -> tutorial/bla (relative)
+			src = fixAbsoluteSrc(src); // /tutorial/bla -> tutorial/bla (relative)
 		} else {
 			src = this.getBaseDir() + '/' + src;
 		}

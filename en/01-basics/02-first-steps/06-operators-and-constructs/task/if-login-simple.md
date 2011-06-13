@@ -18,5 +18,5 @@ The `prompt` returns `null` when cancelled.
 
 The solution is based on nested `if`:
 
-Open it at [play src="tutorial/intro/if_pass"]. Please, pay attention to code formatting and extra line spaces in high-level `if`. <b>Spaces are sweet for better readability.</b>
+Open it at [play src="/assets/intro/if_pass"]. Please, pay attention to code formatting and extra line spaces in high-level `if`. <b>Spaces are sweet for better readability.</b>
 

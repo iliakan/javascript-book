@@ -2,7 +2,7 @@
 # Replace div with same size 
 
 There was a green-bordered `div` in the text:
-[iframe height=140 src="tutorial/browser/dom/replaceDiv/1"]
+[iframe height=140 src="tutorial/browser/dom/replaceDiv/1/index.html"]
 
 A programmer John of your team wrote the code to shift the `div` to right-top with `position: absolute`:
 
@@ -13,7 +13,7 @@ div.style.right = div.style.top = 0
 [/js]
  
 Naturally, the text after `DIV` shifted up:
-[iframe height=90 src="tutorial/browser/dom/replaceDiv/2"]
+[iframe height=90 src="tutorial/browser/dom/replaceDiv/2/index.html"]
 
 Enhance the code, make the text keep it's place even after the `DIV` is shifted. 
 
@@ -21,9 +21,9 @@ Enhance the code, make the text keep it's place even after the `DIV` is shifted.
 
 Should be like this (placeholder got background for demo purposes):
 
-[iframe height=140 src="tutorial/browser/dom/replaceDiv/solution"]
+[iframe height=140 src="tutorial/browser/dom/replaceDiv/solution/index.html"]
 
-The source document: [play src="tutorial/browser/dom/replaceDiv/2"].
+The source document: [play src="/assets/browser/dom/replaceDiv/2"].
 
 <b>P.S... Do it without any additional CSS.</b>
 
@@ -66,5 +66,5 @@ placeHolder.style.marginBottom = computedStyle.marginBottom
 Full property name `marginTop` is used. It guarantees that for any  combination of `margin-top, margin-bottom, margin`, the computed value is correct.
 
 The final result (see `SCRIPT`):
-[html file=tutorial/browser/dom/replaceDiv/solution.html run][/html]
+[html src="/assets/browser/dom/replaceDiv/solution.html" run][/html]
 

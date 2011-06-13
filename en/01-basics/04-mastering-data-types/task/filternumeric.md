@@ -13,6 +13,6 @@ arr = filterNumeric(arr);
 
 =Solution
 
-The solution is to iterate over array and add a value to new array only if it is numeric. Check it out [play src="tutorial/intro/array/filterNumeric"|here].
+The solution is to iterate over array and add a value to new array only if it is numeric. Check it out [play src="/assets/intro/array/filterNumeric"|here].
 
 

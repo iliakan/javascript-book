@@ -136,7 +136,7 @@ And if you remember, when `this.say` is created, it (as every function) gets an 
 The whole point is to ensure that if the inner function wants to access an outer variable in the future, it is able to do so.
 
 
-<blockquote>
+[sum]
 <ul>
 <li>The inner function keeps a reference to the outer  `LexicalEnvironment`.</li>
 <li>The inner function may access variables from it any time even if the outer function is finished.</li>
@@ -146,7 +146,7 @@ The whole point is to ensure that if the inner function wants to access an outer
 This is called a <i>closure</i>.
 
 
-</blockquote>
+[/sum]
 
 
 ### Mutability of `LexicalEnvironment`   
@@ -179,11 +179,11 @@ Here `user.fixName.[[Scope]]` and `user.say.[[Scope]]` reference same `LexicalEn
 
 From (1) to (2), the `LexicalEnvironment.name` is updated, so both functions see the variable change.
 
-<blockquote>
+[sum]
 Variables in outer `LexicalEnvironment` may change. 
 
 Inner functions always see the <i>last</i> value.
-</blockquote>
+[/sum]
 
 
 

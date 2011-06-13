@@ -6,9 +6,9 @@ When in edit mode, the changes are saved to `DIV` on Ctrl-S and junked on Esc. A
 
 The contents is saved as HTML, tags should work.
 
-Please look at how it should look: [play full src="tutorial/browser/events/hotfield"].
+Please look at how it should look: [play full src="/assets/browser/events/hotfield"].
 
-The source code is here: [play src="tutorial/browser/events/hotfield-src"].
+The source code is here: [play src="/assets/browser/events/hotfield-src"].
 
 
 
@@ -109,6 +109,6 @@ function cancel() {
 }
 [/js]
 
-The full solution is here: [play src="tutorial/browser/events/hotfield"].
+The full solution is here: [play src="/assets/browser/events/hotfield"].
 To test it, focus in the right iframe please.
 

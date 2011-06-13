@@ -7,9 +7,9 @@ Advanced topics become easy to grasp once you know how it works.
 
 =Cut
 
-<blockquote>In javascript, all local variables and functions are properties of the special internal object, called `LexicalEnvironment`.</b>
+[sum]In javascript, all local variables and functions are properties of the special internal object, called `LexicalEnvironment`.</b>
 
-</blockquote>
+[/sum]
 
 The top-level `LexicalEnvironment` in browser is `window`. It is also called a <i>global object</i>. 
 
@@ -74,13 +74,13 @@ The value of `g` is a function expression, but the interpreter doesn't care. It 
 
 So to sum:
 
-<blockquote>
+[sum]
 <ol>
 <li>`FunctionDeclarations` become ready-to-use functions. That allows to call a function before it's declaration.</li>
 <li>Variables start as `undefined`.</li>
 <li>All assignments happen later, when the execution reaches them.</li>
 </ol>
-</blockquote>
+[/sum]
 
 As a side effect, it is impossible to have a variable and a function with the same name. 
 

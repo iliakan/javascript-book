@@ -157,7 +157,7 @@ Check it on the iframe below:
 
 <iframe style="border:1px solid black; overflow: hidden; height:130px; width: 600px" src="/files/tutorial/browser/events/mouseoverout.html">
 
-The source code in the playground: [play src="tutorial/browser/events/mouseoverout"].
+The source code in the playground: [play src="/assets/browser/events/mouseoverout"].
 
 
 
@@ -165,11 +165,11 @@ The source code in the playground: [play src="tutorial/browser/events/mouseovero
 
 `Mousemove` triggers on every mouse movement. It's target is the topmost and most nested element which is covered by mouse.
 
-<blockquote>
+[sum]
 `Mousemove` and `mouseover/mouseout` trigger when browser internal timing allows.
 
 That means if you move the mouse fast, intermediate DOM elements and parents are be skipped.
-</blockquote>
+[/sum]
 
 So you can move over an element without any `mousemove/mouseover` triggered on it.
 

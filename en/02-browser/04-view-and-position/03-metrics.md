@@ -19,7 +19,7 @@ Knowing it's components is a preliminary knowledge to going any further.
 
 ## Example document   
 
-The example document is at [play full src="tutorial/browser/dom/metric"].
+The example document is at [play full src="/assets/browser/dom/metric"].
 
 Before you continue reading, it would be a good idea to open it.
 

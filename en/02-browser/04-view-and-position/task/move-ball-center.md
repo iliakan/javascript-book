@@ -4,12 +4,12 @@
 Place a ball in the center of the field.
 
 Source:
-[iframe height=160 src="tutorial/browser/dom/ball-source"]
+[iframe height=160 src="tutorial/browser/dom/ball-source/index.html"]
 
 Use JavaScript to place the ball in the center:
-[iframe height=160 src="tutorial/browser/dom/ball"]
+[iframe height=160 src="tutorial/browser/dom/ball/index.html"]
 
-The source document: [play src="tutorial/browser/dom/ball-source"].
+The source document: [play src="/assets/browser/dom/ball-source"].
 
 
 
@@ -29,7 +29,7 @@ var field = document.getElementById('field')
 ball.style.left = Math.round(field.clientWidth / 2)+'px'
 ball.style.top = Math.round(field.clientHeight / 2)+'px'
 [/js]
-[iframe hide="Click to see the current result" height=160 src="tutorial/browser/dom/ball-half"]
+[iframe hide="Click to see the current result" height=160 src="tutorial/browser/dom/ball-half/index.html"]
 
 To align the center of the ball against the field center, we need to shift the ball. Half of it's width left, half of it's height up.
 
@@ -56,9 +56,9 @@ A reasonable fix is to provide width/height:
 
 Now we're done.
 
-[iframe hide="Click to see the final result" height=160 src="tutorial/browser/dom/ball"]
+[iframe hide="Click to see the final result" height=160 src="tutorial/browser/dom/ball/index.html"]
 
-Full solution code: [play src="tutorial/browser/dom/ball"]
+Full solution code: [play src="/assets/browser/dom/ball"]
 
 P.S. Using `offsetHeight/offsetWidth` instead of `clientHeight/clientWidth` would be wrong, because positioning takes place inside the borders.
 

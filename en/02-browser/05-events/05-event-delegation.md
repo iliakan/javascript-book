@@ -18,9 +18,9 @@ For example, here's a <a href="http://en.wikipedia.org/wiki/Ba_gua">Ba gua chart
 
 Click on the cells. They are highlightable.
 
-[iframe height=350 src="tutorial/browser/events/delegation/bagua"]
+[iframe height=350 src="tutorial/browser/events/delegation/bagua/index.html"]
 
-The table contains 9 cells. Each cell has text and `STRONG` tag to format directions: `South`, `North` etc. The source playground is at [play src="tutorial/browser/events/delegation/bagua"].
+The table contains 9 cells. Each cell has text and `STRONG` tag to format directions: `South`, `North` etc. The source playground is at [play src="/assets/browser/events/delegation/bagua"].
 
 The important point is how highlighting is implemented.
 
@@ -82,7 +82,7 @@ The example above is just a semantic HTML/CSS. Clicks on menu elements will be h
 
 The links should become clickable, like in the example below:
 
-[iframe height=50 src="tutorial/browser/events/delegation/menu"]
+[iframe height=50 src="tutorial/browser/events/delegation/menu/index.html"]
 
 [smart header="Mouse over (hover) state"]
 Hover state indication in the menu above is implemented with pure CSS. 
@@ -106,7 +106,7 @@ document.getElementById('menu').onclick = function(e) {
 
 The code does not ascend the `parentNode` chain, because there are no nested tags inside `A`.
 
-Full source in the playground: [play src="tutorial/browser/events/delegation/menu"].
+Full source in the playground: [play src="/assets/browser/events/delegation/menu"].
 
 
 ## The nested menu example   
@@ -133,9 +133,9 @@ With the help of CSS, second-level `UL` can be hidden until a mouse hovers over 
 
 The nested menu actually causes <i>no changes in JavaScript at all</i>.
 
-[iframe height=110 src="tutorial/browser/events/delegation/menu-nested"]
+[iframe height=110 src="tutorial/browser/events/delegation/menu-nested/index.html"]
 
-Full source in the playground: [play src="tutorial/browser/events/delegation/menu-nested"].
+Full source in the playground: [play src="/assets/browser/events/delegation/menu-nested"].
 
 We can also add/remove menu items in runtime, `without` any handlers management.
 

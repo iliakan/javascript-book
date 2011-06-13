@@ -20,3 +20,10 @@ function loadFile(src) {
 	}
 	return xhr.responseText.replace(/\r/g, '');
 }
+
+function fixAbsoluteSrc(src) {
+	if (src.charAt(0) == '/') {
+		src = src.slice(1);
+	}
+	return src;
+}

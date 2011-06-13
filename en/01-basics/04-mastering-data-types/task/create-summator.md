@@ -9,14 +9,14 @@ Create an object named `summator` with two methods:
 
 As the result, `summator.run()` should prompt for two values and alert their sum. 
 
-You can see it here in action: [play full src="tutorial/intro/object/summator2"]
+You can see it here in action: [play full src="/assets/intro/object/summator2"]
 
 
 
 
 =Solution
 
-The solution: [play src="tutorial/intro/object/summator2"]
+The solution: [play src="/assets/intro/object/summator2"]
 
 
 

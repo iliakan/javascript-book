@@ -18,7 +18,7 @@ When browser is rendering a HTML-page and meets <code>&lt;script&gt;</code> - it
 
 The following example demonstrates how browser switches in-out javascript mode.
 
-[html run file=tutorial/browser/script/rabbits.html link][/html]
+[html run src="/assets/browser/script/rabbits.html" link][/html]
 
 
 Note the order of execution in the example above:
@@ -92,17 +92,17 @@ This is very handy replacement for embedded scripts, because same file may be us
 
 Here is how it looks like:
 
-[html file=tutorial/browser/script/rabbits_ext.html height=100 link][/html]
+[html src="/assets/browser/script/rabbits_ext.html" height=100 link][/html]
 
 Here is the contents of `/files/tutorial/browser/script/rabbits.js`:
 
-[js file=tutorial/browser/script/rabbits.js link][/js]
+[js src="/assets/browser/script/rabbits.js" link][/js]
 
 Note, there are no `SCRIPT` tags inside this file. `SCRIPT` tags are used are only in HTML.
 
-<blockquote>External scripts block page rendering in same way as embedded scripts do.
+[sum]External scripts block page rendering in same way as embedded scripts do.
 
-So, if an external script is in `HEAD` then page will not be shown until the script is downloaded and executed. </blockquote>
+So, if an external script is in `HEAD` then page will not be shown until the script is downloaded and executed. [/sum]
 
 <div class="smart"><div class="smart-head">Closing <code>&lt;/script&gt;</code> and XHTML</div>
 Note that usually one can't use XML-style self-closing tags like <code>&lt;script src="..."/&gt;</code> even if DOCTYPE XHTML is specified. 
@@ -119,11 +119,11 @@ To attach several scripts - use several tags:
 ...
 [/html]
 
-<blockquote>If `src` attribute is present then tag contents is ignored.
+[sum]If `src` attribute is present then tag contents is ignored.
 
 That is, one can't attach external file and execute code in single <code>&lt;script&gt;</code>. Two separate tags are needed: first one with `src` for external file, and the second one without `src`, but with the code, which will be executed after that file.
 
-</blockquote>
+[/sum]
 
 <div class="smart">
 <div class="smart-head">Modern markup for the <code>&lt;script&gt;</code> tag.</div>

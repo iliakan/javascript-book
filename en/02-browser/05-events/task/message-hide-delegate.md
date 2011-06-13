@@ -6,9 +6,9 @@ There is a message list. Add a delete button to each message to remove it.
 <b>Use event delegation. Single event handler for everything.</b>
 
 The result should work like this (click on the right-top image):
-[iframe src="tutorial/browser/events/messages"]
+[iframe src="/assets/browser/events/messages/index.html"]
 
-As the source, you can use either a sample page [play src="tutorial/browser/events/messages-src"], or take a working example with per-element handlers [play src="tutorial/browser/events/messages"] and modify it to use delegation.
+As the source, you can use either a sample page [play src="/assets/browser/events/messages-src"], or take a working example with per-element handlers [play src="/assets/browser/events/messages"] and modify it to use delegation.
 
 =Hint 1
 
@@ -20,6 +20,6 @@ If yes, then remove the parent div.
 
 =Solution
 
-The solution is shown [play src="tutorial/browser/events/messages-delegate"|here].
+The solution is shown [play src="/assets/browser/events/messages-delegate"|here].
 
 

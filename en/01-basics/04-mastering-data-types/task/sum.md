@@ -8,5 +8,5 @@ Note. There's a pitfall ahead. Watch the types.
 
 =Solution
 
-Check source for the solution: [play src="tutorial/intro/sum"].
+Check source for the solution: [play src="/assets/intro/sum"].
 

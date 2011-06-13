@@ -3,9 +3,9 @@
 
 Create a button, which changes on mouse over and click. Hover/Click on it to see:
 
-[iframe src="tutorial/browser/events/rollover"]
+[iframe src="/assets/browser/events/rollover/index.html"]
 
-The source images are at [play src="tutorial/browser/events/rollover-src"].
+The source images are at [play src="/assets/browser/events/rollover-src"].
 
 Also, the source code contains helper functions to add/remove class elements. Remember to use semantic markup.
 
@@ -73,7 +73,7 @@ button.onmouseup = function() {
 
 The `mouseout` handler also removes clicked state. When a visitor mousedowns over the button then moves the mouse away, it eventually becomes 'unclicked'.
 
-See the full solution at [play src="tutorial/browser/events/rollover"].
+See the full solution at [play src="/assets/browser/events/rollover"].
 
 
 
@@ -105,9 +105,9 @@ This image is set as background, and background-position is adjusted to show the
 
 This solution has no problems with instant reflection of a state change.
 
-See the full example at [play src="tutorial/browser/events/rollover-sprite"].
+See the full example at [play src="/assets/browser/events/rollover-sprite"].
 
 
-P.S. Note that there <i>is</i> a [play src="tutorial/browser/events/rollover-css"|pure-CSS solution], with `:active` and `:hover` pseudoclasses, but it doesn't work in IE&lt;8 or IE8 in compatibility mode because of bugs with `:active` handling.
+P.S. Note that there <i>is</i> a [play src="/assets/browser/events/rollover-css"|pure-CSS solution], with `:active` and `:hover` pseudoclasses, but it doesn't work in IE&lt;8 or IE8 in compatibility mode because of bugs with `:active` handling.
 
 

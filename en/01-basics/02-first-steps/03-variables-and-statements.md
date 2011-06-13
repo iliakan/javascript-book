@@ -227,10 +227,10 @@ var $this,
  user15
 [/js]
 
-<blockquote>
+[sum]
 JavaScript is CaSE-sEnSitiVe! 
 <b>`Apple` and `APPLE` are two different names.</b> 
-</blockquote>
+[/sum]
 
 
 ### Reserved words   

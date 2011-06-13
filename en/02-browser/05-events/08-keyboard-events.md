@@ -19,11 +19,11 @@ There are following keyboard events:
 
 There is a fundamental difference between `keypress` and `keydown`.
 
-<blockquote>
+[sum]
 <ul>
 <li>`Keydown` triggers on any key press and gives scan-code.</li>
 <li>`Keypress` triggers after `keydown` and gives char-code, but it is guaranteed for character keys only.</li>
-</ul></blockquote>
+</ul>[/sum]
 
 
 
@@ -244,15 +244,15 @@ e.ctrlKey && e.keyCode == 'S'.charCodeAt(0)
 And it doesn't matter if user the resulting char is "s" or "S" or another language letter. 
 
 
-<blockquote>
+[sum]
 For alphanumeric keys, the scan code equals the character code of the uppercased english letter/digit.
-</blockquote> 
+[/sum] 
 
 The scan code do not equal the char code for most punctuation characters including brackets and arithmetic symbols.
 
 For example, a "-" key has `keyCode=109` in Firefox, `keyCode=189` in IE, but it's `charCode=45`. Obviously no match. 
 
-<blockquote>For all keys except `';', '='` and `'-'` different browsers use same key code.</blockquote>
+[sum]For all keys except `';', '='` and `'-'` different browsers use same key code.[/sum]
 
 Try that on the test stand above. Type '-' and watch <code>keydown keyCode</code and <code>keypress charCode</code>.
 

@@ -248,7 +248,7 @@ The browser escapes the trap by picking the first value by default. It also prov
 
 <b>The `"class"` attribute changes class in all browsers except IE&lt;9. Don't use the attribute. Use `className` property all the time.</b> 
 
-<blockquote>
+[sum]
 To live well with any IE, use attributes correctly.
 
 Or, in other words, try using properties all the time, until you <i>really</i> need an attribute.
@@ -259,7 +259,7 @@ And the only times you <i>really</i> need an attribute are:
 <li>To get an "original value" of the standard HTML attribute, like <code>&lt;INPUT value="..."&gt;</code>.</li>
 </ol>
 
-</blockquote>
+[/sum]
 
 
 ### Attributes as DOM nodes   

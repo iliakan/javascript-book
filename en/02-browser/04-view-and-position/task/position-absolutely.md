@@ -4,20 +4,20 @@
 We've got the `Text`, <span style="background-color:yellow">Question</span> and the <span style="color:red">Button</span>:
 
 
-[iframe src="tutorial/browser/dom/position/source"]
+[iframe src="/assets/browser/dom/position/source/index.html"]
 
 Use JavaScript and CSS to move the <span style="color:red">Button</span> under the <span style="background-color:yellow">Question</span>:
 
 <ol><li>First, to the left:
-[iframe src="tutorial/browser/dom/position/left"]
+[iframe src="/assets/browser/dom/position/left/index.html"]
 </li>
 <li>Second, to the right:
-[iframe src="tutorial/browser/dom/position/right"]
+[iframe src="/assets/browser/dom/position/right/index.html"]
 </li>
 </ol>
 The text should be overlapped, as if the button were a sliding menu.
 
-The source code is here: [play src="tutorial/browser/dom/position/source"]
+The source code is here: [play src="/assets/browser/dom/position/source"]
 
 
 =Solution
@@ -30,8 +30,8 @@ The solution is to:
 <li>Use `buttonElem.style.right=0` for the right side.</li>
 </ol>
 
-Left: [play src="tutorial/browser/dom/position/left"].
-Right: [play src="tutorial/browser/dom/position/right"].
+Left: [play src="/assets/browser/dom/position/left"].
+Right: [play src="/assets/browser/dom/position/right"].
 
 Note that <i>the button does not inherit yellow background</i>, because it is positioned absolutely and, speaking in terms of CSS is <i>out of normal flow</i>.
 
