@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <script src="../engine/clientlibs/json2.js"></script>
+    <script src="../engine/libs/metadata.js"></script>
+    <script src="../engine/libs/loadFile.js"></script>
+    <script src="../engine/libs/navReader.js"></script>
+    <script src="../engine/clientlibs/jquery.js"></script>
+    <script src="../engine/libs/titleExtractor.js"></script>
+    <script src="../engine/libs/tagExpander.js"></script>
+    <script src="../engine/libs/navBuilder.js"></script>
+    <script src="../engine/libs/srcLoader.js"></script>
+    <script src="../engine/libs/nav.js"></script>
+
+        <style>
+        .folder {
+            color: #00008b;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+
+
+    </script>
+</head>
+<body>
+<h1>Navigation<sup><a style="font-size:50%" onclick="rebuildNav(); return false" href="#">Rebuild</a></sup></h1>
+
+<div id="done"></div>
+
+
+<script>
+    var nav = new NavReader();
+    var tree = nav.buildNavigationTree();
+    document.write(tree)
+</script>
+
+
+</body>
+</html>
