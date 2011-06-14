@@ -122,7 +122,7 @@ The `innerHTML` property works for any element node. It's very, very useful.
 
 ### `innerHTML` pitfalls   
 
-The `innerHTML` is not as simple, pink and puffy as it seems. There is a number of pitfalls awaiting for a newbie, and sometimes even an experienced programmer.
+The `innerHTML` is not as simple, pink and puffy as it seems. There is a number of pitfalls waiting for a newbie, and sometimes even an experienced programmer.
 
 [warn header="Read-only `innerHTML` for tables in IE"]
 In Internet Explorer, <a href="http://msdn.microsoft.com/en-us/library/ms533897.aspx">innerHTML</a> is read-only for `COL, COLGROUP, FRAMESET, HEAD, HTML, STYLE, TABLE, TBODY, TFOOT, THEAD, TITLE, TR`. 
