@@ -30,7 +30,7 @@ For a folder (chapter), the file <code>00-index.md</code> is used for this purpo
 <p><b>Navigation does not autopickup your changes.</b>
 If you change the structure or references, then the navigation needs to be rebuilt.</p>
 
-<p>JavaScript is unable to traverse the directory tree, that's why a signed Java Applet is used. It gets executed only when rebuilding navigation.</p>
+<p>JavaScript is unable to traverse the directory tree, that's why a signed Java Applet is used. It gets executed only when rebuilding navigation. You need to have Java installed.</p>
 
 <p>Actually, the applet is small, simplified and secured to maximum. All it can do is to get file names inside a folder and write to file which ends with '.applet.json'. For additional security, it only works locally, so if anyone tries to put it on the web, nothing would work.
 
