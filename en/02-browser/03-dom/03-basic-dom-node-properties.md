@@ -1,4 +1,3 @@
-
 # Basic DOM Node properties 
 
 A DOM node is an object with properties containing information about node itself and its contents. Some of the properties are read-only, and some can be updated on-the-fly.
@@ -103,7 +102,7 @@ So, generally `tagName` is less informative than `nodeName`. But it is one-symbo
 
 The `innerHTML` property is a part of HTML 5 standard, see <a href="http://www.w3.org/TR/html5/embedded-content-0.html">embedded content</a>.
 
-It allows to access node contents in the text form. The example below will output all contents from `document.body` and replace is by a new one.
+It allows to access node contents in the text form. The example below will output all contents from `document.body` and replace it by a new one.
 
 [html run]
 <body>
