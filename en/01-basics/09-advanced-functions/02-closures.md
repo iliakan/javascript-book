@@ -20,7 +20,7 @@ function f() {
 }
 [/js]
 
-In this case, the the interpreter finds the variable in the outer `LexicalEnvironment` object.
+In this case, the interpreter finds the variable in the outer `LexicalEnvironment` object.
 
 The process consists of two steps:
 
