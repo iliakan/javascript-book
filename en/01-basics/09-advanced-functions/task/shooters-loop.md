@@ -36,7 +36,7 @@ Why all shooters alert the same? How to make each shooter output it's number?
 
 =Solution
 
-Note that the `shooter` function. Does not have a variable named `i`. 
+Note that the `shooter` function does not have a variable named `i`. 
 
 So, when it is called, the interpreter takes `i` from the outer  `LexicalEnvironment`.
 
