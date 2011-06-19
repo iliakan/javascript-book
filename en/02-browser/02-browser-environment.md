@@ -1,7 +1,7 @@
 
 # Browser environment 
 
-The browser kindly provides us with a hierarchy of objects which we can use to control it and access various information about time, screen, page, elements on it etc.
+The browser kindly provides us with a hierarchy of objects which we can use to control it and access various information about time, screen, page, elements on it, etc.
 
 =Cut
 
@@ -18,11 +18,11 @@ All other objects form 3 groups.
 
 <dl>
 <dt style="color:#002061">Document Object Model (DOM)</dt>
-<dd>`document` and related objects allow to access contents of the page, modify elements etc. Most interaction with HTML is handled here.
+<dd>`document` and related objects allow to access contents of the page, modify elements, etc. Most interaction with HTML is handled here.
 
 There is a pack of standards for DOM, developed by W3C. You can find it at <a href="http://www.w3.org/DOM/DOMTR">W3C DOM</a> page. As of now, three levels of DOM exist, a next one extends the lower version. Modern browsers also support pre-W3C features from browser dark-ages, called DOM 0.</dd>
 <dt style="color:#008100">Browser Object Model (BOM)</dt>
-<dd>BOM is a pack of objects that allow to control the browser, e.g change current URL, access frames, do background requests to server with XMLHttpRequest etc. Functions like `alert,confirm,prompt` also belong BOM, they are provided by the browser.
+<dd>BOM is a pack of objects that allow to control the browser, e.g change current URL, access frames, do background requests to server with XMLHttpRequest, etc. Functions like `alert,confirm,prompt` also belong BOM, they are provided by the browser.
 
 Many BOM features are standartized in HTML5, but not all.
 </dd>

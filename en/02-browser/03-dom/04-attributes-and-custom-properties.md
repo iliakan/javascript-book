@@ -105,7 +105,7 @@ When you run the code above, note the following:
 </ol>
 
 
-## Properties and attribytes synchronization   
+## Properties and attributes synchronization   
 
 Every type of DOM nodes has standard properties. 
 

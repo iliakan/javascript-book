@@ -121,5 +121,5 @@ The DOM tree is tightly interlinked:
 
 Browser guarantees that the links are always correct. All of them are read-only.
 
-If there is no such element (child, parent, neighbour etc), the value is `null`.
+If there is no such element (child, parent, neighbour, etc.), the value is `null`.
 
