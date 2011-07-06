@@ -14,7 +14,7 @@ function TocBuilder() {
 				if (item.level > level) {
 					text+='<ol>';
 				} else if (item.level < level) {
-					text+='</li></ol>'
+					text+='</li></ol></li>'
 				} 
 			}
 			level = item.level;
