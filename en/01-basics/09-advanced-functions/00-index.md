@@ -1,5 +1,0 @@
-
-# Scopes and Closures 
-
-
-

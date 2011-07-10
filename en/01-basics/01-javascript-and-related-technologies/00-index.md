@@ -1,5 +1,0 @@
-
-# Javascript and related technologies 
-
-
-
