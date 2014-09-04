@@ -1,9 +1,4 @@
 
-# The offline-editing framework for JavaScript Book
+# This project was superseded by https://github.com/iliakan/javascript-nodejs
 
-This repositary is outdated and no longer supported. 
-
-The up to date Russian version of the book is at http://learn.javascript.ru
-
-
-
+See https://github.com/iliakan/javascript-nodejs
