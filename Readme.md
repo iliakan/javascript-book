@@ -1,4 +1,6 @@
 
-# This project was superseded by https://github.com/iliakan/javascript-nodejs
+# This project was superseded.
+
+Please go https://github.com/iliakan/javascript-nodejs.
 
 It was a purely static javascript book engine, based on XMLHttpRequest.
